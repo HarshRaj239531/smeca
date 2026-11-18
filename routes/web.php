@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InquiryAdminController;
@@ -21,6 +22,8 @@ Route::get('/products', [ProductController::class, 'index'])->name('products.ind
 Route::get('/products/{slug}', [ProductController::class, 'show'])->name('products.show');
 Route::get('/b2b-oem-services', [ServiceController::class, 'b2b'])->name('services.b2b');
 Route::get('/consultancy-marketing', [ServiceController::class, 'consultancy'])->name('services.consultancy');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/contact-us', [ContactController::class, 'index'])->name('contact.index');
 Route::post('/contact-us', [ContactController::class, 'store'])->name('contact.store');
 

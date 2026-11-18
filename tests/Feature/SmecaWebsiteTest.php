@@ -163,4 +163,44 @@ class SmecaWebsiteTest extends TestCase
         $response->assertSee('<urlset', false);
         $response->assertSee(url('/'), false);
     }
+
+    /**
+     * Test the blog listing page renders with magazine layout.
+     */
+    public function test_blog_index_renders_with_magazine_hero(): void
+    {
+        $response = $this->get('/blog');
+
+        $response->assertStatus(200);
+        $response->assertSee('BLOG');
+        $response->assertSee('01');
+        $response->assertSee('About Author');
+        $response->assertSee('PERFUMES & SCENTS', false);
+        $response->assertSee('Ayurvedic Skincare Tips');
+    }
+
+    /**
+     * Test a specific blog article page renders.
+     */
+    public function test_blog_article_detail_renders(): void
+    {
+        $response = $this->get('/blog/ayurvedic-skincare-tips-reviews-formulation-advice');
+
+        $response->assertStatus(200);
+        $response->assertSee('Ayurvedic Skincare Tips');
+        $response->assertSee('Dr. Sarina Kumari');
+        $response->assertSee('SMECA Quality');
+    }
+
+    /**
+     * Test navbar displays Blog link.
+     */
+    public function test_navbar_displays_blog_link(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+        $response->assertSee(route('blog.index'));
+        $response->assertSee('Blog');
+    }
 }

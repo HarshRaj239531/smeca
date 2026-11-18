@@ -103,8 +103,8 @@
                     <a href="{{ route('home') }}#testimonials" class="hover:text-[#121c0f] transition-colors">
                         Testimonials
                     </a>
-                    <a href="{{ route('home') }}#faq" class="hover:text-[#121c0f] transition-colors">
-                        FAQ
+                    <a href="{{ route('blog.index') }}" class="hover:text-[#121c0f] transition-colors {{ request()->routeIs('blog.*') ? 'font-bold text-[#121c0f]' : '' }}">
+                        Blog
                     </a>
                     <a href="{{ route('contact.index') }}" class="hover:text-[#121c0f] transition-colors {{ request()->routeIs('contact.*') ? 'font-bold text-[#121c0f]' : '' }}">
                         Contacts
@@ -146,6 +146,9 @@
             </a>
             <a href="{{ route('home') }}#testimonials" class="block py-2 text-sm font-medium text-[#203a31]">
                 Testimonials
+            </a>
+            <a href="{{ route('blog.index') }}" class="block py-2 text-sm font-medium text-[#203a31] {{ request()->routeIs('blog.*') ? 'font-bold' : '' }}">
+                Blog & Journal
             </a>
             <a href="{{ route('home') }}#faq" class="block py-2 text-sm font-medium text-[#203a31]">
                 FAQ
@@ -304,6 +307,7 @@
                         <li><a href="{{ route('products.index') }}" class="hover:text-white transition">Formulations</a></li>
                         <li><a href="{{ route('services.b2b') }}" class="hover:text-white transition">B2B & OEM</a></li>
                         <li><a href="{{ route('services.consultancy') }}" class="hover:text-white transition">Consultancy</a></li>
+                        <li><a href="{{ route('blog.index') }}" class="hover:text-white transition">Blog & Journal</a></li>
                         <li><a href="{{ route('contact.index') }}" class="hover:text-white transition">Contacts</a></li>
                     </ul>
                 </div>
