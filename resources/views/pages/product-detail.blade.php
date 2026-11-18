@@ -29,7 +29,7 @@
                          class="w-full h-96 sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-500">
                     
                     @if($product->is_ayurvedic)
-                        <div class="absolute top-4 left-4 bg-emerald-950/90 text-amber-300 text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
+                        <div class="absolute top-4 left-4 bg-[#243c30] text-[#c0caa7] text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
                             <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/></svg>
                             Classical Ayurvedic Formulation
                         </div>
@@ -106,7 +106,7 @@
                         <div class="text-xs text-slate-600 mt-0.5">Order retail batches, request a physical sample, or discuss OEM contract packaging.</div>
                     </div>
                     <button onclick="openEnquiryModal('{{ addslashes($product->name) }}', {{ $product->id }}, 'product')"
-                            class="shrink-0 bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition shadow-md flex items-center gap-2">
+                            class="shrink-0 bg-[#243c30] hover:bg-[#182a21] text-white font-medium text-xs sm:text-sm px-6 py-3 rounded-xl transition shadow-xs flex items-center gap-2 cursor-pointer">
                         <span>Enquire About This Product</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </button>

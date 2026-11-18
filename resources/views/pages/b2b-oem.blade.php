@@ -5,16 +5,15 @@
 @section('content')
 
 <!-- Header Banner -->
-<section class="bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 text-white py-16 sm:py-24 relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(#52b788_1px,transparent_1px)] [background-size:20px_20px] opacity-15"></div>
+<section class="bg-white text-[#203a31] py-16 sm:py-20 relative overflow-hidden border-b border-stone-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center space-y-4">
-        <span class="inline-block text-xs font-bold uppercase tracking-widest text-amber-300 bg-emerald-800/80 px-3.5 py-1 rounded-full border border-amber-300/30">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#203a31] bg-[#c0caa7]/30 px-3.5 py-1 rounded-full border border-[#203a31]/20">
             Enterprise Solutions
         </span>
-        <h1 class="text-3xl sm:text-5xl font-bold font-serif-display tracking-tight text-white">
+        <h1 class="text-3xl sm:text-5xl font-bold font-serif-display tracking-tight text-[#203a31]">
             B2B, OEM & Third-Party Manufacturing
         </h1>
-        <p class="text-sm sm:text-base text-emerald-100 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Turnkey cosmetic and Ayurvedic contract manufacturing for emerging D2C brands, national retail labels, and institutional super stockists.
         </p>
     </div>
@@ -163,7 +162,7 @@
                 </div>
 
                 <div class="text-center pt-2">
-                    <button type="submit" class="bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-sm px-8 py-3.5 rounded-xl shadow-md transition w-full sm:w-auto">
+                    <button type="submit" class="bg-[#243c30] hover:bg-[#182a21] text-white font-medium text-sm px-8 py-3.5 rounded-xl shadow-xs transition w-full sm:w-auto">
                         Submit OEM Manufacturing Inquiry
                     </button>
                     <p class="text-[11px] text-slate-500 mt-2">

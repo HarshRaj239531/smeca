@@ -5,16 +5,15 @@
 @section('content')
 
 <!-- Page Hero Header -->
-<section class="bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 text-white py-14 sm:py-20 relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(#52b788_1px,transparent_1px)] [background-size:20px_20px] opacity-15"></div>
+<section class="bg-white text-[#203a31] py-14 sm:py-18 relative overflow-hidden border-b border-stone-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center space-y-4">
-        <span class="inline-block text-xs font-bold uppercase tracking-widest text-amber-300 bg-emerald-800/80 px-3.5 py-1 rounded-full border border-amber-300/30">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#203a31] bg-[#c0caa7]/30 px-3.5 py-1 rounded-full border border-[#203a31]/20">
             Dynamic Formulation Catalog
         </span>
-        <h1 class="text-3xl sm:text-5xl font-bold font-serif-display tracking-tight text-white">
+        <h1 class="text-3xl sm:text-5xl font-bold font-serif-display tracking-tight text-[#203a31]">
             Ayurvedic, Cosmetic & Wellness Products
         </h1>
-        <p class="text-sm sm:text-base text-emerald-100 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Explore our data-driven catalog of certified formulations. Each product is available for consumer retail purchase, bulk commercial supply, or third-party private labeling.
         </p>
     </div>
@@ -101,25 +100,25 @@
 <!-- Custom Formulation Callout Banner -->
 <section class="py-16 bg-white border-t border-stone-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-r from-emerald-950 to-emerald-900 rounded-3xl p-8 sm:p-12 text-white flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl">
+        <div class="bg-white border border-stone-200 rounded-3xl p-8 sm:p-12 text-[#203a31] flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xs">
             <div class="space-y-3 max-w-2xl">
-                <span class="text-xs font-bold uppercase tracking-wider text-amber-300">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#384e42] bg-[#c0caa7]/30 px-3 py-1 rounded-full border border-[#203a31]/15 inline-block">
                     Need a Custom Formulation?
                 </span>
-                <h3 class="text-2xl sm:text-3xl font-bold font-serif-display text-white">
+                <h3 class="text-2xl sm:text-3xl font-bold font-serif-display text-[#203a31]">
                     Can't find your specific botanical requirement?
                 </h3>
-                <p class="text-sm text-emerald-100/90 leading-relaxed">
+                <p class="text-sm text-slate-600 leading-relaxed">
                     SMECA operates a specialized formulation lab in Bihar equipped to compound custom Ayurvedic extracts, organic sunscreen lotions, anti-blemish creams, and specialty fine attars tailored to your exact active percentage and target cost.
                 </p>
             </div>
             <div class="shrink-0 flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
                 <button onclick="openEnquiryModal('Custom Formulation R&D Project', null, 'b2b_oem')" 
-                        class="bg-amber-400 hover:bg-amber-300 text-emerald-950 font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl transition text-center shadow-md">
+                        class="bg-[#243c30] hover:bg-[#182a21] text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-xl transition text-center shadow-xs cursor-pointer">
                     Request Custom Lab Sample
                 </button>
                 <a href="{{ route('services.b2b') }}" 
-                   class="bg-emerald-800 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-xl transition text-center border border-emerald-600">
+                   class="bg-stone-100 hover:bg-stone-200 text-[#203a31] font-medium text-xs sm:text-sm px-6 py-3.5 rounded-xl transition text-center border border-stone-300">
                     Learn About OEM Services
                 </a>
             </div>

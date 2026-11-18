@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-[#c0caa7] text-[#203a31] antialiased selection:bg-[#203a31] selection:text-[#c0caa7]">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-white text-[#203a31] antialiased selection:bg-[#203a31] selection:text-[#c0caa7]">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,10 +26,10 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-full flex flex-col bg-[#c0caa7] text-[#203a31] overflow-x-hidden">
+<body class="min-h-full flex flex-col {{ request()->routeIs('home') ? 'bg-[#c0caa7]' : 'bg-white' }} text-[#203a31] overflow-x-hidden">
 
     <!-- Integrated Sage Navigation Bar (Exact Match to User Reference Image) -->
-    <header class="w-full bg-[#c0caa7] z-40 transition-all duration-300">
+    <header class="w-full {{ request()->routeIs('home') ? 'bg-[#c0caa7]' : 'bg-white border-b border-stone-200 shadow-2xs' }} z-40 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
             <div class="flex items-center justify-between h-20 sm:h-24">
                 
@@ -82,7 +82,7 @@
         </div>
 
         <!-- Mobile Drawer -->
-        <div id="mobileMenu" class="hidden md:hidden bg-[#c0caa7] border-t border-[#203a31]/15 px-6 pt-3 pb-6 space-y-3">
+        <div id="mobileMenu" class="hidden md:hidden {{ request()->routeIs('home') ? 'bg-[#c0caa7]' : 'bg-white' }} border-t border-stone-200 px-6 pt-3 pb-6 space-y-3">
             <a href="{{ route('home') }}" class="block py-2 text-sm font-medium text-[#203a31]">
                 Home
             </a>

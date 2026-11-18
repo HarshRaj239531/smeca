@@ -72,7 +72,7 @@
                 <!-- Enquire Now button carries product details to modal -->
                 <button type="button"
                         onclick="openEnquiryModal('{{ addslashes($product->name) }}', {{ $product->id }}, 'product')"
-                        class="bg-emerald-800 hover:bg-emerald-900 text-white text-xs font-semibold px-4 py-2 rounded-xl transition flex items-center gap-1.5 shadow-2xs">
+                        class="bg-[#243c30] hover:bg-[#182a21] text-white text-xs font-medium px-4 py-2 rounded-xl transition flex items-center gap-1.5 shadow-2xs cursor-pointer">
                     <span>Enquire Now</span>
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </button>

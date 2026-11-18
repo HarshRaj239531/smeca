@@ -5,16 +5,15 @@
 @section('content')
 
 <!-- Header Banner -->
-<section class="bg-gradient-to-b from-emerald-950 to-emerald-900 text-white py-16 sm:py-24 relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(#52b788_1px,transparent_1px)] [background-size:20px_20px] opacity-15"></div>
+<section class="bg-white text-[#203a31] py-16 sm:py-20 relative overflow-hidden border-b border-stone-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center space-y-4">
-        <span class="inline-block text-xs font-bold uppercase tracking-widest text-amber-300 bg-emerald-800/80 px-3.5 py-1 rounded-full border border-amber-300/30">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#203a31] bg-[#c0caa7]/30 px-3.5 py-1 rounded-full border border-[#203a31]/20">
             Corporate Profile & Heritage
         </span>
-        <h1 class="text-3xl sm:text-5xl font-bold font-serif-display tracking-tight text-white">
+        <h1 class="text-3xl sm:text-5xl font-bold font-serif-display tracking-tight text-[#203a31]">
             About SMECA Industry Private Limited
         </h1>
-        <p class="text-sm sm:text-base text-emerald-100 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Pioneering ethical cosmetics, herbal skincare, and classical Ayurvedic wellness formulations rooted in the fertile lands of Bihar, India.
         </p>
     </div>
@@ -66,9 +65,9 @@
                     <div class="space-y-4">
                         <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80" 
                              alt="Botanical extracts" class="rounded-2xl shadow-md object-cover h-56 w-full">
-                        <div class="bg-emerald-900 text-white p-5 rounded-2xl">
-                            <span class="text-2xl font-bold font-serif-display text-amber-300">AYUSH</span>
-                            <p class="text-xs text-emerald-100 mt-1">Formulations adhere to classical Ayurvedic pharmacopoeia texts and safety monographs.</p>
+                        <div class="bg-white text-[#203a31] p-5 rounded-2xl border border-stone-200 shadow-xs">
+                            <span class="text-2xl font-bold font-serif-display text-[#203a31]">AYUSH</span>
+                            <p class="text-xs text-slate-600 mt-1">Formulations adhere to classical Ayurvedic pharmacopoeia texts and safety monographs.</p>
                         </div>
                     </div>
                     <div class="space-y-4 pt-8">
@@ -141,49 +140,49 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <div class="bg-gradient-to-br from-emerald-950 to-emerald-900 text-white p-8 rounded-3xl relative overflow-hidden shadow-lg">
+            <div class="bg-white text-[#203a31] p-8 rounded-3xl relative overflow-hidden shadow-xs border border-stone-200">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-2xl font-bold font-serif-display text-amber-300">Aurangabad Operations</h3>
-                    <span class="text-xs bg-emerald-800/80 px-2.5 py-1 rounded-full text-emerald-200 font-semibold">Central Facility</span>
+                    <h3 class="text-2xl font-bold font-serif-display text-[#203a31]">Aurangabad Operations</h3>
+                    <span class="text-xs bg-stone-100 px-2.5 py-1 rounded-full text-slate-700 font-semibold border border-stone-200">Central Facility</span>
                 </div>
-                <p class="text-sm text-emerald-100/90 leading-relaxed mb-6">
+                <p class="text-sm text-slate-600 leading-relaxed mb-6">
                     Our Aurangabad operational facilities house primary formulation vessels, cosmetic batch mixing units, quality verification laboratories, and warehousing depots.
                 </p>
-                <ul class="space-y-2 text-xs text-emerald-200/90">
+                <ul class="space-y-2 text-xs text-slate-600">
                     <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <svg class="w-4 h-4 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                         GMP-compliant blending & bottle filling lines
                     </li>
                     <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <svg class="w-4 h-4 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                         Bulk cosmetic storage & wholesale dispatches
                     </li>
                     <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <svg class="w-4 h-4 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                         Administrative coordination & client OEM meetings
                     </li>
                 </ul>
             </div>
 
-            <div class="bg-gradient-to-br from-stone-900 to-emerald-950 text-white p-8 rounded-3xl relative overflow-hidden shadow-lg">
+            <div class="bg-white text-[#203a31] p-8 rounded-3xl relative overflow-hidden shadow-xs border border-stone-200">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-2xl font-bold font-serif-display text-amber-300">Gaya Botanical Node</h3>
-                    <span class="text-xs bg-emerald-800/80 px-2.5 py-1 rounded-full text-emerald-200 font-semibold">Herbal & Transit Hub</span>
+                    <h3 class="text-2xl font-bold font-serif-display text-[#203a31]">Gaya Botanical Node</h3>
+                    <span class="text-xs bg-stone-100 px-2.5 py-1 rounded-full text-slate-700 font-semibold border border-stone-200">Herbal & Transit Hub</span>
                 </div>
-                <p class="text-sm text-emerald-100/90 leading-relaxed mb-6">
+                <p class="text-sm text-slate-600 leading-relaxed mb-6">
                     Gaya serves as our botanical collection nexus, partnering with regional growers of medicinal herbs, and our high-speed transit node connecting with rail and road freight.
                 </p>
-                <ul class="space-y-2 text-xs text-emerald-200/90">
+                <ul class="space-y-2 text-xs text-slate-600">
                     <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <svg class="w-4 h-4 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                         Ethical herb sourcing & primary solar drying yards
                     </li>
                     <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <svg class="w-4 h-4 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                         Regional retail distribution across Magadh division
                     </li>
                     <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <svg class="w-4 h-4 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                         Training center for sales personnel & Ayurvedic retail vaidyas
                     </li>
                 </ul>
@@ -214,7 +213,7 @@
                 <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-6 items-start">
                     
                     <!-- Director Avatar/Image placeholder -->
-                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-tr from-emerald-800 to-emerald-950 text-white flex items-center justify-center font-serif-display font-bold text-3xl shrink-0 shadow-md border-2 border-emerald-100">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-stone-100 text-[#203a31] flex items-center justify-center font-serif-display font-bold text-3xl shrink-0 shadow-xs border border-stone-200">
                         {{ substr($director['name'], 0, 1) }}
                     </div>
 

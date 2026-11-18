@@ -5,16 +5,15 @@
 @section('content')
 
 <!-- Header Banner -->
-<section class="bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 text-white py-16 sm:py-24 relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(#52b788_1px,transparent_1px)] [background-size:20px_20px] opacity-15"></div>
+<section class="bg-white text-[#203a31] py-16 sm:py-20 relative overflow-hidden border-b border-stone-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center space-y-4">
-        <span class="inline-block text-xs font-bold uppercase tracking-widest text-amber-300 bg-emerald-800/80 px-3.5 py-1 rounded-full border border-amber-300/30">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#203a31] bg-[#c0caa7]/30 px-3.5 py-1 rounded-full border border-[#203a31]/20">
             Strategic Brand Growth
         </span>
-        <h1 class="text-3xl sm:text-5xl font-bold font-serif-display tracking-tight text-white">
+        <h1 class="text-3xl sm:text-5xl font-bold font-serif-display tracking-tight text-[#203a31]">
             Consultancy & Marketing Solutions
         </h1>
-        <p class="text-sm sm:text-base text-emerald-100 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Empowering beauty, cosmetic, and Ayurvedic enterprises with business advisory, retail distribution grooming, and performance marketing strategies.
         </p>
     </div>
@@ -78,19 +77,19 @@
 <!-- Retail Personnel & Distribution Training Spotlight -->
 <section class="py-16 bg-stone-50 border-b border-stone-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-emerald-950 text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-xl">
+        <div class="bg-white border border-stone-200 text-[#203a31] rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-xs">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-8 space-y-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-amber-300">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#384e42] bg-[#c0caa7]/30 px-3 py-1 rounded-full border border-[#203a31]/15 inline-block">
                         Practical Field Grooming
                     </span>
-                    <h3 class="text-2xl sm:text-3xl font-bold font-serif-display text-white">
+                    <h3 class="text-2xl sm:text-3xl font-bold font-serif-display text-[#203a31]">
                         Retail Counter & Field Sales Training in Bihar
                     </h3>
-                    <p class="text-sm text-emerald-100/90 leading-relaxed">
+                    <p class="text-sm text-slate-600 leading-relaxed">
                         Selling Ayurvedic and premium skincare requires product education. We conduct structured training bootcamps in Aurangabad and Gaya for in-store promoters, pharmacy sales staff, and stockist sales representatives, dramatically improving conversion rates.
                     </p>
-                    <div class="flex flex-wrap gap-4 pt-2 text-xs text-amber-200">
+                    <div class="flex flex-wrap gap-4 pt-2 text-xs text-[#384e42]">
                         <span class="flex items-center gap-1.5 font-semibold">✓ Ingredient Explanation Training</span>
                         <span class="flex items-center gap-1.5 font-semibold">✓ Customer Skin Objection Handling</span>
                         <span class="flex items-center gap-1.5 font-semibold">✓ Local Market Stock Rotation</span>
@@ -98,7 +97,7 @@
                 </div>
                 <div class="lg:col-span-4 text-center lg:text-right">
                     <button onclick="openEnquiryModal('Retail Training Program Inquiry', null, 'consultancy')" 
-                            class="bg-amber-400 hover:bg-amber-300 text-emerald-950 font-bold text-sm px-6 py-3.5 rounded-xl transition shadow-lg w-full sm:w-auto">
+                            class="bg-[#243c30] hover:bg-[#182a21] text-white font-medium text-sm px-6 py-3.5 rounded-xl transition shadow-xs w-full sm:w-auto cursor-pointer">
                         Inquire for Staff Training
                     </button>
                 </div>
