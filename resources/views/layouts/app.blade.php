@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-[#c5d2b8] text-[#203a31] antialiased selection:bg-[#203a31] selection:text-[#c5d2b8]">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-[#c0caa7] text-[#203a31] antialiased selection:bg-[#203a31] selection:text-[#c0caa7]">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,17 +8,14 @@
     <title>@yield('title', 'SMECA Box for Beautiful Skin | SMECA INDUSTRY PRIVATE LIMITED')</title>
     <meta name="description" content="@yield('meta_description', 'SMECA Industry Private Limited offers a set of organic cosmetics and authentic Ayurvedic formulations for everyday skin treatment and radiant wellness.')">
 
-    <!-- Fonts: Cormorant Garamond, Playfair Display & Plus Jakarta Sans -->
+    <!-- Fonts: Playfair Display & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         .font-serif-display {
             font-family: 'Playfair Display', Georgia, Cambria, serif;
-        }
-        .font-cormorant {
-            font-family: 'Cormorant Garamond', Georgia, serif;
         }
         body {
             font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -29,38 +26,38 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-full flex flex-col bg-[#c5d2b8] text-[#203a31] overflow-x-hidden">
+<body class="min-h-full flex flex-col bg-[#c0caa7] text-[#203a31] overflow-x-hidden">
 
-    <!-- Ultra-Clean Sage Integrated Navigation Bar (Exactly matching the reference image) -->
-    <header class="w-full bg-[#c5d2b8] z-40 transition-all duration-300">
+    <!-- Integrated Sage Navigation Bar (Exact Match to User Reference Image) -->
+    <header class="w-full bg-[#c0caa7] z-40 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
-            <div class="flex items-center justify-between h-24 sm:h-28">
+            <div class="flex items-center justify-between h-20 sm:h-24">
                 
                 <!-- Brand Identity (Matching 'Shine / PROFESSIONAL') -->
-                <a href="{{ route('home') }}" class="group flex flex-col items-start leading-tight">
+                <a href="{{ route('home') }}" class="group flex flex-col items-start leading-none">
                     <span class="text-2xl sm:text-[28px] font-medium tracking-tight text-[#203a31] font-serif-display">
                         SMECA
                     </span>
-                    <span class="text-[9.5px] sm:text-[10px] font-semibold text-[#466156] tracking-[0.22em] uppercase -mt-0.5">
+                    <span class="text-[9px] sm:text-[9.5px] font-semibold text-[#445437] tracking-[0.24em] uppercase mt-1">
                         PROFESSIONAL
                     </span>
                 </a>
 
                 <!-- Center Minimalist Navigation Links -->
                 <nav class="hidden md:flex items-center gap-8 lg:gap-12 text-xs sm:text-[13px] font-medium text-[#203a31]/90 tracking-wide">
-                    <a href="{{ route('about') }}" class="hover:text-[#0b1c16] transition-colors {{ request()->routeIs('about') ? 'font-bold text-[#0b1c16]' : '' }}">
+                    <a href="{{ route('about') }}" class="hover:text-[#121c0f] transition-colors {{ request()->routeIs('about') ? 'font-bold text-[#121c0f]' : '' }}">
                         About
                     </a>
-                    <a href="{{ route('products.index') }}" class="hover:text-[#0b1c16] transition-colors {{ request()->routeIs('products.*') ? 'font-bold text-[#0b1c16]' : '' }}">
+                    <a href="{{ route('products.index') }}" class="hover:text-[#121c0f] transition-colors {{ request()->routeIs('products.*') ? 'font-bold text-[#121c0f]' : '' }}">
                         Formulations
                     </a>
-                    <a href="{{ route('services.b2b') }}" class="hover:text-[#0b1c16] transition-colors {{ request()->routeIs('services.b2b') ? 'font-bold text-[#0b1c16]' : '' }}">
+                    <a href="{{ route('services.b2b') }}" class="hover:text-[#121c0f] transition-colors {{ request()->routeIs('services.b2b') ? 'font-bold text-[#121c0f]' : '' }}">
                         B2B & OEM
                     </a>
-                    <a href="{{ route('services.consultancy') }}" class="hover:text-[#0b1c16] transition-colors {{ request()->routeIs('services.consultancy') ? 'font-bold text-[#0b1c16]' : '' }}">
+                    <a href="{{ route('services.consultancy') }}" class="hover:text-[#121c0f] transition-colors {{ request()->routeIs('services.consultancy') ? 'font-bold text-[#121c0f]' : '' }}">
                         Consultancy
                     </a>
-                    <a href="{{ route('contact.index') }}" class="hover:text-[#0b1c16] transition-colors {{ request()->routeIs('contact.*') ? 'font-bold text-[#0b1c16]' : '' }}">
+                    <a href="{{ route('contact.index') }}" class="hover:text-[#121c0f] transition-colors {{ request()->routeIs('contact.*') ? 'font-bold text-[#121c0f]' : '' }}">
                         Contacts
                     </a>
                 </nav>
@@ -68,7 +65,7 @@
                 <!-- Right Action Button (Matching 'Order Shine Box Now') -->
                 <div class="hidden sm:flex items-center gap-4">
                     <button onclick="openEnquiryModal('SMECA Curated Skincare Box', null, 'product')" 
-                            class="bg-[#203a31] hover:bg-[#152721] text-white text-xs sm:text-[12.5px] font-medium px-6 py-3 rounded-xs tracking-wide shadow-xs transition duration-200">
+                            class="bg-[#263e32] hover:bg-[#1a2c23] text-white text-xs sm:text-[12.5px] font-medium px-6 py-2.5 rounded-xs tracking-wide shadow-xs transition duration-200">
                         Order SMECA Box Now
                     </button>
                 </div>
@@ -85,28 +82,28 @@
         </div>
 
         <!-- Mobile Drawer -->
-        <div id="mobileMenu" class="hidden md:hidden bg-[#c5d2b8] border-t border-[#203a31]/15 px-6 pt-3 pb-6 space-y-3">
+        <div id="mobileMenu" class="hidden md:hidden bg-[#c0caa7] border-t border-[#203a31]/15 px-6 pt-3 pb-6 space-y-3">
             <a href="{{ route('home') }}" class="block py-2 text-sm font-medium text-[#203a31]">
                 Home
             </a>
             <a href="{{ route('about') }}" class="block py-2 text-sm font-medium text-[#203a31]">
-                About
+                About Us & Directors
             </a>
             <a href="{{ route('products.index') }}" class="block py-2 text-sm font-medium text-[#203a31]">
-                Formulations
+                Formulations Catalog
             </a>
             <a href="{{ route('services.b2b') }}" class="block py-2 text-sm font-medium text-[#203a31]">
-                B2B & OEM
+                B2B & OEM Services
             </a>
             <a href="{{ route('services.consultancy') }}" class="block py-2 text-sm font-medium text-[#203a31]">
-                Consultancy
+                Consultancy & Advisory
             </a>
             <a href="{{ route('contact.index') }}" class="block py-2 text-sm font-medium text-[#203a31]">
-                Contacts
+                Contacts (Aurangabad & Gaya)
             </a>
             <div class="pt-2">
                 <button onclick="openEnquiryModal('SMECA Curated Skincare Box', null, 'product')" 
-                        class="w-full bg-[#203a31] text-white text-xs font-semibold py-3 rounded-xs text-center shadow-xs">
+                        class="w-full bg-[#263e32] text-white text-xs font-semibold py-3 rounded-xs text-center shadow-xs">
                     Order SMECA Box Now
                 </button>
             </div>
@@ -116,9 +113,9 @@
     <!-- Global Flash Notification -->
     @if(session('success_message'))
         <div class="max-w-7xl mx-auto px-6 sm:px-10 mt-2 relative z-30">
-            <div class="bg-white/80 backdrop-blur-md border border-[#203a31]/20 rounded-md px-4 py-3 text-[#203a31] shadow-xs flex items-center justify-between gap-3">
+            <div class="bg-white/90 backdrop-blur-md border border-[#203a31]/20 rounded-md px-4 py-3 text-[#203a31] shadow-xs flex items-center justify-between gap-3">
                 <div class="flex items-center gap-3">
-                    <span class="w-6 h-6 rounded-full bg-[#203a31] text-white flex items-center justify-center shrink-0">
+                    <span class="w-6 h-6 rounded-full bg-[#263e32] text-white flex items-center justify-center shrink-0">
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     </span>
                     <p class="text-xs font-medium">{{ session('success_message') }}</p>
@@ -140,15 +137,15 @@
         <div class="relative bg-[#f6f8f3] rounded-2xl shadow-2xl max-w-xl w-full border border-[#203a31]/20 overflow-hidden transform transition-all duration-300">
             
             <!-- Modal Header -->
-            <div class="bg-[#203a31] text-white p-6 sm:p-7 relative">
+            <div class="bg-[#263e32] text-white p-6 sm:p-7 relative">
                 <button onclick="closeEnquiryModal()" class="absolute top-5 right-5 text-white/70 hover:text-white p-1 rounded transition">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
-                <div class="text-[10px] font-bold uppercase tracking-widest text-[#c5d2b8] mb-1">
+                <div class="text-[10px] font-bold uppercase tracking-widest text-[#c0caa7] mb-1">
                     SMECA Direct Business Desk
                 </div>
                 <h3 class="text-2xl font-serif-display font-medium text-white">Order or Enquire About SMECA Box</h3>
-                <p class="text-xs text-[#c5d2b8]/90 mt-1" id="modalSubtitle">
+                <p class="text-xs text-[#c0caa7]/90 mt-1" id="modalSubtitle">
                     Interested in retail boxes, custom Ayurvedic formulations, or wholesale OEM production?
                 </p>
             </div>
@@ -161,19 +158,19 @@
                 <div>
                     <label class="block text-[11px] font-bold text-[#203a31] uppercase tracking-wider mb-1">Selected Product / Focus</label>
                     <input type="text" name="product_name" id="modalProductName" readonly
-                        class="w-full bg-[#e8eee2] border border-[#203a31]/20 rounded px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-[#203a31] focus:outline-hidden">
+                        class="w-full bg-[#e6ebdd] border border-[#203a31]/20 rounded px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-[#203a31] focus:outline-hidden">
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs font-semibold text-[#203a31] mb-1">Full Name <span class="text-rose-600">*</span></label>
                         <input type="text" name="name" required placeholder="e.g. Rahul Sharma"
-                            class="w-full bg-white border border-stone-300 rounded px-3.5 py-2.5 text-xs sm:text-sm focus:border-[#203a31] focus:outline-hidden">
+                            class="w-full bg-white border border-stone-300 rounded px-3.5 py-2.5 text-xs sm:text-sm focus:border-[#263e32] focus:outline-hidden">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-[#203a31] mb-1">Company / Brand (Optional)</label>
                         <input type="text" name="company_name" placeholder="Business name"
-                            class="w-full bg-white border border-stone-300 rounded px-3.5 py-2.5 text-xs sm:text-sm focus:border-[#203a31] focus:outline-hidden">
+                            class="w-full bg-white border border-stone-300 rounded px-3.5 py-2.5 text-xs sm:text-sm focus:border-[#263e32] focus:outline-hidden">
                     </div>
                 </div>
 
@@ -181,19 +178,19 @@
                     <div>
                         <label class="block text-xs font-semibold text-[#203a31] mb-1">Phone / WhatsApp <span class="text-rose-600">*</span></label>
                         <input type="tel" name="phone" required placeholder="+91 94700 00000"
-                            class="w-full bg-white border border-stone-300 rounded px-3.5 py-2.5 text-xs sm:text-sm focus:border-[#203a31] focus:outline-hidden">
+                            class="w-full bg-white border border-stone-300 rounded px-3.5 py-2.5 text-xs sm:text-sm focus:border-[#263e32] focus:outline-hidden">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-[#203a31] mb-1">Email Address <span class="text-rose-600">*</span></label>
                         <input type="email" name="email" required placeholder="name@domain.com"
-                            class="w-full bg-white border border-stone-300 rounded px-3.5 py-2.5 text-xs sm:text-sm focus:border-[#203a31] focus:outline-hidden">
+                            class="w-full bg-white border border-stone-300 rounded px-3.5 py-2.5 text-xs sm:text-sm focus:border-[#263e32] focus:outline-hidden">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-xs font-semibold text-[#203a31] mb-1">Inquiry Category</label>
                     <select name="inquiry_type" id="modalInquiryType"
-                        class="w-full bg-white border border-stone-300 rounded px-3.5 py-2.5 text-xs sm:text-sm focus:border-[#203a31] focus:outline-hidden">
+                        class="w-full bg-white border border-stone-300 rounded px-3.5 py-2.5 text-xs sm:text-sm focus:border-[#263e32] focus:outline-hidden">
                         <option value="product">Order SMECA Skincare Box</option>
                         <option value="b2b_oem">Third-Party OEM / Private Labeling</option>
                         <option value="distributorship">Super Stockist / Distributorship</option>
@@ -205,14 +202,14 @@
                 <div>
                     <label class="block text-xs font-semibold text-[#203a31] mb-1">Requirements / Message <span class="text-rose-600">*</span></label>
                     <textarea name="message" id="modalMessage" rows="3" required placeholder="Specify your desired box quantity, delivery location, or custom formulation details..."
-                        class="w-full bg-white border border-stone-300 rounded p-3 text-xs sm:text-sm focus:border-[#203a31] focus:outline-hidden"></textarea>
+                        class="w-full bg-white border border-stone-300 rounded p-3 text-xs sm:text-sm focus:border-[#263e32] focus:outline-hidden"></textarea>
                 </div>
 
                 <div class="flex items-center justify-end gap-3 pt-2">
                     <button type="button" onclick="closeEnquiryModal()" class="px-4 py-2 text-xs font-semibold text-slate-600 hover:text-slate-800 transition">
                         Cancel
                     </button>
-                    <button type="submit" class="bg-[#203a31] hover:bg-[#152721] text-white font-medium text-xs sm:text-sm px-6 py-2.5 rounded-xs shadow-xs transition">
+                    <button type="submit" class="bg-[#263e32] hover:bg-[#1a2c23] text-white font-medium text-xs sm:text-sm px-6 py-2.5 rounded-xs shadow-xs transition">
                         Submit Order / Inquiry
                     </button>
                 </div>
@@ -221,7 +218,7 @@
     </div>
 
     <!-- Corporate Minimalist Footer -->
-    <footer class="bg-[#203a31] text-[#c5d2b8] border-t border-[#152721] pt-16 pb-10">
+    <footer class="bg-[#202716] text-[#c0caa7] border-t border-[#12170c] pt-16 pb-10">
         <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
                 
@@ -229,12 +226,12 @@
                 <div class="lg:col-span-2 space-y-4">
                     <div>
                         <span class="text-2xl font-serif-display font-medium text-white tracking-tight">SMECA</span>
-                        <span class="block text-[10px] tracking-[0.25em] uppercase text-[#c5d2b8]/80 font-semibold -mt-1">PROFESSIONAL</span>
+                        <span class="block text-[10px] tracking-[0.25em] uppercase text-[#c0caa7]/80 font-semibold mt-0.5">PROFESSIONAL</span>
                     </div>
-                    <p class="text-xs sm:text-sm text-[#c5d2b8]/80 leading-relaxed max-w-md">
+                    <p class="text-xs sm:text-sm text-[#c0caa7]/80 leading-relaxed max-w-md">
                         SMECA Industry Private Limited manufactures premium organic cosmetics, skincare treatments, and authentic Ayurvedic wellness formulations in Bihar (Aurangabad & Gaya).
                     </p>
-                    <div class="pt-1 text-xs text-[#c5d2b8]/90 space-y-1">
+                    <div class="pt-1 text-xs text-[#c0caa7]/90 space-y-1">
                         <p><strong class="text-white">Operating Region:</strong> Bihar, India – Aurangabad & Gaya Districts</p>
                         <p><strong class="text-white">Directors:</strong> Sanjit Kumar, Sonu Kumar, Sarina Kumari, Yogendra Das</p>
                     </div>
@@ -243,7 +240,7 @@
                 <!-- Col 2: Navigation -->
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Navigation</h4>
-                    <ul class="space-y-2 text-xs text-[#c5d2b8]/80">
+                    <ul class="space-y-2 text-xs text-[#c0caa7]/80">
                         <li><a href="{{ route('home') }}" class="hover:text-white transition">Home</a></li>
                         <li><a href="{{ route('about') }}" class="hover:text-white transition">About Us</a></li>
                         <li><a href="{{ route('products.index') }}" class="hover:text-white transition">Formulations</a></li>
@@ -256,7 +253,7 @@
                 <!-- Col 3: Categories -->
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Categories</h4>
-                    <ul class="space-y-2 text-xs text-[#c5d2b8]/80">
+                    <ul class="space-y-2 text-xs text-[#c0caa7]/80">
                         <li><a href="{{ route('products.index', ['category' => 'ayurvedic']) }}" class="hover:text-white transition">Ayurvedic Tailams</a></li>
                         <li><a href="{{ route('products.index', ['category' => 'skincare']) }}" class="hover:text-white transition">Skincare & Serums</a></li>
                         <li><a href="{{ route('products.index', ['category' => 'haircare']) }}" class="hover:text-white transition">Haircare Therapy</a></li>
@@ -268,10 +265,10 @@
                 <!-- Col 4: Operations & Portal -->
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Operations</h4>
-                    <p class="text-xs text-[#c5d2b8]/80 leading-relaxed mb-4">
+                    <p class="text-xs text-[#c0caa7]/80 leading-relaxed mb-4">
                         Aurangabad Manufacturing Facility & Gaya Botanical Hub.
                     </p>
-                    <a href="{{ route('admin.inquiries') }}" class="inline-block bg-[#c5d2b8]/15 hover:bg-[#c5d2b8]/25 text-white text-xs font-semibold px-4 py-2 rounded-xs transition">
+                    <a href="{{ route('admin.inquiries') }}" class="inline-block bg-[#c0caa7]/15 hover:bg-[#c0caa7]/25 text-white text-xs font-semibold px-4 py-2 rounded-xs transition">
                         Staff Inquiry Portal &rarr;
                     </a>
                 </div>
@@ -279,7 +276,7 @@
             </div>
 
             <!-- Bottom Copyright -->
-            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#c5d2b8]/60">
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#c0caa7]/60">
                 <p>© {{ date('Y') }} SMECA INDUSTRY PRIVATE LIMITED. All rights reserved.</p>
                 <div class="flex items-center gap-4 text-[11px]">
                     <span>✓ 100% Organic & Ayurvedic</span>

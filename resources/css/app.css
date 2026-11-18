@@ -8,21 +8,18 @@
     --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', Times, serif;
     
-    /* Sage palette matching the user's reference image */
-    --color-sage-50: #f6f8f3;
-    --color-sage-100: #e8eee2;
-    --color-sage-200: #d8e4cf;
-    --color-sage-300: #c5d2b8; /* Exact hero background */
-    --color-sage-400: #a9bd99;
-    --color-sage-500: #8da47b;
-    --color-sage-600: #6f865f;
-    --color-sage-700: #556847; /* Exact box color */
-    --color-sage-800: #3d564c; /* Subtitle / Secondary text */
-    --color-sage-900: #203a31; /* Headline & Dark Button */
-    --color-sage-950: #14251f;
-
-    --color-olive-box: #566847;
-    --color-olive-dark: #435236;
+    /* Exact sampled organic sage palette from user's reference image */
+    --color-sage-50: #f5f7f1;
+    --color-sage-100: #e6ebdd;
+    --color-sage-200: #d4ddc6;
+    --color-sage-300: #c0caa7; /* Exact reference background */
+    --color-sage-400: #a7b489;
+    --color-sage-500: #8c9b6c;
+    --color-sage-600: #6d7b4f;
+    --color-sage-700: #525e3b;
+    --color-sage-800: #394328;
+    --color-sage-900: #202716;
+    --color-sage-950: #12170c;
 }
 
 html {
@@ -31,37 +28,19 @@ html {
 
 ::selection {
     background-color: #203a31;
-    color: #c5d2b8;
+    color: #c0caa7;
 }
 
-/* Floating leaves animations */
-@keyframes leaf-float-1 {
+/* Subtle floating leaf animation */
+@keyframes leaf-float {
     0%, 100% {
         transform: translateY(0px) rotate(0deg);
     }
     50% {
-        transform: translateY(-8px) rotate(3deg);
+        transform: translateY(-6px) rotate(2deg);
     }
 }
 
-@keyframes leaf-float-2 {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(6px) rotate(-4deg);
-    }
-}
-
-.animate-float-1 {
-    animation: leaf-float-1 6s ease-in-out infinite;
-}
-
-.animate-float-2 {
-    animation: leaf-float-2 7s ease-in-out infinite;
-}
-
-/* 3D Box Perspective */
-.perspective-box {
-    perspective: 1200px;
+.animate-leaf {
+    animation: leaf-float 5s ease-in-out infinite;
 }
