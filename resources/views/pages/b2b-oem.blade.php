@@ -57,7 +57,7 @@
 
                     <div class="mt-6 pt-4 border-t border-stone-200">
                         <button onclick="openEnquiryModal('OEM Inquiry: {{ addslashes($capability['title']) }}', null, 'b2b_oem')"
-                                class="text-xs font-bold text-emerald-800 hover:text-emerald-950 flex items-center gap-1.5 transition">
+                                class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1.5 transition cursor-pointer">
                             <span>Request Specifications</span>
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </button>
@@ -162,7 +162,7 @@
                 </div>
 
                 <div class="text-center pt-2">
-                    <button type="submit" class="bg-[#243c30] hover:bg-[#182a21] text-white font-medium text-sm px-8 py-3.5 rounded-xl shadow-xs transition w-full sm:w-auto">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm px-8 py-3.5 rounded-xl shadow-xs transition w-full sm:w-auto cursor-pointer">
                         Submit OEM Manufacturing Inquiry
                     </button>
                     <p class="text-[11px] text-slate-500 mt-2">

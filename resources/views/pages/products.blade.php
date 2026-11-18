@@ -114,7 +114,7 @@
             </div>
             <div class="shrink-0 flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
                 <button onclick="openEnquiryModal('Custom Formulation R&D Project', null, 'b2b_oem')" 
-                        class="bg-[#243c30] hover:bg-[#182a21] text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-xl transition text-center shadow-xs cursor-pointer">
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-xl transition text-center shadow-xs cursor-pointer">
                     Request Custom Lab Sample
                 </button>
                 <a href="{{ route('services.b2b') }}" 

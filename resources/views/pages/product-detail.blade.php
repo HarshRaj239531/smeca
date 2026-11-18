@@ -106,7 +106,7 @@
                         <div class="text-xs text-slate-600 mt-0.5">Order retail batches, request a physical sample, or discuss OEM contract packaging.</div>
                     </div>
                     <button onclick="openEnquiryModal('{{ addslashes($product->name) }}', {{ $product->id }}, 'product')"
-                            class="shrink-0 bg-[#243c30] hover:bg-[#182a21] text-white font-medium text-xs sm:text-sm px-6 py-3 rounded-xl transition shadow-xs flex items-center gap-2 cursor-pointer">
+                            class="shrink-0 bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs sm:text-sm px-6 py-3 rounded-xl transition shadow-xs flex items-center gap-2 cursor-pointer">
                         <span>Enquire About This Product</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </button>
@@ -136,7 +136,7 @@
                     <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
                         <span class="text-[11px] font-semibold text-emerald-800">{{ $related->volume_size }}</span>
                         <button onclick="openEnquiryModal('{{ addslashes($related->name) }}', {{ $related->id }}, 'product')"
-                                class="text-xs font-bold text-emerald-800 hover:underline">
+                                class="text-xs font-bold text-blue-600 hover:text-blue-800 hover:underline cursor-pointer">
                             Enquire &rarr;
                         </button>
                     </div>

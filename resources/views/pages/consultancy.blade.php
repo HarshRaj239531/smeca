@@ -62,7 +62,7 @@
 
                     <div class="mt-8 pt-4 border-t border-stone-200">
                         <button onclick="openEnquiryModal('Advisory: {{ addslashes($service['title']) }}', null, 'consultancy')"
-                                class="bg-emerald-800 hover:bg-emerald-900 text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition shadow-xs flex items-center gap-2">
+                                class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition shadow-xs flex items-center gap-2 cursor-pointer">
                             <span>Book Consultation Session</span>
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </button>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="lg:col-span-4 text-center lg:text-right">
                     <button onclick="openEnquiryModal('Retail Training Program Inquiry', null, 'consultancy')" 
-                            class="bg-[#243c30] hover:bg-[#182a21] text-white font-medium text-sm px-6 py-3.5 rounded-xl transition shadow-xs w-full sm:w-auto cursor-pointer">
+                            class="bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm px-6 py-3.5 rounded-xl transition shadow-xs w-full sm:w-auto cursor-pointer">
                         Inquire for Staff Training
                     </button>
                 </div>

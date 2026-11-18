@@ -82,7 +82,7 @@
                 </select>
             </div>
 
-            <button type="submit" class="bg-emerald-800 hover:bg-emerald-900 text-white text-xs font-semibold px-4 py-2 rounded-xl transition">
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded-xl transition cursor-pointer">
                 Filter
             </button>
             <a href="{{ route('admin.inquiries') }}" class="text-xs text-slate-500 hover:underline">Reset</a>

@@ -218,7 +218,7 @@
 
                         <!-- Action Submit -->
                         <div class="pt-2">
-                            <button type="submit" class="w-full bg-[#243c30] hover:bg-[#182a21] text-white font-medium text-sm py-3.5 rounded-xl shadow-xs transition cursor-pointer">
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm py-3.5 rounded-xl shadow-xs transition cursor-pointer">
                                 Submit Formal Inquiry
                             </button>
                             <p class="text-[11px] text-slate-500 text-center mt-3">

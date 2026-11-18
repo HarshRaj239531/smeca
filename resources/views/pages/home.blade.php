@@ -36,7 +36,7 @@
                 <!-- Action Button -->
                 <div class="pt-2">
                     <button onclick="openEnquiryModal('SMECA Curated Skincare Box', null, 'product')" 
-                            class="bg-[#243c30] hover:bg-[#182a21] text-white text-xs sm:text-sm font-medium px-8 py-3.5 rounded-xs tracking-wide shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer">
+                            class="bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-8 py-3.5 rounded-xs tracking-wide shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer">
                         Order SMECA Box Now &rarr;
                     </button>
                 </div>
@@ -252,7 +252,7 @@
                                 Specifications
                             </a>
                             <button onclick="openEnquiryModal('{{ addslashes($product->name) }}', {{ $product->id }}, 'product')"
-                                    class="bg-[#263e32] hover:bg-[#1a2c23] text-white text-xs font-medium px-4 py-2 rounded-xs transition flex items-center gap-1.5 shadow-xs">
+                                    class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium px-4 py-2 rounded-xs transition flex items-center gap-1.5 shadow-xs cursor-pointer">
                                 <span>Enquire Now</span>
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                             </button>
@@ -586,7 +586,7 @@
             </div>
             <div class="shrink-0 flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
                 <button onclick="openEnquiryModal('General Business Requirement', null, 'b2b_oem')"
-                        class="bg-[#243c30] hover:bg-[#182a21] text-white text-xs sm:text-sm font-medium px-7 py-3.5 rounded-xs tracking-wide shadow-xs transition cursor-pointer">
+                        class="bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-7 py-3.5 rounded-xs tracking-wide shadow-xs transition cursor-pointer">
                     Submit Product Enquiry &rarr;
                 </button>
                 <a href="{{ route('contact.index') }}" 

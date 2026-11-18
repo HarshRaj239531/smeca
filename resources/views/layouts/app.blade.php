@@ -68,7 +68,7 @@
                 <!-- Right Action Button (Matching 'Order Shine Box Now') -->
                 <div class="hidden sm:flex items-center gap-4">
                     <button onclick="openEnquiryModal('SMECA Curated Skincare Box', null, 'product')" 
-                            class="bg-[#263e32] hover:bg-[#1a2c23] text-white text-xs sm:text-[12.5px] font-medium px-6 py-2.5 rounded-xs tracking-wide shadow-xs transition duration-200">
+                            class="bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-[12.5px] font-medium px-6 py-2.5 rounded-xs tracking-wide shadow-xs transition duration-200 cursor-pointer">
                         Order SMECA Box Now
                     </button>
                 </div>
@@ -112,7 +112,7 @@
             </a>
             <div class="pt-2">
                 <button onclick="openEnquiryModal('SMECA Curated Skincare Box', null, 'product')" 
-                        class="w-full bg-[#263e32] text-white text-xs font-semibold py-3 rounded-xs text-center shadow-xs">
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold py-3 rounded-xs text-center shadow-xs cursor-pointer">
                     Order SMECA Box Now
                 </button>
             </div>
@@ -218,7 +218,7 @@
                     <button type="button" onclick="closeEnquiryModal()" class="px-4 py-2 text-xs font-semibold text-slate-600 hover:text-slate-800 transition">
                         Cancel
                     </button>
-                    <button type="submit" class="bg-[#263e32] hover:bg-[#1a2c23] text-white font-medium text-xs sm:text-sm px-6 py-2.5 rounded-xs shadow-xs transition">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs sm:text-sm px-6 py-2.5 rounded-xs shadow-xs transition cursor-pointer">
                         Submit Order / Inquiry
                     </button>
                 </div>
