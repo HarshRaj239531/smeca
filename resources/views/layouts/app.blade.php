@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-stone-50 text-slate-900 antialiased selection:bg-emerald-900 selection:text-amber-200">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-[#fbfaf7] text-slate-900 antialiased selection:bg-emerald-950 selection:text-amber-200">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', 'SMECA INDUSTRY PRIVATE LIMITED | Botanical Cosmetics & Ayurvedic Formulations')</title>
-    <meta name="description" content="@yield('meta_description', 'SMECA Industry Private Limited is an Indian premier manufacturer of certified Cosmetics, Skincare, Personal Care and Ayurvedic Formulations headquartered in Bihar (Aurangabad & Gaya). Leading B2C wellness and turnkey B2B/OEM contract manufacturing.')">
+    <meta name="description" content="@yield('meta_description', 'SMECA Industry Private Limited is an Indian manufacturer of certified Cosmetics, Skincare, Personal Care and Ayurvedic Formulations headquartered in Bihar (Aurangabad & Gaya). Leading B2C wellness and turnkey B2B/OEM contract manufacturing.')">
 
-    <!-- Premium Google Fonts: Playfair Display, Cormorant Garamond & Plus Jakarta Sans -->
+    <!-- Fonts: Cormorant Garamond, Playfair Display & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -29,166 +29,140 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-full flex flex-col bg-[#faf9f6] text-slate-900 overflow-x-hidden">
+<body class="min-h-full flex flex-col bg-[#fbfaf7] text-slate-900 overflow-x-hidden">
 
-    <!-- Top Announcement & Operational Status Bar -->
-    <div class="bg-[#081c12] text-emerald-200 text-xs py-2 px-4 sm:px-8 border-b border-emerald-950/80 relative z-50">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            
-            <!-- Live Regional Status Indicator -->
-            <div class="flex items-center gap-2.5 text-[11px] font-medium tracking-wide">
+    <!-- Subtle Minimalist Top Micro-Ribbon -->
+    <div class="bg-[#0b2417] text-emerald-200 text-[11px] py-1.5 px-4 sm:px-8 border-b border-emerald-950/90 relative z-40">
+        <div class="max-w-7xl mx-auto flex justify-between items-center gap-4">
+            <!-- Left: Regional Status -->
+            <div class="flex items-center gap-2">
                 <span class="relative flex h-2 w-2">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
                 </span>
-                <span class="text-emerald-100 font-semibold uppercase tracking-wider text-[10px]">OPERATIONAL HUB:</span>
-                <span class="text-emerald-300/90 hidden sm:inline">Aurangabad & Gaya Districts (Bihar, India)</span>
+                <span class="font-semibold text-emerald-100 uppercase tracking-widest text-[9.5px]">OPERATIONAL HUB:</span>
+                <span class="text-emerald-300/90 hidden sm:inline">Aurangabad & Gaya Districts, Bihar</span>
                 <span class="text-emerald-700 hidden md:inline">•</span>
-                <span class="text-amber-300 font-medium hidden md:inline">AYUSH & GMP Standards Compliant</span>
+                <span class="text-amber-300/90 font-medium hidden md:inline">AYUSH & GMP Standard Compliant</span>
             </div>
 
-            <!-- Quick Direct Communications -->
-            <div class="flex items-center gap-4 sm:gap-6 text-[11px] text-emerald-200/90 font-medium tracking-wide">
-                <a href="tel:+919470000000" class="hover:text-white transition flex items-center gap-1.5 group">
-                    <svg class="w-3.5 h-3.5 text-amber-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <!-- Right: Direct Helpline -->
+            <div class="flex items-center gap-4 sm:gap-6 text-emerald-200/90 font-medium">
+                <a href="tel:+919470000000" class="hover:text-amber-200 transition flex items-center gap-1.5">
+                    <svg class="w-3 h-3 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                     <span>+91 94700 00000</span>
                 </a>
-                <span class="text-emerald-800">/</span>
-                <a href="mailto:contact@smecaindustry.com" class="hover:text-white transition flex items-center gap-1.5 group">
-                    <svg class="w-3.5 h-3.5 text-amber-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                    <span class="hidden md:inline">contact@smecaindustry.com</span>
-                    <span class="md:hidden">Email Desk</span>
+                <span class="text-emerald-800 hidden sm:inline">|</span>
+                <a href="mailto:contact@smecaindustry.com" class="hover:text-amber-200 transition hidden sm:flex items-center gap-1.5">
+                    <svg class="w-3 h-3 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <span>contact@smecaindustry.com</span>
                 </a>
                 <span class="text-emerald-800 hidden lg:inline">|</span>
-                <a href="{{ route('admin.inquiries') }}" class="hidden lg:flex items-center gap-1 text-emerald-400 hover:text-white text-[10px] tracking-wider uppercase font-semibold transition">
-                    <span>Staff Portal</span>
-                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                <a href="{{ route('admin.inquiries') }}" class="hidden lg:inline text-emerald-400 hover:text-white uppercase tracking-wider text-[10px] font-bold">
+                    Staff Portal &rarr;
                 </a>
             </div>
-
         </div>
     </div>
 
-    <!-- Award-Winning Luxury Frosted Navigation Header -->
-    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-stone-200/80 transition-all duration-300 shadow-[0_4px_24px_rgba(15,46,30,0.04)]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-22 sm:h-24">
+    <!-- Award-Winning Floating Island Capsule Navbar -->
+    <div class="sticky top-2 sm:top-4 z-50 px-3 sm:px-6 lg:px-8 transition-all duration-300">
+        <header class="max-w-7xl mx-auto">
+            <div class="bg-white/85 backdrop-blur-2xl border border-stone-200/90 shadow-[0_12px_40px_rgba(8,28,18,0.07)] rounded-2xl sm:rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-4 transition-all">
                 
-                <!-- Bespoke Luxury Brand Identity / Seal -->
-                <a href="{{ route('home') }}" class="group flex items-center gap-3.5 sm:gap-4 shrink-0">
-                    <!-- Custom Botanical Emblem with Gold Leaf Accents -->
-                    <div class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-[#081c12] via-[#0f2e1e] to-[#1b4d33] p-0.5 shadow-lg shadow-emerald-950/20 group-hover:shadow-emerald-900/30 transition-all duration-300 group-hover:scale-[1.03]">
-                        <div class="w-full h-full rounded-[14px] bg-[#0b2417] border border-amber-400/30 flex items-center justify-center relative overflow-hidden">
-                            <!-- Subtle golden radial glint -->
-                            <div class="absolute inset-0 bg-radial from-amber-400/20 via-transparent to-transparent opacity-60"></div>
-                            <svg class="w-7 h-7 sm:w-8 sm:h-8 text-amber-300 transform group-hover:rotate-6 transition-transform duration-500" viewBox="0 0 24 24" fill="currentColor">
+                <!-- Brand Seal & Logo -->
+                <a href="{{ route('home') }}" class="flex items-center gap-3 shrink-0 group">
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#081c12] via-[#0f2e1e] to-[#1b4d33] p-0.5 shadow-md shadow-emerald-950/20 group-hover:scale-105 transition-all duration-300">
+                        <div class="w-full h-full rounded-[10px] sm:rounded-[14px] bg-[#0b2417] border border-amber-400/30 flex items-center justify-center">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-amber-300 group-hover:rotate-6 transition-transform duration-300" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/>
                             </svg>
                         </div>
                     </div>
-
-                    <!-- Typography with Corporate Authority -->
-                    <div class="space-y-0.5">
-                        <div class="flex items-center gap-2">
-                            <span class="text-2xl sm:text-3xl font-extrabold tracking-[-0.03em] text-[#081c12] font-serif-display">
-                                SMECA
-                            </span>
-                            <span class="text-[9px] font-bold uppercase tracking-widest text-amber-800 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-300/70">
-                                PVT LTD
-                            </span>
+                    <div>
+                        <div class="flex items-center gap-1.5 leading-none">
+                            <span class="text-xl sm:text-2xl font-black tracking-tight text-[#081c12] font-serif-display">SMECA</span>
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-amber-800 bg-amber-50 px-1.5 py-0.2 rounded border border-amber-300/80">PVT LTD</span>
                         </div>
-                        <p class="text-[10px] sm:text-[11px] font-bold text-emerald-800 uppercase tracking-[0.16em]">
-                            Ayurvedic & Cosmetic Science
+                        <p class="text-[9.5px] sm:text-[10px] font-bold text-emerald-800 uppercase tracking-[0.14em] mt-0.5">
+                            Ayurvedic & Cosmetics
                         </p>
                     </div>
                 </a>
 
-                <!-- Desktop Haute Navigation Links with Interactive Mega-Menu -->
-                <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-[13px] font-semibold text-slate-700 tracking-wide">
+                <!-- Desktop Haute Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-1 xl:gap-1.5 text-xs font-semibold text-slate-700 tracking-wide">
                     
                     <!-- Home -->
                     <a href="{{ route('home') }}" 
-                       class="px-3.5 py-2.5 rounded-xl transition-all duration-200 relative group {{ request()->routeIs('home') ? 'text-emerald-900 font-bold bg-emerald-50/80' : 'hover:text-emerald-900 hover:bg-stone-50' }}">
-                        <span>Home</span>
-                        @if(request()->routeIs('home'))
-                            <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-emerald-800 rounded-full"></span>
-                        @endif
+                       class="px-3.5 py-2 rounded-full transition-all duration-200 {{ request()->routeIs('home') ? 'bg-[#0b2417] text-amber-200 font-bold shadow-xs' : 'hover:text-[#0b2417] hover:bg-stone-100' }}">
+                        Home
                     </a>
 
                     <!-- About Us -->
                     <a href="{{ route('about') }}" 
-                       class="px-3.5 py-2.5 rounded-xl transition-all duration-200 relative group {{ request()->routeIs('about') ? 'text-emerald-900 font-bold bg-emerald-50/80' : 'hover:text-emerald-900 hover:bg-stone-50' }}">
-                        <span>About & Governance</span>
-                        @if(request()->routeIs('about'))
-                            <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-emerald-800 rounded-full"></span>
-                        @endif
+                       class="px-3.5 py-2 rounded-full transition-all duration-200 {{ request()->routeIs('about') ? 'bg-[#0b2417] text-amber-200 font-bold shadow-xs' : 'hover:text-[#0b2417] hover:bg-stone-100' }}">
+                        About Us
                     </a>
 
-                    <!-- Formulations / Dynamic Products with Dropdown Menu -->
-                    <div class="relative group" id="productsMenuWrapper">
+                    <!-- Formulations Mega Dropdown -->
+                    <div class="relative group">
                         <a href="{{ route('products.index') }}" 
-                           class="px-3.5 py-2.5 rounded-xl transition-all duration-200 inline-flex items-center gap-1.5 {{ request()->routeIs('products.*') ? 'text-emerald-900 font-bold bg-emerald-50/80' : 'hover:text-emerald-900 hover:bg-stone-50' }}">
+                           class="px-3.5 py-2 rounded-full transition-all duration-200 inline-flex items-center gap-1.5 {{ request()->routeIs('products.*') ? 'bg-[#0b2417] text-amber-200 font-bold shadow-xs' : 'hover:text-[#0b2417] hover:bg-stone-100' }}">
                             <span>Formulations</span>
-                            <span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-bold bg-emerald-100 text-emerald-900">
-                                Dynamic
-                            </span>
-                            <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-900 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <span class="w-1.5 h-1.5 rounded-full {{ request()->routeIs('products.*') ? 'bg-amber-300' : 'bg-emerald-600' }}"></span>
+                            <svg class="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </a>
 
-                        <!-- Dropdown Panel -->
-                        <div class="absolute left-0 top-full pt-2 w-80 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
-                            <div class="bg-white/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-stone-200/90 p-4 space-y-2">
-                                <div class="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-stone-100 pb-1.5">
-                                    Product Categories
+                        <!-- Floating Luxury Dropdown Menu -->
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-80 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
+                            <div class="bg-white/98 backdrop-blur-2xl rounded-2xl shadow-2xl border border-stone-200/90 p-3.5 space-y-1.5">
+                                <div class="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-stone-100 pb-1">
+                                    Dynamic Formulation Segments
                                 </div>
-                                <div class="space-y-1">
-                                    <a href="{{ route('products.index', ['category' => 'ayurvedic']) }}" class="flex items-center justify-between p-2 rounded-xl hover:bg-emerald-50/70 transition group/item">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs">🌿</span>
-                                            <div>
-                                                <div class="text-xs font-bold text-slate-900 group-hover/item:text-emerald-900">Ayurvedic Formulations</div>
-                                                <div class="text-[10px] text-slate-500">Classical Tailam, Lepas & Asavas</div>
-                                            </div>
+                                <a href="{{ route('products.index', ['category' => 'ayurvedic']) }}" class="flex items-center justify-between p-2 rounded-xl hover:bg-emerald-50/80 transition">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="text-sm">🌿</span>
+                                        <div>
+                                            <div class="text-xs font-bold text-slate-800">Ayurvedic Formulations</div>
+                                            <div class="text-[10px] text-slate-500">Classical Tailam & Lepams</div>
                                         </div>
-                                        <svg class="w-3.5 h-3.5 text-slate-300 group-hover/item:text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-
-                                    <a href="{{ route('products.index', ['category' => 'skincare']) }}" class="flex items-center justify-between p-2 rounded-xl hover:bg-emerald-50/70 transition group/item">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs">✨</span>
-                                            <div>
-                                                <div class="text-xs font-bold text-slate-900 group-hover/item:text-emerald-900">Skincare & Facial Care</div>
-                                                <div class="text-[10px] text-slate-500">Active Vitamin C & Aloe Serums</div>
-                                            </div>
+                                    </div>
+                                    <span class="text-[10px] text-emerald-800 font-bold">&rarr;</span>
+                                </a>
+                                <a href="{{ route('products.index', ['category' => 'skincare']) }}" class="flex items-center justify-between p-2 rounded-xl hover:bg-emerald-50/80 transition">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="text-sm">✨</span>
+                                        <div>
+                                            <div class="text-xs font-bold text-slate-800">Skincare & Serums</div>
+                                            <div class="text-[10px] text-slate-500">Vitamin C & Aloe Hydragels</div>
                                         </div>
-                                        <svg class="w-3.5 h-3.5 text-slate-300 group-hover/item:text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-
-                                    <a href="{{ route('products.index', ['category' => 'haircare']) }}" class="flex items-center justify-between p-2 rounded-xl hover:bg-emerald-50/70 transition group/item">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs">💧</span>
-                                            <div>
-                                                <div class="text-xs font-bold text-slate-900 group-hover/item:text-emerald-900">Haircare & Scalp Therapy</div>
-                                                <div class="text-[10px] text-slate-500">Bhringraj & Red Onion Oils</div>
-                                            </div>
+                                    </div>
+                                    <span class="text-[10px] text-emerald-800 font-bold">&rarr;</span>
+                                </a>
+                                <a href="{{ route('products.index', ['category' => 'haircare']) }}" class="flex items-center justify-between p-2 rounded-xl hover:bg-emerald-50/80 transition">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="text-sm">💧</span>
+                                        <div>
+                                            <div class="text-xs font-bold text-slate-800">Haircare & Scalp Therapy</div>
+                                            <div class="text-[10px] text-slate-500">Bhringraj & Red Onion Oils</div>
                                         </div>
-                                        <svg class="w-3.5 h-3.5 text-slate-300 group-hover/item:text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-
-                                    <a href="{{ route('products.index', ['category' => 'perfumes']) }}" class="flex items-center justify-between p-2 rounded-xl hover:bg-emerald-50/70 transition group/item">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs">🌸</span>
-                                            <div>
-                                                <div class="text-xs font-bold text-slate-900 group-hover/item:text-emerald-900">Artisanal Perfumes & Attar</div>
-                                                <div class="text-[10px] text-slate-500">Pure Mitti & Royal Oudh</div>
-                                            </div>
+                                    </div>
+                                    <span class="text-[10px] text-emerald-800 font-bold">&rarr;</span>
+                                </a>
+                                <a href="{{ route('products.index', ['category' => 'perfumes']) }}" class="flex items-center justify-between p-2 rounded-xl hover:bg-emerald-50/80 transition">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="text-sm">🌸</span>
+                                        <div>
+                                            <div class="text-xs font-bold text-slate-800">Artisanal Perfumes & Attars</div>
+                                            <div class="text-[10px] text-slate-500">Mitti & Royal Oudh Blends</div>
                                         </div>
-                                        <svg class="w-3.5 h-3.5 text-slate-300 group-hover/item:text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </div>
+                                    </div>
+                                    <span class="text-[10px] text-emerald-800 font-bold">&rarr;</span>
+                                </a>
                                 <div class="pt-2 border-t border-stone-100 text-center">
-                                    <a href="{{ route('products.index') }}" class="text-[11px] font-bold text-emerald-800 hover:text-emerald-950 block py-1">
-                                        Browse Complete Catalog &rarr;
+                                    <a href="{{ route('products.index') }}" class="text-[11px] font-bold text-emerald-900 hover:underline block py-0.5">
+                                        View All 12+ Dynamic Products &rarr;
                                     </a>
                                 </div>
                             </div>
@@ -197,97 +171,100 @@
 
                     <!-- B2B & OEM Services -->
                     <a href="{{ route('services.b2b') }}" 
-                       class="px-3.5 py-2.5 rounded-xl transition-all duration-200 inline-flex items-center gap-1.5 {{ request()->routeIs('services.b2b') ? 'text-emerald-900 font-bold bg-emerald-50/80' : 'hover:text-emerald-900 hover:bg-stone-50' }}">
+                       class="px-3.5 py-2 rounded-full transition-all duration-200 inline-flex items-center gap-1.5 {{ request()->routeIs('services.b2b') ? 'bg-[#0b2417] text-amber-200 font-bold shadow-xs' : 'hover:text-[#0b2417] hover:bg-stone-100' }}">
                         <span>B2B & OEM</span>
-                        <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                        <span class="text-[9px] font-bold bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-full">Contract Mfg</span>
                     </a>
 
                     <!-- Consultancy -->
                     <a href="{{ route('services.consultancy') }}" 
-                       class="px-3.5 py-2.5 rounded-xl transition-all duration-200 {{ request()->routeIs('services.consultancy') ? 'text-emerald-900 font-bold bg-emerald-50/80' : 'hover:text-emerald-900 hover:bg-stone-50' }}">
-                        <span>Consultancy</span>
+                       class="px-3.5 py-2 rounded-full transition-all duration-200 {{ request()->routeIs('services.consultancy') ? 'bg-[#0b2417] text-amber-200 font-bold shadow-xs' : 'hover:text-[#0b2417] hover:bg-stone-100' }}">
+                        Consultancy
                     </a>
 
                     <!-- Contact -->
                     <a href="{{ route('contact.index') }}" 
-                       class="px-3.5 py-2.5 rounded-xl transition-all duration-200 {{ request()->routeIs('contact.*') ? 'text-emerald-900 font-bold bg-emerald-50/80' : 'hover:text-emerald-900 hover:bg-stone-50' }}">
-                        <span>Contact</span>
+                       class="px-3.5 py-2 rounded-full transition-all duration-200 {{ request()->routeIs('contact.*') ? 'bg-[#0b2417] text-amber-200 font-bold shadow-xs' : 'hover:text-[#0b2417] hover:bg-stone-100' }}">
+                        Contact
                     </a>
                 </nav>
 
-                <!-- Right Action Cluster: High-Conversion OEM Button with Sheen -->
-                <div class="hidden sm:flex items-center gap-3">
+                <!-- Right Action Cluster -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    
+                    <!-- Search / Dynamic Products Icon Link -->
+                    <a href="{{ route('products.index') }}" title="Search Products"
+                       class="w-9 h-9 rounded-full bg-stone-100 hover:bg-emerald-50 text-slate-700 hover:text-emerald-900 flex items-center justify-center transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </a>
+
+                    <!-- Luxury CTA Button with Light Sheen -->
                     <button onclick="openEnquiryModal('Enterprise B2B / OEM Consultation', null, 'b2b_oem')" 
-                            class="relative overflow-hidden group bg-gradient-to-r from-[#081c12] via-[#0f2e1e] to-[#1b4d33] hover:from-[#0b2417] hover:to-[#081c12] text-white px-5 sm:px-6 py-3 rounded-xl font-bold text-xs sm:text-sm tracking-wide shadow-md shadow-emerald-950/20 hover:shadow-xl transition-all duration-300 border border-emerald-700/30">
-                        <!-- Shimmer animation bar -->
+                            class="relative overflow-hidden group bg-gradient-to-r from-[#081c12] via-[#0f2e1e] to-[#1b4d33] hover:from-[#0b2417] hover:to-[#081c12] text-white px-4 sm:px-5 py-2.5 rounded-full font-bold text-xs tracking-wide shadow-md shadow-emerald-950/20 hover:shadow-lg transition-all duration-300 border border-emerald-700/40 shrink-0">
                         <span class="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000"></span>
-                        
-                        <div class="relative flex items-center gap-2">
-                            <span>Request OEM Quote</span>
-                            <svg class="w-4 h-4 text-amber-300 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        <div class="relative flex items-center gap-1.5">
+                            <span class="text-amber-200">Request OEM Quote</span>
+                            <svg class="w-3.5 h-3.5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </div>
                     </button>
-                </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="flex items-center lg:hidden">
+                    <!-- Mobile Hamburger Button -->
                     <button id="mobileMenuBtn" aria-label="Toggle navigation" 
-                            class="p-2.5 rounded-xl text-slate-800 hover:text-emerald-900 hover:bg-stone-100 transition border border-stone-200">
-                        <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
-                        <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                            class="lg:hidden w-9 h-9 rounded-full bg-stone-100 hover:bg-stone-200 text-slate-800 flex items-center justify-center transition border border-stone-200">
+                        <svg id="menuIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
+                        <svg id="closeIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                     </button>
                 </div>
 
             </div>
-        </div>
 
-        <!-- Mobile Drawer with Luxury Editorial Layout -->
-        <div id="mobileMenu" class="hidden lg:hidden border-t border-stone-200 bg-white/98 backdrop-blur-2xl px-5 pt-4 pb-8 space-y-3 shadow-2xl">
-            <div class="space-y-1 text-sm font-semibold">
-                <a href="{{ route('home') }}" class="block px-3.5 py-2.5 rounded-xl {{ request()->routeIs('home') ? 'bg-emerald-50 text-emerald-900 font-bold' : 'text-slate-700 hover:bg-stone-50' }}">
+            <!-- Mobile Floating Menu Card -->
+            <div id="mobileMenu" class="hidden lg:hidden mt-2 bg-white/98 backdrop-blur-2xl border border-stone-200 rounded-3xl p-5 shadow-2xl space-y-2">
+                <a href="{{ route('home') }}" class="block px-4 py-2.5 rounded-xl text-xs font-bold {{ request()->routeIs('home') ? 'bg-[#0b2417] text-amber-200' : 'text-slate-700 hover:bg-stone-50' }}">
                     Home
                 </a>
-                <a href="{{ route('about') }}" class="block px-3.5 py-2.5 rounded-xl {{ request()->routeIs('about') ? 'bg-emerald-50 text-emerald-900 font-bold' : 'text-slate-700 hover:bg-stone-50' }}">
+                <a href="{{ route('about') }}" class="block px-4 py-2.5 rounded-xl text-xs font-bold {{ request()->routeIs('about') ? 'bg-[#0b2417] text-amber-200' : 'text-slate-700 hover:bg-stone-50' }}">
                     About Us & Board of Directors
                 </a>
-                <a href="{{ route('products.index') }}" class="block px-3.5 py-2.5 rounded-xl {{ request()->routeIs('products.*') ? 'bg-emerald-50 text-emerald-900 font-bold' : 'text-slate-700 hover:bg-stone-50' }}">
+                <a href="{{ route('products.index') }}" class="block px-4 py-2.5 rounded-xl text-xs font-bold {{ request()->routeIs('products.*') ? 'bg-[#0b2417] text-amber-200' : 'text-slate-700 hover:bg-stone-50' }}">
                     Dynamic Formulations Catalog
                 </a>
-                <a href="{{ route('services.b2b') }}" class="block px-3.5 py-2.5 rounded-xl {{ request()->routeIs('services.b2b') ? 'bg-emerald-50 text-emerald-900 font-bold' : 'text-slate-700 hover:bg-stone-50' }}">
+                <a href="{{ route('services.b2b') }}" class="block px-4 py-2.5 rounded-xl text-xs font-bold {{ request()->routeIs('services.b2b') ? 'bg-[#0b2417] text-amber-200' : 'text-slate-700 hover:bg-stone-50' }}">
                     B2B & OEM Contract Manufacturing
                 </a>
-                <a href="{{ route('services.consultancy') }}" class="block px-3.5 py-2.5 rounded-xl {{ request()->routeIs('services.consultancy') ? 'bg-emerald-50 text-emerald-900 font-bold' : 'text-slate-700 hover:bg-stone-50' }}">
+                <a href="{{ route('services.consultancy') }}" class="block px-4 py-2.5 rounded-xl text-xs font-bold {{ request()->routeIs('services.consultancy') ? 'bg-[#0b2417] text-amber-200' : 'text-slate-700 hover:bg-stone-50' }}">
                     Consultancy & Marketing Advisory
                 </a>
-                <a href="{{ route('contact.index') }}" class="block px-3.5 py-2.5 rounded-xl {{ request()->routeIs('contact.*') ? 'bg-emerald-50 text-emerald-900 font-bold' : 'text-slate-700 hover:bg-stone-50' }}">
+                <a href="{{ route('contact.index') }}" class="block px-4 py-2.5 rounded-xl text-xs font-bold {{ request()->routeIs('contact.*') ? 'bg-[#0b2417] text-amber-200' : 'text-slate-700 hover:bg-stone-50' }}">
                     Contact Us (Aurangabad & Gaya)
                 </a>
-            </div>
 
-            <div class="pt-4 border-t border-stone-200 space-y-3">
-                <button onclick="openEnquiryModal('Mobile Enterprise Quotation', null, 'b2b_oem')" 
-                        class="w-full bg-[#081c12] text-amber-200 font-bold text-sm py-3.5 rounded-xl shadow-md text-center">
-                    Request B2B OEM Quotation
-                </button>
-                <div class="p-3 bg-stone-50 rounded-xl text-xs text-slate-500 text-center">
-                    Registered in Bihar • Aurangabad & Gaya Districts
+                <div class="pt-3 border-t border-stone-100 flex flex-col gap-2">
+                    <button onclick="openEnquiryModal('Mobile Enterprise Quotation', null, 'b2b_oem')" 
+                            class="w-full bg-[#081c12] text-amber-200 font-bold text-xs py-3 rounded-xl shadow-md text-center">
+                        Request OEM Proposal
+                    </button>
+                    <div class="text-[10px] text-slate-500 text-center">
+                        Aurangabad & Gaya Operational Footprint (Bihar)
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+
+        </header>
+    </div>
 
     <!-- Global Flash Notification -->
     @if(session('success_message'))
-        <div class="bg-emerald-50 border-b border-emerald-300 px-4 py-3.5 text-emerald-950 shadow-xs relative z-30">
-            <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-3 relative z-30">
+            <div class="bg-emerald-50 border border-emerald-300 rounded-2xl px-4 py-3 text-emerald-950 shadow-sm flex items-center justify-between gap-3">
                 <div class="flex items-center gap-3">
-                    <span class="w-8 h-8 rounded-full bg-emerald-800 text-amber-300 flex items-center justify-center shrink-0">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="w-7 h-7 rounded-full bg-emerald-800 text-amber-300 flex items-center justify-center shrink-0">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     </span>
-                    <p class="text-xs sm:text-sm font-semibold">{{ session('success_message') }}</p>
+                    <p class="text-xs font-semibold">{{ session('success_message') }}</p>
                 </div>
                 <button onclick="this.parentElement.parentElement.remove()" class="text-emerald-800 hover:text-emerald-950 p-1">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
             </div>
         </div>
