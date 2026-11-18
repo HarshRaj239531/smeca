@@ -1,9 +1,34 @@
 @import 'tailwindcss';
 
+@source "../views";
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Plus Jakarta Sans', 'Instrument Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --color-herbal-950: #0b2417;
+    --color-herbal-900: #143d2b;
+    --color-herbal-800: #1c523a;
+    --color-herbal-700: #2d6a4f;
+    --color-herbal-600: #40916c;
+    --color-herbal-500: #52b788;
+    --color-herbal-400: #74c69d;
+    --color-herbal-300: #95d5b2;
+    --color-herbal-200: #b7e4c7;
+    --color-herbal-100: #d8f3dc;
+    --color-herbal-50: #f0fdf4;
+    --color-earth-600: #b58351;
+    --color-earth-500: #c9935d;
+    --color-earth-100: #faebd7;
+    --color-earth-50: #fbf8f3;
+}
+
+/* Smooth scrolling and transitions */
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: #2d6a4f;
+    color: #ffffff;
 }
