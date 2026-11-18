@@ -8,6 +8,10 @@
     <title>@yield('title', 'SMECA Box for Beautiful Skin | SMECA INDUSTRY PRIVATE LIMITED')</title>
     <meta name="description" content="@yield('meta_description', 'SMECA Industry Private Limited offers a set of organic cosmetics and authentic Ayurvedic formulations for everyday skin treatment and radiant wellness.')">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('images/smeca-logo.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/smeca-logo.png') }}">
+
     <!-- Fonts: Playfair Display & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,14 +37,17 @@
         <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
             <div class="flex items-center justify-between h-20 sm:h-24">
                 
-                <!-- Brand Identity (Matching 'Shine / PROFESSIONAL') -->
-                <a href="{{ route('home') }}" class="group flex flex-col items-start leading-none">
-                    <span class="text-2xl sm:text-[28px] font-medium tracking-tight text-[#203a31] font-serif-display">
-                        SMECA
-                    </span>
-                    <span class="text-[9px] sm:text-[9.5px] font-semibold text-[#445437] tracking-[0.24em] uppercase mt-1">
-                        PROFESSIONAL
-                    </span>
+                <!-- Brand Identity with Official SMECA Logo -->
+                <a href="{{ route('home') }}" class="group flex items-center gap-3">
+                    <img src="{{ asset('images/smeca-logo.png') }}" alt="SMECA Logo" class="h-11 sm:h-13 w-auto object-contain transition-transform group-hover:scale-105">
+                    <div class="flex flex-col items-start leading-none">
+                        <span class="text-xl sm:text-[22px] font-bold tracking-tight text-[#203a31] font-serif-display">
+                            SMECA
+                        </span>
+                        <span class="text-[8px] sm:text-[8.5px] font-semibold text-[#445437] tracking-[0.22em] uppercase mt-1">
+                            INDUSTRY PVT. LTD.
+                        </span>
+                    </div>
                 </a>
 
                 <!-- Center Minimalist Navigation Links -->
@@ -233,10 +240,13 @@
                 
                 <!-- Col 1: Brand Info -->
                 <div class="lg:col-span-2 space-y-4">
-                    <div>
-                        <span class="text-2xl font-serif-display font-medium text-white tracking-tight">SMECA</span>
-                        <span class="block text-[10px] tracking-[0.25em] uppercase text-[#c0caa7]/80 font-semibold mt-0.5">PROFESSIONAL</span>
-                    </div>
+                    <a href="{{ route('home') }}" class="inline-flex items-center gap-3 bg-white/10 hover:bg-white/15 backdrop-blur-xs border border-white/15 px-4 py-2.5 rounded-xl transition">
+                        <img src="{{ asset('images/smeca-logo.png') }}" alt="SMECA Logo" class="h-10 w-auto object-contain">
+                        <div class="flex flex-col items-start leading-none">
+                            <span class="text-xl font-serif-display font-medium text-white tracking-tight">SMECA</span>
+                            <span class="block text-[8.5px] tracking-[0.22em] uppercase text-[#c0caa7]/90 font-semibold mt-1">INDUSTRY PVT. LTD.</span>
+                        </div>
+                    </a>
                     <p class="text-xs sm:text-sm text-[#c0caa7]/80 leading-relaxed max-w-md">
                         SMECA Industry Private Limited manufactures premium organic cosmetics, skincare treatments, and authentic Ayurvedic wellness formulations in Bihar (Aurangabad & Gaya).
                     </p>
