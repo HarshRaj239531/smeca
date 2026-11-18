@@ -26,23 +26,23 @@
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {!! json_encode([
-      '@context' => 'https://schema.org',
-      '@type' => 'Organization',
+      chr(64) . 'context' => 'https://schema.org',
+      chr(64) . 'type' => 'Organization',
       'name' => 'SMECA Industry Private Limited',
       'alternateName' => 'SMECA Professional',
       'url' => url('/'),
       'logo' => asset('images/smeca-logo.png'),
       'description' => 'Manufacturer of premium organic cosmetics, Ayurvedic skincare, and contract B2B cosmetic formulations in Bihar, India.',
       'address' => [
-        '@type' => 'PostalAddress',
+        chr(64) . 'type' => 'PostalAddress',
         'addressRegion' => 'Bihar',
         'addressCountry' => 'IN',
       ],
       'founder' => [
-        ['@type' => 'Person', 'name' => 'Sanjit Kumar'],
-        ['@type' => 'Person', 'name' => 'Sonu Kumar'],
-        ['@type' => 'Person', 'name' => 'Sarina Kumari'],
-        ['@type' => 'Person', 'name' => 'Yogendra Das'],
+        [chr(64) . 'type' => 'Person', 'name' => 'Sanjit Kumar'],
+        [chr(64) . 'type' => 'Person', 'name' => 'Sonu Kumar'],
+        [chr(64) . 'type' => 'Person', 'name' => 'Sarina Kumari'],
+        [chr(64) . 'type' => 'Person', 'name' => 'Yogendra Das'],
       ],
     ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
     </script>
