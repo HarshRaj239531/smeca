@@ -6,117 +6,117 @@
 @section('content')
 
 <!-- =========================================================================
-     EDITORIAL HERO: Asymmetric Magazine Mosaic Grid (100% Edge-to-Edge Full Bleed)
+     EDITORIAL HERO: Asymmetric Magazine Mosaic Grid (100% Viewport-Fitted Desktop)
      ========================================================================= -->
-<section class="w-full bg-white border-b border-stone-200 overflow-hidden">
-    <!-- Seamless Full-Bleed Editorial Mosaic Grid (Edge-to-Edge, zero margin, full screen cover) -->
-    <div class="w-full grid grid-cols-1 md:grid-cols-12 bg-white">
+<section class="w-full bg-white border-b border-stone-200 overflow-hidden md:h-[calc(100vh-6rem)] md:min-h-[560px] md:max-h-[820px]">
+    <!-- Seamless Full-Bleed Editorial Mosaic Grid (Edge-to-Edge, zero margin, fits desktop viewport) -->
+    <div class="w-full h-full grid grid-cols-1 md:grid-cols-12 bg-white">
         
         <!-- ========================================================
              COLUMN 1 (Left): Tall Organic Bottles & Branches Photo
              ======================================================== -->
-        <div class="md:col-span-4 relative bg-[#f2ede6] min-h-[460px] md:min-h-[680px] lg:min-h-[720px] border-b md:border-b-0 md:border-r border-stone-200 group overflow-hidden">
+        <div class="md:col-span-4 h-full relative bg-[#f2ede6] min-h-[420px] md:min-h-0 border-b md:border-b-0 md:border-r border-stone-200 group overflow-hidden">
             <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80" 
                  alt="SMECA Organic Skincare Bottles with Botanical Branches" 
                  class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700">
-            <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur-xs text-[#203a31] text-[10.5px] font-bold uppercase tracking-widest px-4 py-2 rounded-sm border border-stone-200 shadow-xs">
+            <div class="absolute bottom-5 left-5 bg-white/95 backdrop-blur-xs text-[#203a31] text-[10px] font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-sm border border-stone-200 shadow-xs">
                 SMECA Organics
             </div>
         </div>
 
         <!-- ========================================================
-             COLUMN 2 (Center): 3 Stacked Flush Rows
+             COLUMN 2 (Center): 3 Stacked Flush Rows (Exact 34% / 28% / 38% proportion)
              ======================================================== -->
-        <div class="md:col-span-4 flex flex-col border-b md:border-b-0 md:border-r border-stone-200">
+        <div class="md:col-span-4 h-full flex flex-col border-b md:border-b-0 md:border-r border-stone-200 overflow-hidden">
             
             <!-- Row 1: Solid Brand Color Block '01 — BLOG' -->
-            <div class="bg-[#203a31] text-white p-8 sm:p-10 lg:p-14 flex flex-col justify-center min-h-[200px] sm:min-h-[230px] lg:min-h-[250px] relative overflow-hidden">
-                <div class="flex items-center gap-4 mb-2">
-                    <span class="text-3xl sm:text-4xl lg:text-5xl font-serif-display font-medium text-white tracking-tight">01</span>
-                    <span class="w-16 sm:w-24 h-0.5 bg-white/70 inline-block"></span>
+            <div class="bg-[#203a31] text-white p-6 sm:p-8 lg:p-10 flex flex-col justify-center min-h-[170px] md:min-h-0 md:h-[34%] relative overflow-hidden">
+                <div class="flex items-center gap-3.5 mb-1.5">
+                    <span class="text-2xl sm:text-3xl lg:text-4xl font-serif-display font-medium text-white tracking-tight">01</span>
+                    <span class="w-12 sm:w-16 h-0.5 bg-white/70 inline-block"></span>
                 </div>
-                <h1 class="text-5xl sm:text-6xl lg:text-[68px] font-serif-display font-medium tracking-wider text-white uppercase leading-none">
+                <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-serif-display font-medium tracking-wider text-white uppercase leading-none">
                     BLOG
                 </h1>
             </div>
 
             <!-- Row 2: Author Card with Left Protruding Colored Tab & Avatar (No Text Overlap) -->
-            <div class="bg-white p-5 sm:p-7 border-t border-b border-stone-200 flex items-center justify-between gap-4 relative group">
+            <div class="bg-white p-4 sm:p-5 lg:p-6 border-t border-b border-stone-200 flex items-center justify-between gap-3 relative group md:h-[28%] md:min-h-0">
                 <!-- Left Tab: 'About Author' -->
-                <div class="z-20 absolute -left-2.5 top-1/2 -translate-y-1/2 bg-[#203a31] text-[#c0caa7] text-[8.5px] font-bold uppercase tracking-wider py-4 px-1 rounded-sm shadow-xs [writing-mode:vertical-lr] rotate-180 flex items-center justify-center">
+                <div class="z-20 absolute -left-2.5 top-1/2 -translate-y-1/2 bg-[#203a31] text-[#c0caa7] text-[8px] font-bold uppercase tracking-wider py-3 px-1 rounded-sm shadow-xs [writing-mode:vertical-lr] rotate-180 flex items-center justify-center">
                     About Author
                 </div>
 
-                <!-- Clean Pl-6 Spacing So Tab Never Overlaps Headline -->
-                <div class="pl-6 space-y-1 flex-1">
-                    <h3 class="text-xs sm:text-sm lg:text-[15px] font-bold text-slate-900 leading-snug">
+                <!-- Clean Pl-5 Spacing So Tab Never Overlaps Headline -->
+                <div class="pl-5 space-y-0.5 flex-1 min-w-0">
+                    <h3 class="text-xs sm:text-[13px] lg:text-sm font-bold text-slate-900 leading-snug line-clamp-2">
                         Hey I'm Dr. Sarina, Welcome To SMECA Journal
                     </h3>
-                    <p class="text-[11px] sm:text-xs text-slate-500 line-clamp-2 leading-relaxed">
+                    <p class="text-[10px] sm:text-[11px] text-slate-500 line-clamp-2 leading-tight">
                         Curating authentic Ayurvedic formulation wisdom, herb extractions & clinical skincare.
                     </p>
                     <a href="{{ route('blog.show', $heroMainPost['slug']) }}" 
-                       class="inline-block text-[10.5px] font-bold uppercase tracking-wider text-[#203a31] hover:text-blue-600 transition pt-1 underline underline-offset-2">
+                       class="inline-block text-[9.5px] sm:text-[10px] font-bold uppercase tracking-wider text-[#203a31] hover:text-blue-600 transition pt-0.5 underline underline-offset-2">
                         READ MORE...
                     </a>
                 </div>
 
                 <!-- Author Avatar Image -->
-                <div class="shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border border-stone-200 shadow-2xs">
+                <div class="shrink-0 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl overflow-hidden border border-stone-200 shadow-2xs">
                     <img src="{{ $authorSpotlight['avatar'] }}" alt="{{ $authorSpotlight['name'] }}" class="w-full h-full object-cover">
                 </div>
             </div>
 
             <!-- Row 3: 'PERFUMES & SCENTS' Dark Card with Bottom-Left Arrow Tab -->
-            <div class="relative bg-stone-900 flex-1 min-h-[220px] lg:min-h-[270px] overflow-hidden group">
+            <div class="relative bg-stone-900 flex-1 min-h-[190px] md:min-h-0 md:h-[38%] overflow-hidden group">
                 <img src="{{ $perfumesPost['image_url'] }}" 
                      alt="{{ $perfumesPost['title'] }}" 
                      class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500">
                 
                 <!-- Top Text Overlay: PERFUMES & SCENTS -->
-                <div class="absolute top-6 left-6 text-white text-[11px] font-bold uppercase tracking-[0.2em] drop-shadow-md">
+                <div class="absolute top-4 left-5 text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] drop-shadow-md">
                     PERFUMES & SCENTS
                 </div>
 
                 <!-- Bottom Left Arrow Tab Button -->
                 <a href="{{ route('blog.show', $perfumesPost['slug']) }}" 
                    aria-label="Read Perfumes Article"
-                   class="absolute bottom-6 left-0 bg-[#203a31] hover:bg-blue-600 text-white w-11 h-11 rounded-r-md flex items-center justify-center shadow-lg transition-colors">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                   class="absolute bottom-4 left-0 bg-[#203a31] hover:bg-blue-600 text-white w-9 h-9 sm:w-10 sm:h-10 rounded-r-md flex items-center justify-center shadow-lg transition-colors">
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                 </a>
             </div>
 
         </div>
 
         <!-- ========================================================
-             COLUMN 3 (Right): 2 Stacked Flush Rows
+             COLUMN 3 (Right): 2 Stacked Flush Rows (Exact 42% / 58% proportion)
              ======================================================== -->
-        <div class="md:col-span-4 flex flex-col">
+        <div class="md:col-span-4 h-full flex flex-col overflow-hidden">
             
             <!-- Row 1: 'COSMETICS' Photo Card -->
-            <div class="relative bg-stone-100 min-h-[210px] sm:min-h-[240px] lg:min-h-[270px] overflow-hidden border-b border-stone-200 group">
+            <div class="relative bg-stone-100 min-h-[190px] md:min-h-0 md:h-[42%] overflow-hidden border-b border-stone-200 group">
                 <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80" 
                      alt="SMECA Cosmetics Collection" 
                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute bottom-5 left-6 text-[#203a31] text-[11px] font-bold uppercase tracking-[0.2em] bg-white/95 backdrop-blur-xs px-3.5 py-1.5 rounded-sm shadow-2xs border border-stone-200">
+                <div class="absolute bottom-4 left-5 text-[#203a31] text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] bg-white/95 backdrop-blur-xs px-3 py-1 rounded-sm shadow-2xs border border-stone-200">
                     COSMETICS
                 </div>
             </div>
 
             <!-- Row 2: Solid Brand Color Block with Full Article Copy & 'READ MORE...' -->
-            <div class="bg-[#203a31] text-white p-8 sm:p-10 lg:p-12 flex-1 flex flex-col justify-between">
-                <div>
-                    <h2 class="text-xl sm:text-2xl font-serif-display font-medium text-white leading-snug">
+            <div class="bg-[#203a31] text-white p-6 sm:p-7 lg:p-9 flex-1 md:h-[58%] flex flex-col justify-between overflow-hidden">
+                <div class="space-y-2">
+                    <h2 class="text-base sm:text-lg lg:text-xl font-serif-display font-medium text-white leading-snug line-clamp-2">
                         {{ $heroMainPost['title'] }}
                     </h2>
-                    <p class="text-xs sm:text-sm text-white/80 mt-3.5 leading-relaxed">
+                    <p class="text-xs sm:text-[12.5px] text-white/80 line-clamp-3 sm:line-clamp-4 leading-relaxed">
                         {{ $heroMainPost['excerpt'] }}
                     </p>
                 </div>
 
-                <div class="pt-6 mt-6 border-t border-white/15">
+                <div class="pt-3 border-t border-white/15">
                     <a href="{{ route('blog.show', $heroMainPost['slug']) }}" 
-                       class="inline-block text-[11.5px] font-bold uppercase tracking-wider text-white hover:text-[#c0caa7] transition underline underline-offset-2">
+                       class="inline-block text-[11px] font-bold uppercase tracking-wider text-white hover:text-[#c0caa7] transition underline underline-offset-2">
                         READ MORE...
                     </a>
                 </div>
