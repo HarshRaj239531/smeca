@@ -24,6 +24,13 @@ Route::get('/consultancy-marketing', [ServiceController::class, 'consultancy'])-
 Route::get('/contact-us', [ContactController::class, 'index'])->name('contact.index');
 Route::post('/contact-us', [ContactController::class, 'store'])->name('contact.store');
 
+// Dynamic SEO Sitemap
+Route::get('/sitemap.xml', function () {
+    $products = \App\Models\Product::select('slug', 'updated_at')->get();
+    return response()->view('pages.sitemap', compact('products'))
+        ->header('Content-Type', 'text/xml; charset=utf-8');
+})->name('sitemap');
+
 // Inquiry Management Dashboard for SMECA Team
 Route::prefix('admin')->group(function (): void {
     Route::get('/inquiries', [InquiryAdminController::class, 'index'])->name('admin.inquiries');

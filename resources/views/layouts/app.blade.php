@@ -7,6 +7,45 @@
 
     <title>@yield('title', 'SMECA Box for Beautiful Skin | SMECA INDUSTRY PRIVATE LIMITED')</title>
     <meta name="description" content="@yield('meta_description', 'SMECA Industry Private Limited offers a set of organic cosmetics and authentic Ayurvedic formulations for everyday skin treatment and radiant wellness.')">
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:site_name" content="SMECA INDUSTRY PRIVATE LIMITED">
+    <meta property="og:title" content="@yield('title', 'SMECA Box for Beautiful Skin | SMECA INDUSTRY PRIVATE LIMITED')">
+    <meta property="og:description" content="@yield('meta_description', 'SMECA Industry Private Limited offers a set of organic cosmetics and authentic Ayurvedic formulations for everyday skin treatment and radiant wellness.')">
+    <meta property="og:image" content="{{ asset('images/smeca-logo.png') }}">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('title', 'SMECA Box for Beautiful Skin | SMECA INDUSTRY PRIVATE LIMITED')">
+    <meta name="twitter:description" content="@yield('meta_description', 'SMECA Industry Private Limited offers a set of organic cosmetics and authentic Ayurvedic formulations for everyday skin treatment and radiant wellness.')">
+    <meta name="twitter:image" content="{{ asset('images/smeca-logo.png') }}">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {!! json_encode([
+      '@context' => 'https://schema.org',
+      '@type' => 'Organization',
+      'name' => 'SMECA Industry Private Limited',
+      'alternateName' => 'SMECA Professional',
+      'url' => url('/'),
+      'logo' => asset('images/smeca-logo.png'),
+      'description' => 'Manufacturer of premium organic cosmetics, Ayurvedic skincare, and contract B2B cosmetic formulations in Bihar, India.',
+      'address' => [
+        '@type' => 'PostalAddress',
+        'addressRegion' => 'Bihar',
+        'addressCountry' => 'IN',
+      ],
+      'founder' => [
+        ['@type' => 'Person', 'name' => 'Sanjit Kumar'],
+        ['@type' => 'Person', 'name' => 'Sonu Kumar'],
+        ['@type' => 'Person', 'name' => 'Sarina Kumari'],
+        ['@type' => 'Person', 'name' => 'Yogendra Das'],
+      ],
+    ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('images/smeca-logo.png') }}">
@@ -296,7 +335,7 @@
 
             <!-- Bottom Copyright -->
             <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#c0caa7]/60">
-                <p>© {{ date('Y') }} SMECA INDUSTRY PRIVATE LIMITED. All rights reserved.</p>
+                <p>© 2026 SMECA Industry Private Limited. All Rights Reserved.</p>
                 <div class="flex items-center gap-4 text-[11px]">
                     <span>✓ 100% Organic & Ayurvedic</span>
                     <span>✓ cGMP Cleanroom Quality</span>

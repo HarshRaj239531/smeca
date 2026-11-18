@@ -150,4 +150,17 @@ class SmecaWebsiteTest extends TestCase
         $response->assertSee('Vikas Verma');
         $response->assertSee('Verma Naturals');
     }
+
+    /**
+     * Test dynamic SEO sitemap generates valid XML.
+     */
+    public function test_sitemap_xml_generates_valid_response(): void
+    {
+        $response = $this->get('/sitemap.xml');
+
+        $response->assertStatus(200);
+        $response->assertHeader('Content-Type', 'text/xml; charset=utf-8');
+        $response->assertSee('<urlset', false);
+        $response->assertSee(url('/'), false);
+    }
 }
