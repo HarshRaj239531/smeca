@@ -44,7 +44,7 @@
                 </a>
 
                 <!-- Center Minimalist Navigation Links -->
-                <nav class="hidden md:flex items-center gap-8 lg:gap-12 text-xs sm:text-[13px] font-medium text-[#203a31]/90 tracking-wide">
+                <nav class="hidden md:flex items-center gap-7 lg:gap-10 text-xs sm:text-[13px] font-medium text-[#203a31]/90 tracking-wide">
                     <a href="{{ route('about') }}" class="hover:text-[#121c0f] transition-colors {{ request()->routeIs('about') ? 'font-bold text-[#121c0f]' : '' }}">
                         About
                     </a>
@@ -54,8 +54,11 @@
                     <a href="{{ route('services.b2b') }}" class="hover:text-[#121c0f] transition-colors {{ request()->routeIs('services.b2b') ? 'font-bold text-[#121c0f]' : '' }}">
                         B2B & OEM
                     </a>
-                    <a href="{{ route('services.consultancy') }}" class="hover:text-[#121c0f] transition-colors {{ request()->routeIs('services.consultancy') ? 'font-bold text-[#121c0f]' : '' }}">
-                        Consultancy
+                    <a href="{{ route('home') }}#testimonials" class="hover:text-[#121c0f] transition-colors">
+                        Testimonials
+                    </a>
+                    <a href="{{ route('home') }}#faq" class="hover:text-[#121c0f] transition-colors">
+                        FAQ
                     </a>
                     <a href="{{ route('contact.index') }}" class="hover:text-[#121c0f] transition-colors {{ request()->routeIs('contact.*') ? 'font-bold text-[#121c0f]' : '' }}">
                         Contacts
@@ -94,6 +97,12 @@
             </a>
             <a href="{{ route('services.b2b') }}" class="block py-2 text-sm font-medium text-[#203a31]">
                 B2B & OEM Services
+            </a>
+            <a href="{{ route('home') }}#testimonials" class="block py-2 text-sm font-medium text-[#203a31]">
+                Testimonials
+            </a>
+            <a href="{{ route('home') }}#faq" class="block py-2 text-sm font-medium text-[#203a31]">
+                FAQ
             </a>
             <a href="{{ route('services.consultancy') }}" class="block py-2 text-sm font-medium text-[#203a31]">
                 Consultancy & Advisory

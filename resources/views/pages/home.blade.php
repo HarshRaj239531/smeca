@@ -314,4 +314,288 @@
     </div>
 </section>
 
+<!-- =========================================================================
+     STANDARDS & CERTIFIED QUALITY STRIP
+     ========================================================================= -->
+<section class="py-14 bg-[#f6f8f3] border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            
+            <div class="p-5 rounded-xs bg-white border border-stone-200">
+                <div class="w-10 h-10 mx-auto rounded-full bg-[#c0caa7]/40 text-[#203a31] flex items-center justify-center mb-3">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                </div>
+                <h4 class="text-xs font-serif-display font-medium text-[#203a31]">100% Ayurvedic Actives</h4>
+                <p class="text-[11px] text-slate-500 mt-0.5">Classical botanical extracts</p>
+            </div>
+
+            <div class="p-5 rounded-xs bg-white border border-stone-200">
+                <div class="w-10 h-10 mx-auto rounded-full bg-[#c0caa7]/40 text-[#203a31] flex items-center justify-center mb-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                </div>
+                <h4 class="text-xs font-serif-display font-medium text-[#203a31]">cGMP Compliant</h4>
+                <p class="text-[11px] text-slate-500 mt-0.5">Sterile batch compounding</p>
+            </div>
+
+            <div class="p-5 rounded-xs bg-white border border-stone-200">
+                <div class="w-10 h-10 mx-auto rounded-full bg-[#c0caa7]/40 text-[#203a31] flex items-center justify-center mb-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <h4 class="text-xs font-serif-display font-medium text-[#203a31]">Bihar Operations</h4>
+                <p class="text-[11px] text-slate-500 mt-0.5">Aurangabad & Gaya facilities</p>
+            </div>
+
+            <div class="p-5 rounded-xs bg-white border border-stone-200">
+                <div class="w-10 h-10 mx-auto rounded-full bg-[#c0caa7]/40 text-[#203a31] flex items-center justify-center mb-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                </div>
+                <h4 class="text-xs font-serif-display font-medium text-[#203a31]">Strict NDA Protocols</h4>
+                <p class="text-[11px] text-slate-500 mt-0.5">Confidential OEM formulation</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================================
+     TESTIMONIALS SECTION: Partner & Consumer Trust
+     ========================================================================= -->
+<section id="testimonials" class="py-20 bg-white border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-14">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#3d564c] bg-[#c0caa7]/40 px-3.5 py-1 rounded-xs border border-[#203a31]/15">
+                Client & Partner Voices
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-serif-display font-medium text-[#203a31]">
+                Endorsed by Brands, Stockists & Consumers
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600">
+                From turnkey OEM cosmetics batches to everyday Ayurvedic skincare routines, hear how SMECA delivers verified quality.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Testimonial 1: B2B OEM Client -->
+            <div class="bg-[#f6f8f3] p-8 rounded-xs border border-stone-200 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <!-- Star Rating -->
+                    <div class="flex items-center gap-1 text-amber-500 mb-4">
+                        @for($i = 0; $i < 5; $i++)
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        @endfor
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed italic mb-6">
+                        "SMECA compounded and packaged our flagship Kumkumadi facial serum under private label. Their batch reproducibility, sterile cGMP filling, and active herbal stability exceeded our dermatological benchmarks. Exceptional turnkey partner."
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-stone-200/80 flex items-center justify-between">
+                    <div>
+                        <h4 class="text-sm font-serif-display font-medium text-[#203a31]">Dr. Ananya Sen</h4>
+                        <p class="text-[11px] text-slate-500">Founder, Vedic Botanica D2C (Delhi)</p>
+                    </div>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider text-[#203a31] bg-[#c0caa7]/30 px-2.5 py-0.5 rounded-xs border border-[#203a31]/15">
+                        OEM Brand
+                    </span>
+                </div>
+            </div>
+
+            <!-- Testimonial 2: Super Stockist / Distributor -->
+            <div class="bg-[#f6f8f3] p-8 rounded-xs border border-stone-200 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-1 text-amber-500 mb-4">
+                        @for($i = 0; $i < 5; $i++)
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        @endfor
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed italic mb-6">
+                        "Distributing SMECA's herbal haircare and Ayurvedic pain balms across Gaya, Aurangabad, and Patna has yielded phenomenal retail repeat demand. Prompt freight dispatch and clear wholesale trade margins make them a joy to work with."
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-stone-200/80 flex items-center justify-between">
+                    <div>
+                        <h4 class="text-sm font-serif-display font-medium text-[#203a31]">Rajesh Kumar Verma</h4>
+                        <p class="text-[11px] text-slate-500">MD, Magadh Distribution (Bihar)</p>
+                    </div>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider text-[#203a31] bg-[#c0caa7]/30 px-2.5 py-0.5 rounded-xs border border-[#203a31]/15">
+                        Super Stockist
+                    </span>
+                </div>
+            </div>
+
+            <!-- Testimonial 3: B2C Customer -->
+            <div class="bg-[#f6f8f3] p-8 rounded-xs border border-stone-200 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-1 text-amber-500 mb-4">
+                        @for($i = 0; $i < 5; $i++)
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        @endfor
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed italic mb-6">
+                        "The SMECA Skincare Box with the Kumkumadi Face Cream and Hydra Cleanser completely balanced my skin. Zero synthetic burning, pure botanical nourishment, and my skin feels deeply supple and glowing every morning."
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-stone-200/80 flex items-center justify-between">
+                    <div>
+                        <h4 class="text-sm font-serif-display font-medium text-[#203a31]">Pooja Mishra</h4>
+                        <p class="text-[11px] text-slate-500">Skincare Enthusiast, Patna</p>
+                    </div>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider text-[#203a31] bg-[#c0caa7]/30 px-2.5 py-0.5 rounded-xs border border-[#203a31]/15">
+                        Verified Buyer
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- =========================================================================
+     FAQ SECTION: Product, Manufacturing & Inquiry Clarifications
+     ========================================================================= -->
+<section id="faq" class="py-20 bg-[#f6f8f3] border-t border-stone-200">
+    <div class="max-w-4xl mx-auto px-6 sm:px-10 lg:px-12">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-14">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#3d564c] bg-[#c0caa7]/40 px-3.5 py-1 rounded-xs border border-[#203a31]/15">
+                Got Questions?
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-serif-display font-medium text-[#203a31]">
+                Frequently Asked Questions
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600">
+                Find answers regarding our Ayurvedic and cosmetic formulations, Bihar operations, private label contracts, and enquiry system.
+            </p>
+        </div>
+
+        <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-xs border border-stone-200 p-5 sm:p-6 transition-all duration-200 open:shadow-xs">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-left">
+                    <h3 class="text-sm sm:text-base font-serif-display font-medium text-[#203a31] pr-4">
+                        What product categories does SMECA Industry Private Limited formulate and manufacture?
+                    </h3>
+                    <span class="w-6 h-6 rounded-full bg-[#f6f8f3] border border-stone-300 flex items-center justify-center shrink-0 text-[#203a31] transition-transform duration-200 group-open:rotate-180">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </span>
+                </summary>
+                <div class="mt-4 pt-3 border-t border-stone-200 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    SMECA specializes in ethical personal care across six core verticals: <strong>Ayurvedic classical medicines</strong> (Kshirpak Tailams, herbal lepams), <strong>Advanced Skincare</strong> (Vitamin C serums, hydragels, moisturisers), <strong>Haircare</strong> (Bhringraj & Red Onion oils, sulfate-free cleansers), <strong>Natural Perfumes & Attars</strong>, and <strong>Wellness Balms</strong>. Custom compounds can also be formulated upon request.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-xs border border-stone-200 p-5 sm:p-6 transition-all duration-200 open:shadow-xs">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-left">
+                    <h3 class="text-sm sm:text-base font-serif-display font-medium text-[#203a31] pr-4">
+                        How does the dynamic Product Enquiry system work?
+                    </h3>
+                    <span class="w-6 h-6 rounded-full bg-[#f6f8f3] border border-stone-300 flex items-center justify-center shrink-0 text-[#203a31] transition-transform duration-200 group-open:rotate-180">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </span>
+                </summary>
+                <div class="mt-4 pt-3 border-t border-stone-200 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Every product card on the website features an <strong>Enquire Now</strong> button. Clicking this automatically carries the product name and code into the inquiry modal, so you never need to re-type details. Once submitted, your inquiry is securely recorded in our Query Collection System, and our sales desk responds within 24 business hours.
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-xs border border-stone-200 p-5 sm:p-6 transition-all duration-200 open:shadow-xs">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-left">
+                    <h3 class="text-sm sm:text-base font-serif-display font-medium text-[#203a31] pr-4">
+                        Does SMECA offer Third-Party Manufacturing (OEM) and Private Labeling?
+                    </h3>
+                    <span class="w-6 h-6 rounded-full bg-[#f6f8f3] border border-stone-300 flex items-center justify-center shrink-0 text-[#203a31] transition-transform duration-200 group-open:rotate-180">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </span>
+                </summary>
+                <div class="mt-4 pt-3 border-t border-stone-200 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Yes. We provide complete turnkey OEM solutions for beauty startups, established direct-to-consumer (D2C) brands, and institutional stockists. This covers raw herb sourcing, custom lab formulation compounding, cGMP sterile filling, stability testing, primary packaging, label compliance, and statutory AYUSH documentation, with flexible low minimum order quantities (MOQs).
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-xs border border-stone-200 p-5 sm:p-6 transition-all duration-200 open:shadow-xs">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-left">
+                    <h3 class="text-sm sm:text-base font-serif-display font-medium text-[#203a31] pr-4">
+                        Where are your manufacturing and operating hubs located in Bihar?
+                    </h3>
+                    <span class="w-6 h-6 rounded-full bg-[#f6f8f3] border border-stone-300 flex items-center justify-center shrink-0 text-[#203a31] transition-transform duration-200 group-open:rotate-180">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </span>
+                </summary>
+                <div class="mt-4 pt-3 border-t border-stone-200 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Our registered corporate operations and primary formulation laboratories are centered in the <strong>Aurangabad and Gaya districts of Bihar, India</strong>. This strategic hub enables direct partnerships with regional herb farmers and solar drying yards while connecting directly to national rail and road freight corridors.
+                </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-xs border border-stone-200 p-5 sm:p-6 transition-all duration-200 open:shadow-xs">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-left">
+                    <h3 class="text-sm sm:text-base font-serif-display font-medium text-[#203a31] pr-4">
+                        How can retail pharmacies, beauty stores, or distributors partner with SMECA?
+                    </h3>
+                    <span class="w-6 h-6 rounded-full bg-[#f6f8f3] border border-stone-300 flex items-center justify-center shrink-0 text-[#203a31] transition-transform duration-200 group-open:rotate-180">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </span>
+                </summary>
+                <div class="mt-4 pt-3 border-t border-stone-200 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    We welcome regional stockists and distributor partners across Bihar and Northern India. We support our channel partners with competitive wholesale dealer margins, fast dispatch schedules, point-of-sale marketing collateral, and structured staff product training. You can submit a partnership request via our <a href="{{ route('contact.index') }}" class="text-[#203a31] font-bold underline">Contact Page</a>.
+                </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-xs border border-stone-200 p-5 sm:p-6 transition-all duration-200 open:shadow-xs">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-left">
+                    <h3 class="text-sm sm:text-base font-serif-display font-medium text-[#203a31] pr-4">
+                        Are all SMECA formulations 100% safe, toxin-free, and cruelty-free?
+                    </h3>
+                    <span class="w-6 h-6 rounded-full bg-[#f6f8f3] border border-stone-300 flex items-center justify-center shrink-0 text-[#203a31] transition-transform duration-200 group-open:rotate-180">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </span>
+                </summary>
+                <div class="mt-4 pt-3 border-t border-stone-200 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Absolutely. Every product batch is formulated without harmful parabens, phthalates, synthetic mineral oils, or prohibited harsh sulfates. We perform rigorous analytical tests for heavy metals, microbial safety, and pH compatibility, and never test on animals.
+                </div>
+            </details>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- =========================================================================
+     PARTNERSHIP & INQUIRY CALL-TO-ACTION BANNER
+     ========================================================================= -->
+<section class="py-16 bg-white border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
+        <div class="bg-[#f6f8f3] border border-stone-200 rounded-xs p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
+            <div class="space-y-2 max-w-2xl">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#3d564c] bg-[#c0caa7]/40 px-3 py-1 rounded-xs border border-[#203a31]/15 inline-block">
+                    Get Started Today
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-serif-display font-medium text-[#203a31]">
+                    Ready to Formulate, Distribute, or Order?
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Connect directly with our Bihar operational team for custom quotes, lab sample requests, wholesale trade distribution, or retail box inquiries.
+                </p>
+            </div>
+            <div class="shrink-0 flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+                <button onclick="openEnquiryModal('General Business Requirement', null, 'b2b_oem')"
+                        class="bg-[#243c30] hover:bg-[#182a21] text-white text-xs sm:text-sm font-medium px-7 py-3.5 rounded-xs tracking-wide shadow-xs transition cursor-pointer">
+                    Submit Product Enquiry &rarr;
+                </button>
+                <a href="{{ route('contact.index') }}" 
+                   class="bg-white hover:bg-stone-50 text-[#203a31] text-xs sm:text-sm font-medium px-6 py-3.5 rounded-xs tracking-wide border border-stone-300 transition text-center">
+                    Contact Corporate Desk
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 @endsection
