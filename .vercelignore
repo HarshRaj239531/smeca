@@ -1,9 +1,5 @@
+/vendor
+/node_modules
+/tests
 .git
 .github
-tests
-tests/*
-node_modules
-storage/framework/cache/*
-storage/framework/sessions/*
-storage/framework/views/*
-storage/logs/*
