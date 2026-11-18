@@ -30,6 +30,7 @@
     }
   ],
   "env": {
+    "APP_KEY": "base64:qP3P98HymxwgvjePRu4zbQr13NoIzZbpo0kSdSQ/RG8=",
     "APP_ENV": "production",
     "APP_DEBUG": "false",
     "APP_CONFIG_CACHE": "/tmp/config.php",
@@ -40,6 +41,8 @@
     "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
     "CACHE_STORE": "array",
     "SESSION_DRIVER": "cookie",
-    "LOG_CHANNEL": "stderr"
+    "LOG_CHANNEL": "stderr",
+    "DB_CONNECTION": "sqlite",
+    "DB_DATABASE": "/tmp/database.sqlite"
   }
 }

@@ -1,10 +1,21 @@
 <?php
 
+use Illuminate\Foundation\Application;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
+
+define('LARAVEL_START', microtime(true));
+
 // 1. Prepare writable /tmp storage directories for serverless Vercel environment
 $storageDirs = [
+    '/tmp/storage',
+    '/tmp/storage/app',
+    '/tmp/storage/app/public',
+    '/tmp/storage/framework',
     '/tmp/storage/framework/views',
     '/tmp/storage/framework/sessions',
     '/tmp/storage/framework/cache',
+    '/tmp/storage/framework/cache/data',
     '/tmp/storage/logs',
 ];
 
@@ -14,7 +25,7 @@ foreach ($storageDirs as $dir) {
     }
 }
 
-// 2. Set essential serverless environment variables if not already set
+// 2. Set essential serverless environment variables
 putenv('LARAVEL_STORAGE_PATH=/tmp/storage');
 $_ENV['LARAVEL_STORAGE_PATH'] = '/tmp/storage';
 $_SERVER['LARAVEL_STORAGE_PATH'] = '/tmp/storage';
@@ -39,18 +50,30 @@ if (!getenv('APP_KEY')) {
     $_ENV['APP_KEY'] = 'base64:qP3P98HymxwgvjePRu4zbQr13NoIzZbpo0kSdSQ/RG8=';
 }
 
-// 3. SQLite Database handling for Vercel: copy database to writable /tmp
+// 3. SQLite Database handling for Vercel
 $sqliteSource = __DIR__ . '/../database/database.sqlite';
-$sqliteTarget = sys_get_temp_dir() . '/database.sqlite';
+$sqliteTarget = '/tmp/database.sqlite';
 
-if (file_exists($sqliteSource)) {
-    if (!file_exists($sqliteTarget)) {
+$needsMigration = false;
+
+if (file_exists($sqliteSource) && filesize($sqliteSource) > 0) {
+    if (!file_exists($sqliteTarget) || filesize($sqliteTarget) === 0) {
         @copy($sqliteSource, $sqliteTarget);
     }
-    putenv("DB_DATABASE={$sqliteTarget}");
-    $_ENV['DB_DATABASE'] = $sqliteTarget;
-    $_SERVER['DB_DATABASE'] = $sqliteTarget;
+} else {
+    if (!file_exists($sqliteTarget)) {
+        @touch($sqliteTarget);
+        $needsMigration = true;
+    }
 }
+
+putenv("DB_CONNECTION=sqlite");
+$_ENV['DB_CONNECTION'] = 'sqlite';
+$_SERVER['DB_CONNECTION'] = 'sqlite';
+
+putenv("DB_DATABASE={$sqliteTarget}");
+$_ENV['DB_DATABASE'] = $sqliteTarget;
+$_SERVER['DB_DATABASE'] = $sqliteTarget;
 
 // 4. Direct Static Asset Streamer (checks both public and dist)
 $uri = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
@@ -85,5 +108,20 @@ if ($uri !== '/' && $targetFile) {
     exit;
 }
 
-// 5. Forward all dynamic requests to Laravel public entry point
-require __DIR__ . '/../public/index.php';
+// 5. Autoload & Bootstrap Laravel
+require __DIR__ . '/../vendor/autoload.php';
+
+/** @var Application $app */
+$app = require_once __DIR__ . '/../bootstrap/app.php';
+
+// Self-healing migration if database was empty or not bundled
+if ($needsMigration) {
+    try {
+        Artisan::call('migrate', ['--force' => true]);
+        Artisan::call('db:seed', ['--force' => true]);
+    } catch (\Throwable $e) {
+        error_log('Migration fallback error: ' . $e->getMessage());
+    }
+}
+
+$app->handleRequest(Request::capture());
