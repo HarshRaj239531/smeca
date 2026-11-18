@@ -8,35 +8,35 @@
      HERO SECTION: High-Fidelity Photorealistic Packaging & Cosmetics Presentation
      Background: Exact Organic Sage (#c0caa7) | Typography: Deep Forest (#203a31)
      ========================================================================= -->
-<section class="relative bg-[#c0caa7] overflow-hidden pt-4 pb-10 sm:pt-6 sm:pb-16 select-none">
+<section class="relative bg-[#c0caa7] overflow-hidden pt-4 pb-12 sm:pt-8 sm:pb-16 select-none" style="background: radial-gradient(circle at 75% 40%, #cbd6b5 0%, #c0caa7 55%, #b5bf98 100%);">
     <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 relative">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center min-h-[580px]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center min-h-[540px]">
             
             <!-- Left Column: Copy, Price & Social Icons (Exact match to reference image) -->
-            <div class="lg:col-span-5 space-y-6 sm:space-y-7 z-10 text-left">
+            <div class="lg:col-span-5 space-y-6 sm:space-y-7 z-10 text-left pr-0 lg:pr-2">
                 
                 <!-- Main Heading -->
-                <h1 class="text-4xl sm:text-6xl xl:text-7xl font-serif-display font-medium text-[#203a31] tracking-[-0.03em] leading-[1.08]">
+                <h1 class="text-3xl sm:text-5xl lg:text-[46px] xl:text-[54px] font-serif-display font-medium text-[#203a31] tracking-[-0.02em] leading-[1.12]">
                     SMECA Box for <br>
                     Beautiful Skin
                 </h1>
 
                 <!-- Subtitle Description -->
-                <p class="text-sm sm:text-base text-[#3d564c] font-normal leading-relaxed max-w-sm">
+                <p class="text-sm sm:text-base text-[#384e42] font-normal leading-relaxed max-w-sm">
                     A set of organic cosmetics and Ayurvedic formulations for everyday skin treatment.
                 </p>
 
                 <!-- Pricing Line -->
-                <p class="text-sm sm:text-base text-[#3d564c] font-medium pt-1">
+                <p class="text-sm sm:text-base text-[#384e42] font-medium pt-1">
                     Buy a perfect skincare box for only 
                     <span class="font-bold text-xl sm:text-2xl text-[#203a31] ml-1">₹1,499.00</span>
-                    <span class="text-xs text-[#3d564c]/80 block sm:inline sm:ml-2">(Wholesale & OEM Available)</span>
+                    <span class="text-xs text-[#384e42]/80 block sm:inline sm:ml-2 font-normal">(Wholesale & OEM Available)</span>
                 </p>
 
                 <!-- Action Button -->
                 <div class="pt-2">
                     <button onclick="openEnquiryModal('SMECA Curated Skincare Box', null, 'product')" 
-                            class="bg-[#263e32] hover:bg-[#1a2c23] text-white text-xs sm:text-sm font-medium px-7 py-3.5 rounded-xs tracking-wide shadow-md transition duration-200">
+                            class="bg-[#243c30] hover:bg-[#182a21] text-white text-xs sm:text-sm font-medium px-8 py-3.5 rounded-xs tracking-wide shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer">
                         Order SMECA Box Now &rarr;
                     </button>
                 </div>
@@ -60,7 +60,7 @@
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </a>
 
-                    <span class="ml-3 text-[11px] text-[#3d564c] font-medium hidden sm:inline">
+                    <span class="ml-3 text-[11px] text-[#384e42] font-medium hidden sm:inline">
                         Bihar Manufacturing • Aurangabad & Gaya
                     </span>
                 </div>
@@ -68,57 +68,22 @@
             </div>
 
             <!-- Right Column: Photorealistic Studio 3D Packaging Box Presentation -->
-            <div class="lg:col-span-7 relative flex items-center justify-center py-2 lg:py-0">
-                
-                <div class="relative w-full max-w-[620px] aspect-[4/3] flex items-center justify-center">
+            <div class="lg:col-span-7 relative flex items-center justify-center lg:justify-end py-4 lg:py-0">
+                <div class="relative w-full max-w-[580px] xl:max-w-[650px] flex items-center justify-center cursor-pointer group"
+                     onclick="openEnquiryModal('SMECA Curated Skincare Box', null, 'product')">
                     
-                    <!-- Photorealistic 3D Box & Cosmetics Asset with Seamless Edge Feathering -->
-                    <img src="{{ asset('images/hero-cosmetics-box-hd.png') }}" 
+                    <img src="{{ asset('images/smeca-seamless-box.png') }}" 
                          alt="SMECA Box for Beautiful Skin - Organic Cosmetics & Ayurvedic Formulations" 
-                         class="w-full h-full object-contain filter drop-shadow-[0_20px_35px_rgba(20,37,31,0.22)] transform hover:scale-[1.01] transition-transform duration-500">
-
-                    <!-- Custom Embossed SMECA Branding Layer positioned over the box lid -->
-                    <div class="absolute top-[42%] left-[32%] sm:left-[35%] transform -rotate-[28deg] -skew-x-6 pointer-events-none text-left z-20">
-                        <div class="text-[#f5f8f2] font-serif-display font-medium text-sm sm:text-base tracking-widest drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
-                            SMECA
-                        </div>
-                        <div class="text-[#e2ead8] text-[6.5px] sm:text-[7.5px] tracking-[0.26em] uppercase font-bold -mt-0.5 opacity-90 drop-shadow-xs">
-                            PROFESSIONAL
-                        </div>
-                    </div>
-
-                    <!-- Interactive Clickable Hotspots for Products (Jar & Tubes) -->
-                    <!-- Hotspot 1: Amber Glass Kumkumadi Balm Jar -->
-                    <button type="button" 
-                            onclick="openEnquiryModal('SMECA Kumkumadi Miracle Cream Jar', 1, 'product')"
-                            title="Click to enquire about Kumkumadi Cream Jar"
-                            class="absolute top-[38%] left-[55%] w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white/0 hover:bg-white/10 border border-white/0 hover:border-white/30 transition-all cursor-pointer z-20 flex items-center justify-center group"
-                            aria-label="Enquire Kumkumadi Cream Jar">
-                        <span class="opacity-0 group-hover:opacity-100 bg-[#263e32]/90 text-white text-[9px] font-bold px-2 py-0.5 rounded shadow-sm transition-opacity pointer-events-none whitespace-nowrap">
-                            Kumkumadi Balm
-                        </span>
-                    </button>
-
-                    <!-- Hotspot 2: Skincare Hydra Cleanser Tube -->
-                    <button type="button" 
-                            onclick="openEnquiryModal('SMECA Hydra Cleanser Tube', 2, 'product')"
-                            title="Click to enquire about Hydra Cleanser Tube"
-                            class="absolute top-[48%] right-[10%] w-28 h-36 sm:w-32 sm:h-44 rounded-xl bg-white/0 hover:bg-white/10 border border-white/0 hover:border-white/30 transition-all cursor-pointer z-20 flex items-center justify-center group"
-                            aria-label="Enquire Hydra Cleanser Tube">
-                        <span class="opacity-0 group-hover:opacity-100 bg-[#263e32]/90 text-white text-[9px] font-bold px-2 py-0.5 rounded shadow-sm transition-opacity pointer-events-none whitespace-nowrap">
-                            Hydra Cleanser
-                        </span>
-                    </button>
+                         class="w-full h-auto object-contain select-none transform group-hover:scale-[1.015] transition-transform duration-500">
 
                 </div>
-
             </div>
 
         </div>
 
         <!-- Mouse Scroll Down Indicator (Exact match to bottom of image) -->
-        <div class="flex justify-center pt-8 sm:pt-10">
-            <a href="#overview" class="flex flex-col items-center gap-1 text-[#203a31]/60 hover:text-[#203a31] transition group">
+        <div class="flex justify-center pt-8 sm:pt-12">
+            <a href="#overview" class="flex flex-col items-center gap-1.5 text-[#203a31]/60 hover:text-[#203a31] transition group">
                 <div class="w-5 h-8 rounded-full border-[1.5px] border-[#203a31]/70 flex items-start justify-center p-1 shadow-2xs">
                     <div class="w-1 h-2 rounded-full bg-[#203a31] animate-bounce"></div>
                 </div>
