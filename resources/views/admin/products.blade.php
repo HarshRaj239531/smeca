@@ -18,13 +18,43 @@
     </div>
 
     <div class="flex items-center gap-3">
+        <button type="button" onclick="openCreateProductModal()"
+                class="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition flex items-center gap-1.5 shadow-xs cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+            <span>+ Add Formulation</span>
+        </button>
+
         <a href="{{ route('products.index') }}" target="_blank"
-           class="bg-[#203a31] hover:bg-[#14221c] text-white text-xs font-semibold px-4 py-2 rounded-xl transition flex items-center gap-1.5 shadow-xs">
+           class="bg-[#203a31] hover:bg-[#14221c] text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition flex items-center gap-1.5 shadow-xs">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             <span>Live Catalog Page</span>
         </a>
     </div>
 </div>
+
+@if(session('status_updated'))
+    <div class="mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs flex items-center justify-between shadow-2xs">
+        <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span class="font-semibold">{{ session('status_updated') }}</span>
+        </div>
+        <button type="button" onclick="this.parentElement.remove()" class="text-emerald-700 hover:text-emerald-900 font-bold px-2 py-1">&times;</button>
+    </div>
+@endif
+
+@if($errors->any())
+    <div class="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-900 text-xs shadow-2xs">
+        <div class="font-bold mb-1 flex items-center gap-2">
+            <svg class="w-4 h-4 text-red-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+            <span>Please correct the following errors:</span>
+        </div>
+        <ul class="list-disc pl-6 space-y-0.5">
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 <!-- Category Metric Tabs (Matching Reference Design) -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -177,7 +207,7 @@
                     <th class="py-3.5 px-5">OEM MOQ</th>
                     <th class="py-3.5 px-5">Classification</th>
                     <th class="py-3.5 px-5">Status</th>
-                    <th class="py-3.5 px-5 text-right">Preview</th>
+                    <th class="py-3.5 px-5 text-right">Actions</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-stone-100">
@@ -238,12 +268,37 @@
                             </span>
                         </td>
 
-                        <!-- Live Link -->
+                        <!-- Actions -->
                         <td class="py-4 px-5 text-right whitespace-nowrap">
-                            <a href="{{ route('products.show', $product->slug) }}" target="_blank"
-                               class="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-800 bg-blue-50 px-3 py-1 rounded-lg transition">
-                                <span>Inspect</span> &rarr;
-                            </a>
+                            <div class="inline-flex items-center gap-1.5 justify-end">
+                                <!-- Edit Button -->
+                                <button type="button" 
+                                        onclick='openEditProductModal(@json($product))'
+                                        class="inline-flex items-center gap-1 text-xs font-semibold text-amber-700 hover:text-amber-900 bg-amber-50 hover:bg-amber-100 border border-amber-200/60 px-2.5 py-1.5 rounded-lg transition cursor-pointer"
+                                        title="Edit Formulation">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                                    <span>Edit</span>
+                                </button>
+
+                                <!-- Live Link -->
+                                <a href="{{ route('products.show', $product->slug) }}" target="_blank"
+                                   class="inline-flex items-center gap-1 text-xs font-semibold text-blue-700 hover:text-blue-900 bg-blue-50 hover:bg-blue-100 border border-blue-200/60 px-2.5 py-1.5 rounded-lg transition"
+                                   title="View on Live Website">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                                    <span>View</span>
+                                </a>
+
+                                <!-- Delete Form -->
+                                <form method="POST" action="{{ route('admin.products.destroy', $product->id) }}" class="inline" onsubmit="return confirm('Are you sure you want to remove formulation &quot;{{ addslashes($product->name) }}&quot; from catalog?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"
+                                            class="inline-flex items-center text-xs font-semibold text-red-600 hover:text-red-800 bg-red-50 hover:bg-red-100 border border-red-200/60 p-1.5 rounded-lg transition cursor-pointer"
+                                            title="Delete Formulation">
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                                    </button>
+                                </form>
+                            </div>
                         </td>
 
                     </tr>
@@ -263,5 +318,8 @@
         {{ $products->links() }}
     </div>
 </div>
+
+<!-- Formulation Master Modal (Separated Component) -->
+@include('admin.partials.product-modal')
 
 @endsection

@@ -312,4 +312,116 @@ class SmecaWebsiteTest extends TestCase
         $response->assertSee(route('blog.index'));
         $response->assertSee('Blog');
     }
+
+    /**
+     * Test admin products page renders with add button, edit modals, and formulation actions.
+     */
+    public function test_admin_products_catalog_renders_with_add_and_edit_features(): void
+    {
+        $user = \App\Models\User::first() ?? \App\Models\User::factory()->create();
+
+        $response = $this->actingAs($user)->get('/admin/products');
+
+        $response->assertStatus(200);
+        $response->assertSee('+ Add Formulation');
+        $response->assertSee('createProductModal');
+        $response->assertSee('editProductModal');
+        $response->assertSee('openEditProductModal');
+        $response->assertSee('Active Formulations Directory');
+    }
+
+    /**
+     * Test admin can create a new formulation in the catalog.
+     */
+    public function test_admin_can_create_new_formulation(): void
+    {
+        $user = \App\Models\User::first() ?? \App\Models\User::factory()->create();
+        $category = Category::first();
+
+        $response = $this->actingAs($user)->post('/admin/products', [
+            'name' => 'SMECA Royal Saffron Night Cream',
+            'category_id' => $category->id,
+            'tagline' => 'Luxury Botanical Night Emulsion',
+            'volume_size' => '50g Glass Jar',
+            'moq' => '300 Units',
+            'status' => 'Available',
+            'key_ingredients' => 'Kesar, Sandalwood, Almond Oil',
+            'benefits' => 'Deep cellular nourishment, overnight hydration',
+            'short_description' => 'A rich, restorative cream formulated with premium herbal actives for supple skin.',
+            'description' => 'Manufactured under GMP standards with cold-pressed botanical oils.',
+            'is_ayurvedic' => '1',
+            'b2b_available' => '1',
+            'is_featured' => '1',
+        ]);
+
+        $response->assertRedirect('/admin/products');
+        $response->assertSessionHas('status_updated');
+
+        $this->assertDatabaseHas('products', [
+            'name' => 'SMECA Royal Saffron Night Cream',
+            'slug' => 'smeca-royal-saffron-night-cream',
+            'category_id' => $category->id,
+            'is_ayurvedic' => true,
+        ]);
+    }
+
+    /**
+     * Test admin can update an existing formulation.
+     */
+    public function test_admin_can_update_existing_formulation(): void
+    {
+        $user = \App\Models\User::first() ?? \App\Models\User::factory()->create();
+        $product = Product::first();
+        $category = Category::latest('id')->first();
+
+        $response = $this->actingAs($user)->put('/admin/products/' . $product->id, [
+            'name' => 'Updated ' . $product->name,
+            'category_id' => $category->id,
+            'tagline' => 'Updated Tagline Text',
+            'volume_size' => '200 ml Extra Pack',
+            'moq' => '500 Units Bulk',
+            'status' => 'Available',
+            'key_ingredients' => 'Updated Ingredients',
+            'benefits' => 'Updated Benefits',
+            'short_description' => 'Updated short description for test.',
+            'description' => 'Updated detailed description.',
+            'is_ayurvedic' => '1',
+            'b2b_available' => '1',
+        ]);
+
+        $response->assertRedirect('/admin/products');
+        $response->assertSessionHas('status_updated');
+
+        $this->assertDatabaseHas('products', [
+            'id' => $product->id,
+            'name' => 'Updated ' . $product->name,
+            'moq' => '500 Units Bulk',
+        ]);
+    }
+
+    /**
+     * Test admin can remove a formulation from catalog.
+     */
+    public function test_admin_can_delete_formulation(): void
+    {
+        $user = \App\Models\User::first() ?? \App\Models\User::factory()->create();
+        $product = Product::create([
+            'category_id' => Category::first()->id,
+            'name' => 'Temporary Formulation For Deletion',
+            'slug' => 'temp-formulation-delete',
+            'tagline' => 'Temporary',
+            'short_description' => 'To be deleted',
+            'status' => 'Available',
+            'is_ayurvedic' => false,
+            'b2b_available' => true,
+        ]);
+
+        $response = $this->actingAs($user)->delete('/admin/products/' . $product->id);
+
+        $response->assertRedirect('/admin/products');
+        $response->assertSessionHas('status_updated');
+        $this->assertDatabaseMissing('products', [
+            'id' => $product->id,
+        ]);
+    }
 }

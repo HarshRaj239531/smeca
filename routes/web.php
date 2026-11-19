@@ -57,6 +57,9 @@ Route::prefix('admin')->group(function (): void {
         Route::patch('/inquiries/{inquiry}/status', [InquiryAdminController::class, 'updateStatus'])->name('admin.inquiries.status');
         Route::delete('/inquiries/{inquiry}', [InquiryAdminController::class, 'destroy'])->name('admin.inquiries.destroy');
         Route::get('/products', [InquiryAdminController::class, 'products'])->name('admin.products');
+        Route::post('/products', [InquiryAdminController::class, 'storeProduct'])->name('admin.products.store');
+        Route::put('/products/{product}', [InquiryAdminController::class, 'updateProduct'])->name('admin.products.update');
+        Route::delete('/products/{product}', [InquiryAdminController::class, 'destroyProduct'])->name('admin.products.destroy');
         Route::post('/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
     });
 });

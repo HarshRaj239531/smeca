@@ -157,4 +157,99 @@ class InquiryAdminController extends Controller
 
         return redirect()->back()->with('status_updated', 'Inquiry record removed permanently.');
     }
+
+    /**
+     * Store a newly created formulation / product in the catalog.
+     */
+    public function storeProduct(Request $request): RedirectResponse
+    {
+        $validated = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'category_id' => ['required', 'exists:categories,id'],
+            'tagline' => ['nullable', 'string', 'max:255'],
+            'short_description' => ['required', 'string'],
+            'description' => ['nullable', 'string'],
+            'volume_size' => ['nullable', 'string', 'max:100'],
+            'moq' => ['nullable', 'string', 'max:100'],
+            'key_ingredients' => ['nullable', 'string', 'max:500'],
+            'benefits' => ['nullable', 'string', 'max:500'],
+            'image_url' => ['nullable', 'string', 'max:500'],
+            'status' => ['required', 'string', 'max:50'],
+            'is_ayurvedic' => ['nullable', 'boolean'],
+            'b2b_available' => ['nullable', 'boolean'],
+            'is_featured' => ['nullable', 'boolean'],
+        ]);
+
+        $slug = \Illuminate\Support\Str::slug($validated['name']);
+        $originalSlug = $slug;
+        $counter = 1;
+        while (Product::where('slug', $slug)->exists()) {
+            $slug = "{$originalSlug}-{$counter}";
+            $counter++;
+        }
+
+        $validated['slug'] = $slug;
+        $validated['is_ayurvedic'] = $request->boolean('is_ayurvedic');
+        $validated['b2b_available'] = $request->boolean('b2b_available');
+        $validated['is_featured'] = $request->boolean('is_featured');
+        $validated['image_url'] = !empty($validated['image_url']) ? $validated['image_url'] : '/images/hero-box.png';
+
+        Product::create($validated);
+
+        return redirect()->route('admin.products')->with('status_updated', "New formulation '{$validated['name']}' added to catalog successfully.");
+    }
+
+    /**
+     * Update an existing formulation / product in the catalog.
+     */
+    public function updateProduct(Request $request, Product $product): RedirectResponse
+    {
+        $validated = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'category_id' => ['required', 'exists:categories,id'],
+            'tagline' => ['nullable', 'string', 'max:255'],
+            'short_description' => ['required', 'string'],
+            'description' => ['nullable', 'string'],
+            'volume_size' => ['nullable', 'string', 'max:100'],
+            'moq' => ['nullable', 'string', 'max:100'],
+            'key_ingredients' => ['nullable', 'string', 'max:500'],
+            'benefits' => ['nullable', 'string', 'max:500'],
+            'image_url' => ['nullable', 'string', 'max:500'],
+            'status' => ['required', 'string', 'max:50'],
+            'is_ayurvedic' => ['nullable', 'boolean'],
+            'b2b_available' => ['nullable', 'boolean'],
+            'is_featured' => ['nullable', 'boolean'],
+        ]);
+
+        if ($product->name !== $validated['name']) {
+            $slug = \Illuminate\Support\Str::slug($validated['name']);
+            $originalSlug = $slug;
+            $counter = 1;
+            while (Product::where('slug', $slug)->where('id', '!=', $product->id)->exists()) {
+                $slug = "{$originalSlug}-{$counter}";
+                $counter++;
+            }
+            $validated['slug'] = $slug;
+        }
+
+        $validated['is_ayurvedic'] = $request->boolean('is_ayurvedic');
+        $validated['b2b_available'] = $request->boolean('b2b_available');
+        $validated['is_featured'] = $request->boolean('is_featured');
+        $validated['image_url'] = !empty($validated['image_url']) ? $validated['image_url'] : ($product->image_url ?: '/images/hero-box.png');
+
+        $product->update($validated);
+
+        return redirect()->route('admin.products')->with('status_updated', "Formulation '{$product->name}' updated successfully.");
+    }
+
+    /**
+     * Remove a formulation from the catalog.
+     */
+    public function destroyProduct(Product $product): RedirectResponse
+    {
+        $name = $product->name;
+        $product->delete();
+
+        return redirect()->route('admin.products')->with('status_updated', "Formulation '{$name}' removed from catalog.");
+    }
 }
