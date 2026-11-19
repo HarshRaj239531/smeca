@@ -212,9 +212,13 @@
             @foreach($directors as $director)
                 <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-6 items-start">
                     
-                    <!-- Director Avatar/Image placeholder -->
-                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-stone-100 text-[#203a31] flex items-center justify-center font-serif-display font-bold text-3xl shrink-0 shadow-xs border border-stone-200">
-                        {{ substr($director['name'], 0, 1) }}
+                    <!-- Director Avatar/Monogram Seal -->
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-white text-[#203a31] p-2 flex items-center justify-center shrink-0 shadow-sm border border-stone-200 group-hover:scale-105 group-hover:shadow-md transition-all duration-300">
+                        <div class="w-full h-full rounded-xl border border-[#203a31]/20 flex items-center justify-center bg-white">
+                            <span class="font-serif-display font-bold text-3xl text-[#203a31]">
+                                {{ substr($director['name'], 0, 1) }}
+                            </span>
+                        </div>
                     </div>
 
                     <!-- Details -->

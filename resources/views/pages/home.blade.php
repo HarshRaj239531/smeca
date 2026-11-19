@@ -288,8 +288,12 @@
             @foreach($directors as $director)
                 <div class="bg-[#f6f8f3] rounded-xs p-7 border border-stone-200 hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-center group">
                     <div>
-                        <div class="w-18 h-18 mx-auto rounded-full bg-[#203a31] text-[#c0caa7] flex items-center justify-center font-serif-display font-medium text-2xl shadow-md group-hover:scale-105 transition-transform mb-4">
-                            {{ $director['initials'] }}
+                        <div class="relative w-20 h-20 mx-auto rounded-full bg-white border border-stone-200 shadow-sm p-1.5 flex items-center justify-center group-hover:scale-105 group-hover:shadow-md group-hover:border-[#203a31]/40 transition-all duration-300 mb-4">
+                            <div class="w-full h-full rounded-full border border-[#203a31]/20 flex items-center justify-center bg-white shadow-inner">
+                                <span class="font-serif-display font-bold text-2xl text-[#203a31] tracking-wider">
+                                    {{ $director['initials'] }}
+                                </span>
+                            </div>
                         </div>
                         <h3 class="text-lg font-serif-display font-medium text-[#203a31]">{{ $director['name'] }}</h3>
                         <p class="text-[11px] font-bold text-[#525e3b] uppercase tracking-wider mt-0.5">{{ $director['role'] }}</p>
