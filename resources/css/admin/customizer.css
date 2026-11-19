@@ -103,9 +103,21 @@ body.admin-body {
     border-color: var(--admin-sidebar-border) !important;
 }
 
+#adminSidebar .sidebar-brand-box span:first-child {
+    color: var(--admin-sidebar-text) !important;
+}
+
 #adminSidebar .sidebar-profile-box {
     background-color: var(--admin-sidebar-hover) !important;
     border-color: var(--admin-sidebar-border) !important;
+}
+
+#adminSidebar .sidebar-profile-box h4 {
+    color: var(--admin-sidebar-text) !important;
+}
+
+#adminSidebar .sidebar-profile-box p {
+    color: var(--admin-sidebar-muted) !important;
 }
 
 /* Sidebar Link Styling - Inactive Items */
@@ -135,7 +147,6 @@ body.admin-body {
 }
 
 /* Sidebar Link Styling - Active Selected Item */
-/* ALWAYS retains high contrast dark background and white text, even when hovered! */
 #adminSidebar .sidebar-link-active,
 #adminSidebar .sidebar-link-active:hover,
 #adminSidebar .sidebar-link-active:focus,
@@ -191,36 +202,275 @@ body.admin-body {
     font-family: var(--admin-font-sans) !important;
 }
 
-[data-admin-themed="true"] main .bg-white {
+[data-admin-themed="true"] main .bg-white,
+[data-admin-themed="true"] .admin-card-surface {
     background-color: var(--admin-card-bg) !important;
-    transition: background-color 0.2s ease;
+    color: var(--admin-text-main) !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+[data-admin-themed="true"] main .bg-stone-50,
+[data-admin-themed="true"] main .bg-stone-50\/70,
+[data-admin-themed="true"] main .bg-stone-50\/80,
+[data-admin-themed="true"] main .bg-stone-50\/50,
+[data-admin-themed="true"] main .bg-\[\#f6f8f3\],
+[data-admin-themed="true"] main .bg-\[\#f8faf6\] {
+    background-color: var(--admin-card-hover) !important;
+}
+
+[data-admin-themed="true"] main .border-stone-100,
 [data-admin-themed="true"] main .border-stone-200,
-[data-admin-themed="true"] main .border-stone-100 {
+[data-admin-themed="true"] main .border-stone-200\/80,
+[data-admin-themed="true"] main .border-stone-200\/90,
+[data-admin-themed="true"] main .border-stone-300,
+[data-admin-themed="true"] main .divide-stone-100 > :not([hidden]) ~ :not([hidden]),
+[data-admin-themed="true"] main .divide-stone-200 > :not([hidden]) ~ :not([hidden]) {
     border-color: var(--admin-card-border) !important;
 }
 
+/* Headings and Main Text */
+[data-admin-themed="true"] main h1,
+[data-admin-themed="true"] main h2,
+[data-admin-themed="true"] main h3,
+[data-admin-themed="true"] main h4,
 [data-admin-themed="true"] main .text-slate-900,
+[data-admin-themed="true"] main .text-slate-800,
+[data-admin-themed="true"] main .text-slate-700,
 [data-admin-themed="true"] main .text-stone-900,
-[data-admin-themed="true"] main .text-\[\#203a31\] {
+[data-admin-themed="true"] main .text-stone-800,
+[data-admin-themed="true"] main .text-stone-700,
+[data-admin-themed="true"] main .text-\[\#203a31\],
+[data-admin-themed="true"] main .text-\[\#1b2b24\] {
     color: var(--admin-text-main) !important;
 }
 
+/* Secondary & Muted Text */
+[data-admin-themed="true"] main .text-slate-600,
 [data-admin-themed="true"] main .text-slate-500,
 [data-admin-themed="true"] main .text-slate-400,
+[data-admin-themed="true"] main .text-stone-600,
 [data-admin-themed="true"] main .text-stone-500,
 [data-admin-themed="true"] main .text-stone-400 {
     color: var(--admin-text-muted) !important;
 }
 
-[data-admin-themed="true"] main .bg-\[\#f6f8f3\],
-[data-admin-themed="true"] main .bg-stone-50 {
+/* Tables across Admin in Themed / Dark Mode */
+[data-admin-themed="true"] main table {
+    color: var(--admin-text-main) !important;
+}
+
+[data-admin-themed="true"] main thead,
+[data-admin-themed="true"] main thead tr,
+[data-admin-themed="true"] main thead th {
     background-color: var(--admin-card-hover) !important;
+    color: var(--admin-text-muted) !important;
+    border-color: var(--admin-card-border) !important;
+}
+
+[data-admin-themed="true"] main tbody tr {
+    background-color: var(--admin-card-bg) !important;
+    border-color: var(--admin-card-border) !important;
+}
+
+[data-admin-themed="true"] main tbody tr:hover,
+[data-admin-themed="true"] main tbody tr.hover\:bg-\[\#f6f8f3\]:hover {
+    background-color: var(--admin-card-hover) !important;
+}
+
+[data-admin-themed="true"] main tbody td {
+    color: var(--admin-text-main) !important;
+    border-color: var(--admin-card-border) !important;
+}
+
+[data-admin-themed="true"] main tbody td .text-slate-800,
+[data-admin-themed="true"] main tbody td .text-slate-700,
+[data-admin-themed="true"] main tbody td .text-slate-600 {
+    color: var(--admin-text-main) !important;
 }
 
 [data-admin-themed="true"] .font-serif-display {
     font-family: var(--admin-font-serif, var(--admin-font-sans)) !important;
+}
+
+/* ======================================================== */
+/* SPECIFIC DARK MODE HIGH CONTRAST OVERRIDES               */
+/* ======================================================== */
+[data-admin-dark="true"] {
+    color-scheme: dark;
+}
+
+/* Header in Dark Mode */
+[data-admin-dark="true"] #adminHeader {
+    background-color: var(--admin-header-bg) !important;
+    border-color: var(--admin-header-border) !important;
+}
+
+[data-admin-dark="true"] #adminHeader .bg-stone-50,
+[data-admin-dark="true"] #adminHeader .bg-stone-50\/80,
+[data-admin-dark="true"] #adminHeader .bg-stone-50\/70,
+[data-admin-dark="true"] #adminHeader .bg-stone-100 {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: var(--admin-header-border) !important;
+    color: var(--admin-header-text) !important;
+}
+
+[data-admin-dark="true"] #adminHeader button,
+[data-admin-dark="true"] #adminHeader a.bg-white {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: var(--admin-header-border) !important;
+    color: var(--admin-header-text) !important;
+}
+
+[data-admin-dark="true"] #adminHeader button:hover,
+[data-admin-dark="true"] #adminHeader a.bg-white:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+[data-admin-dark="true"] #adminHeader #headerLiveDate {
+    color: var(--admin-header-text) !important;
+}
+
+[data-admin-dark="true"] #adminHeader .bg-\[\#e8f7f0\] {
+    background-color: rgba(5, 196, 107, 0.15) !important;
+    border-color: rgba(5, 196, 107, 0.3) !important;
+    color: #34d399 !important;
+}
+
+/* Inputs, Selects & Forms in Dark Mode */
+[data-admin-dark="true"] input[type="text"],
+[data-admin-dark="true"] input[type="email"],
+[data-admin-dark="true"] input[type="tel"],
+[data-admin-dark="true"] input[type="password"],
+[data-admin-dark="true"] input[type="search"],
+[data-admin-dark="true"] select,
+[data-admin-dark="true"] textarea {
+    background-color: var(--admin-card-hover) !important;
+    color: var(--admin-text-main) !important;
+    border-color: var(--admin-card-border) !important;
+}
+
+[data-admin-dark="true"] select option {
+    background-color: #151e2e !important;
+    color: #f8fafc !important;
+}
+
+[data-admin-dark="true"] input::placeholder,
+[data-admin-dark="true"] textarea::placeholder {
+    color: var(--admin-text-muted) !important;
+    opacity: 0.7;
+}
+
+[data-admin-dark="true"] input:focus,
+[data-admin-dark="true"] select:focus,
+[data-admin-dark="true"] textarea:focus {
+    background-color: var(--admin-card-hover) !important;
+    color: var(--admin-text-main) !important;
+    border-color: var(--admin-accent) !important;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2) !important;
+}
+
+/* Badges & Pills in Dark Mode */
+[data-admin-dark="true"] main .bg-stone-100 {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: var(--admin-text-main) !important;
+    border-color: var(--admin-card-border) !important;
+}
+
+[data-admin-dark="true"] main .bg-emerald-100 {
+    background-color: rgba(5, 196, 107, 0.18) !important;
+    color: #6ee7b7 !important;
+    border-color: rgba(5, 196, 107, 0.35) !important;
+}
+
+[data-admin-dark="true"] main .bg-emerald-50 {
+    background-color: rgba(5, 196, 107, 0.15) !important;
+    color: #34d399 !important;
+    border-color: rgba(5, 196, 107, 0.3) !important;
+}
+
+[data-admin-dark="true"] main .bg-amber-100 {
+    background-color: rgba(245, 158, 11, 0.18) !important;
+    color: #fcd34d !important;
+    border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
+[data-admin-dark="true"] main .bg-amber-50 {
+    background-color: rgba(245, 158, 11, 0.15) !important;
+    color: #fbbf24 !important;
+    border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
+[data-admin-dark="true"] main .bg-blue-100 {
+    background-color: rgba(59, 130, 246, 0.18) !important;
+    color: #93c5fd !important;
+    border-color: rgba(59, 130, 246, 0.35) !important;
+}
+
+[data-admin-dark="true"] main .bg-blue-50 {
+    background-color: rgba(59, 130, 246, 0.15) !important;
+    color: #60a5fa !important;
+    border-color: rgba(59, 130, 246, 0.35) !important;
+}
+
+[data-admin-dark="true"] main .bg-purple-100 {
+    background-color: rgba(168, 85, 247, 0.18) !important;
+    color: #d8b4fe !important;
+    border-color: rgba(168, 85, 247, 0.35) !important;
+}
+
+[data-admin-dark="true"] main .bg-red-50 {
+    background-color: rgba(239, 68, 68, 0.15) !important;
+    color: #f87171 !important;
+    border-color: rgba(239, 68, 68, 0.35) !important;
+}
+
+/* Modals & Drawers in Dark Mode */
+[data-admin-dark="true"] #productFormModal .bg-white,
+[data-admin-dark="true"] #manualInquiryModal .bg-white,
+[data-admin-dark="true"] #themeCustomizerDrawer {
+    background-color: var(--admin-card-bg) !important;
+    color: var(--admin-text-main) !important;
+    border-color: var(--admin-card-border) !important;
+}
+
+[data-admin-dark="true"] #productFormModal .bg-stone-50\/80,
+[data-admin-dark="true"] #productFormModal .bg-stone-50,
+[data-admin-dark="true"] #manualInquiryModal .bg-stone-50,
+[data-admin-dark="true"] #themeCustomizerDrawer .bg-stone-50 {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    border-color: var(--admin-card-border) !important;
+    color: var(--admin-text-main) !important;
+}
+
+[data-admin-dark="true"] #productFormModal label,
+[data-admin-dark="true"] #manualInquiryModal label,
+[data-admin-dark="true"] #themeCustomizerDrawer label {
+    color: var(--admin-text-main) !important;
+}
+
+[data-admin-dark="true"] #productFormModal .sticky.bottom-0 {
+    background-color: var(--admin-card-bg) !important;
+    border-color: var(--admin-card-border) !important;
+}
+
+[data-admin-dark="true"] #themeCustomizerDrawer .text-slate-900,
+[data-admin-dark="true"] #themeCustomizerDrawer .text-slate-800,
+[data-admin-dark="true"] #themeCustomizerDrawer .text-slate-700 {
+    color: var(--admin-text-main) !important;
+}
+
+/* Pagination in Dark Mode */
+[data-admin-dark="true"] nav[role="navigation"] {
+    color: var(--admin-text-main) !important;
+}
+[data-admin-dark="true"] nav[role="navigation"] span,
+[data-admin-dark="true"] nav[role="navigation"] a {
+    background-color: var(--admin-card-bg) !important;
+    color: var(--admin-text-main) !important;
+    border-color: var(--admin-card-border) !important;
+}
+[data-admin-dark="true"] nav[role="navigation"] a:hover {
+    background-color: var(--admin-card-hover) !important;
 }
 
 /* Executive Vibrant Metric Cards (Exact match to reference design) */

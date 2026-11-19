@@ -218,6 +218,7 @@
                         <td class="py-4 px-5">
                             <div class="flex items-center gap-3">
                                 <img src="{{ $product->image_url }}" alt="{{ $product->name }}" 
+                                     onerror="this.onerror=null; this.src='/images/hero-box.png';"
                                      class="w-12 h-12 rounded-xl object-cover border border-stone-200 shrink-0">
                                 <div class="min-w-0">
                                     <div class="font-bold text-[#203a31] text-sm group-hover:text-emerald-800 transition">

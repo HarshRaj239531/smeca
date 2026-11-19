@@ -41,7 +41,7 @@
         'dark': {
             name: 'Midnight Dark',
             sidebarBg: '#0f172a',
-            sidebarText: '#e2e8f0',
+            sidebarText: '#f8fafc',
             sidebarActiveBg: '#38bdf8',
             sidebarActiveText: '#0f172a',
             sidebarBorder: '#1e293b',
@@ -183,9 +183,15 @@
     function applyTheme(theme) {
         const root = document.documentElement;
         
+        const isDark = isColorDark(theme.bg);
+        const isSidebarDark = isColorDark(theme.sidebarBg);
+
         // Mark as themed
         root.setAttribute('data-admin-themed', 'true');
         root.setAttribute('data-admin-mode', theme.mode || 'custom');
+        root.setAttribute('data-admin-dark', isDark ? 'true' : 'false');
+        root.setAttribute('data-sidebar-dark', isSidebarDark ? 'true' : 'false');
+        root.classList.toggle('dark', isDark);
 
         // Font family
         const sansFont = FONTS[theme.fontFamily] || FONTS['Plus Jakarta Sans'];
@@ -202,7 +208,6 @@
         root.style.setProperty('--admin-sidebar-active-text', theme.sidebarActiveText);
 
         // Sidebar muted text
-        const isSidebarDark = isColorDark(theme.sidebarBg);
         root.style.setProperty('--admin-sidebar-muted', isSidebarDark ? 'rgba(255,255,255,0.45)' : '#94a3b8');
 
         // Canvas & Cards
