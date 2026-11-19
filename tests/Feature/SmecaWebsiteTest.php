@@ -30,6 +30,8 @@ class SmecaWebsiteTest extends TestCase
         $response->assertSee('Ayurvedic');
         $response->assertSee('Aurangabad');
         $response->assertSee('Gaya');
+        $response->assertSee('Design and Development by');
+        $response->assertSee('Startup Web Support');
     }
 
     /**
@@ -46,6 +48,8 @@ class SmecaWebsiteTest extends TestCase
         $response->assertSee('Yogendra Das');
         $response->assertSee('Aurangabad');
         $response->assertSee('Gaya');
+        $response->assertSee('Design and Development by');
+        $response->assertSee('Startup Web Support');
     }
 
     /**
@@ -251,6 +255,9 @@ class SmecaWebsiteTest extends TestCase
         $response->assertSee('stat-card-gradient-1');
         $response->assertSee('stat-card-gradient-2');
         $response->assertSee('stat-card-glass');
+
+        // Verify footer developer credit
+        $response->assertSee('Startup Web Support');
     }
 
     /**

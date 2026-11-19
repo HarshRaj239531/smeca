@@ -341,13 +341,18 @@
             </div>
 
             <!-- Bottom Copyright -->
-            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#c0caa7]/60">
+            <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#c0caa7]/60">
                 <p>© 2026 SMECA Industry Private Limited. All Rights Reserved.</p>
                 <div class="flex items-center gap-4 text-[11px]">
                     <span>✓ 100% Organic & Ayurvedic</span>
                     <span>✓ cGMP Cleanroom Quality</span>
                     <span>✓ Bihar, India</span>
                 </div>
+            </div>
+
+            <!-- Developer Credit -->
+            <div class="pt-4 mt-3 text-center text-xs text-[#c0caa7]/60 border-t border-white/5">
+                <p>Design and Development by <span class="text-white font-medium">Startup Web Support</span></p>
             </div>
         </div>
     </footer>

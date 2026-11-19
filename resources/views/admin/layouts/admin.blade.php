@@ -73,6 +73,11 @@
             @yield('content')
         </main>
 
+        <!-- Admin Desk Footer -->
+        <footer class="py-4 px-6 border-t border-stone-200/80 bg-white/60 text-center text-xs text-slate-500">
+            <p>© {{ date('Y') }} SMECA Industry Private Limited • Design and Development by <span class="font-semibold text-slate-700">Startup Web Support</span></p>
+        </footer>
+
     </div>
 
     <!-- Modular Live Theme & Appearance Studio Drawer -->
