@@ -94,3 +94,29 @@ html {
 .shine-effect:hover::after {
     left: 140%;
 }
+
+/* =========================================================================
+   Professional Red Borders on Selected Feature & Product Cards Only
+   ========================================================================= */
+
+/* 1. Four Pillars of Excellence Cards (Exact match to user reference) */
+#overview .grid > div,
+/* 2. Featured Products & Formulations Cards */
+.product-item,
+section .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 > div.bg-white,
+/* 3. Board of Directors Cards */
+section .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div.bg-\[\#f6f8f3\],
+/* 4. Testimonials Client Cards */
+#testimonials .grid > div {
+    border: 1px solid rgba(239, 68, 68, 0.45) !important;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+#overview .grid > div:hover,
+.product-item:hover,
+section .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 > div.bg-white:hover,
+section .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div.bg-\[\#f6f8f3\]:hover,
+#testimonials .grid > div:hover {
+    border-color: #ef4444 !important;
+    box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.15), 0 4px 10px -3px rgba(239, 68, 68, 0.1) !important;
+}
