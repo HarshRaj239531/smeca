@@ -71,6 +71,9 @@
 </head>
 <body class="min-h-full flex flex-col {{ request()->routeIs('home') ? 'bg-[#c0caa7]' : 'bg-white' }} text-[#203a31] overflow-x-hidden">
 
+    <!-- Scroll Progress Indicator (GSAP ScrollTrigger) -->
+    <div id="scroll-progress"></div>
+
     <!-- Integrated Sage Navigation Bar (Exact Match to User Reference Image) -->
     <header class="w-full {{ request()->routeIs('home') ? 'bg-[#c0caa7]' : 'bg-white border-b border-stone-200 shadow-2xs' }} z-40 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
@@ -114,7 +117,7 @@
                 <!-- Right Action Button (Matching 'Order Shine Box Now') -->
                 <div class="hidden sm:flex items-center gap-4">
                     <button onclick="openEnquiryModal('SMECA Curated Skincare Box', null, 'product')" 
-                            class="bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-[12.5px] font-medium px-6 py-2.5 rounded-xs tracking-wide shadow-xs transition duration-200 cursor-pointer">
+                            class="shine-effect bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-[12.5px] font-medium px-6 py-2.5 rounded-xs tracking-wide shadow-xs transition duration-200 cursor-pointer">
                         Order SMECA Box Now
                     </button>
                 </div>
@@ -349,62 +352,38 @@
         </div>
     </footer>
 
-    <!-- Interactive Scripts for Mobile Drawer & Enquiry Modal -->
+    <!-- Fallback Handlers if bundle is deferred -->
     <script>
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const menuIcon = document.getElementById('menuIcon');
-        const closeIcon = document.getElementById('closeIcon');
+        if (!window.openEnquiryModal) {
+            window.openEnquiryModal = function(productName = 'SMECA Skincare Box', productId = null, type = 'product') {
+                const modal = document.getElementById('enquiryModal');
+                const nameInput = document.getElementById('modalProductName');
+                const idInput = document.getElementById('modalProductId');
+                const typeInput = document.getElementById('modalInquiryType');
+                const messageInput = document.getElementById('modalMessage');
 
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', () => {
-                const isHidden = mobileMenu.classList.contains('hidden');
-                if (isHidden) {
-                    mobileMenu.classList.remove('hidden');
-                    menuIcon.classList.add('hidden');
-                    closeIcon.classList.remove('hidden');
-                } else {
-                    mobileMenu.classList.add('hidden');
-                    menuIcon.classList.remove('hidden');
-                    closeIcon.classList.add('hidden');
+                if (modal) {
+                    if (nameInput) nameInput.value = productName;
+                    if (idInput) idInput.value = productId || '';
+                    if (typeInput) typeInput.value = type;
+                    if (messageInput) {
+                        messageInput.placeholder = `Please share your quantity requirement, delivery location, or private label details for ${productName}...`;
+                    }
+                    modal.classList.remove('hidden');
+                    document.body.classList.add('overflow-hidden');
                 }
-            });
+            };
         }
 
-        function openEnquiryModal(productName = 'SMECA Skincare Box', productId = null, type = 'product') {
-            const modal = document.getElementById('enquiryModal');
-            const nameInput = document.getElementById('modalProductName');
-            const idInput = document.getElementById('modalProductId');
-            const typeInput = document.getElementById('modalInquiryType');
-            const messageInput = document.getElementById('modalMessage');
-
-            if (modal) {
-                nameInput.value = productName;
-                idInput.value = productId || '';
-                if (typeInput) {
-                    typeInput.value = type;
+        if (!window.closeEnquiryModal) {
+            window.closeEnquiryModal = function() {
+                const modal = document.getElementById('enquiryModal');
+                if (modal) {
+                    modal.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
                 }
-                if (messageInput) {
-                    messageInput.placeholder = `Please share your quantity requirement, delivery location, or private label details for ${productName}...`;
-                }
-                modal.classList.remove('hidden');
-                document.body.classList.add('overflow-hidden');
-            }
+            };
         }
-
-        function closeEnquiryModal() {
-            const modal = document.getElementById('enquiryModal');
-            if (modal) {
-                modal.classList.add('hidden');
-                document.body.classList.remove('overflow-hidden');
-            }
-        }
-
-        document.getElementById('enquiryModal')?.addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeEnquiryModal();
-            }
-        });
     </script>
 
     @stack('scripts')

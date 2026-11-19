@@ -36,7 +36,7 @@
                 <!-- Action Button -->
                 <div class="pt-2">
                     <button onclick="openEnquiryModal('SMECA Curated Skincare Box', null, 'product')" 
-                            class="bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-8 py-3.5 rounded-xs tracking-wide shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer">
+                            class="shine-effect bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-8 py-3.5 rounded-xs tracking-wide shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer">
                         Order SMECA Box Now &rarr;
                     </button>
                 </div>
