@@ -128,16 +128,16 @@
 </div>
 
 <!-- Search & Filter Bar -->
-<div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-2xs mb-6">
-    <form method="GET" action="{{ route('admin.products') }}" class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-        <div class="flex-1 relative">
+<div class="bg-white p-4 sm:p-5 rounded-2xl border border-stone-200 shadow-2xs mb-6 w-full max-w-full min-w-0">
+    <form method="GET" action="{{ route('admin.products') }}" class="flex flex-col md:flex-row items-stretch md:items-center gap-3">
+        <div class="flex-1 min-w-0 relative">
             <input type="text" name="search" value="{{ request('search') }}" 
                    placeholder="Search product name, botanical actives, or tagline..."
                    class="w-full bg-[#f6f8f3] border border-stone-300 rounded-xl pl-9 pr-4 py-2.5 text-xs focus:bg-white focus:border-[#203a31] focus:outline-hidden">
             <svg class="w-4 h-4 text-slate-400 absolute left-3 top-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
         </div>
 
-        <div class="sm:w-56">
+        <div class="w-full md:w-56 shrink-0">
             <select name="category" class="w-full bg-[#f6f8f3] border border-stone-300 rounded-xl px-3 py-2.5 text-xs focus:bg-white focus:border-[#203a31] focus:outline-hidden">
                 <option value="all">All Product Categories</option>
                 @foreach($categories as $category)
@@ -148,12 +148,12 @@
             </select>
         </div>
 
-        <button type="submit" class="bg-[#203a31] hover:bg-[#14221c] text-white text-xs font-semibold py-2.5 px-5 rounded-xl shadow-xs transition">
+        <button type="submit" class="bg-[#203a31] hover:bg-[#14221c] text-white text-xs font-semibold py-2.5 px-5 rounded-xl shadow-xs transition shrink-0 cursor-pointer">
             Filter
         </button>
 
         @if(request()->hasAny(['search', 'category']))
-            <a href="{{ route('admin.products') }}" class="px-3.5 py-2.5 rounded-xl border border-stone-300 text-xs font-semibold text-slate-600 hover:bg-stone-100 transition text-center">
+            <a href="{{ route('admin.products') }}" class="px-3.5 py-2.5 rounded-xl border border-stone-300 text-xs font-semibold text-slate-600 hover:bg-stone-100 transition text-center shrink-0">
                 Reset
             </a>
         @endif
@@ -161,14 +161,14 @@
 </div>
 
 <!-- Products Table Card -->
-<div class="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden">
-    <div class="px-6 py-4 border-b border-stone-200 flex items-center justify-between bg-stone-50/70">
+<div class="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden w-full max-w-full min-w-0">
+    <div class="px-5 py-4 border-b border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-stone-50/70">
         <h3 class="text-sm font-bold text-[#203a31] uppercase tracking-wider">Active Formulations Directory</h3>
         <span class="text-xs text-slate-500">Showing {{ $products->count() }} of {{ $products->total() }}</span>
     </div>
 
-    <div class="overflow-x-auto">
-        <table class="w-full text-left text-xs text-slate-600">
+    <div class="overflow-x-auto w-full max-w-full custom-theme-scroll">
+        <table class="w-full text-left text-xs text-slate-600 min-w-[700px]">
             <thead class="bg-stone-50 border-b border-stone-200 text-slate-700 uppercase font-bold text-[10px] tracking-wider">
                 <tr>
                     <th class="py-3.5 px-5">Formulation / SKU</th>

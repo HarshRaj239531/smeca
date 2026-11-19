@@ -226,7 +226,7 @@
 </div>
 
 <!-- Inquiries Data Table Card -->
-<div class="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden">
+<div class="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden w-full max-w-full min-w-0">
     
     <div class="px-6 py-4 border-b border-stone-200 flex items-center justify-between bg-stone-50/70">
         <div class="flex items-center gap-2.5">
@@ -240,8 +240,8 @@
         </div>
     </div>
 
-    <div class="overflow-x-auto">
-        <table class="w-full text-left text-xs text-slate-600">
+    <div class="overflow-x-auto w-full max-w-full custom-theme-scroll">
+        <table class="w-full text-left text-xs text-slate-600 min-w-[700px]">
             <thead class="bg-stone-50 border-b border-stone-200 text-slate-700 uppercase font-bold text-[10px] tracking-wider">
                 <tr>
                     <th class="py-3.5 px-5">Received Date</th>

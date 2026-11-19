@@ -1,8 +1,8 @@
 <!-- Top Executive Header (Matching Reference Architecture) -->
-<header id="adminHeader" class="h-20 bg-white border-b border-stone-200/90 sticky top-0 z-30 shadow-2xs flex items-center justify-between px-4 sm:px-8 transition-colors">
+<header id="adminHeader" class="h-20 bg-white border-b border-stone-200/90 sticky top-0 z-30 shadow-2xs flex items-center justify-between px-3 sm:px-6 lg:px-8 transition-colors w-full max-w-full min-w-0 box-border">
     
     <!-- Left Section: Hamburger + Active Module Pill -->
-    <div class="flex items-center gap-3 sm:gap-4">
+    <div class="flex items-center gap-3 sm:gap-4 shrink-0">
         
         <!-- Sidebar Hamburger Toggle -->
         <button onclick="toggleAdminSidebar()" 
@@ -14,7 +14,7 @@
         </button>
 
         <!-- Active Module Pill Badge (like ATTENDANCE pill in reference) -->
-        <div class="hidden sm:flex items-center gap-2 bg-[#e8f7f0] border border-emerald-300/80 text-emerald-800 px-3.5 py-1.5 rounded-full text-xs font-extrabold tracking-wider uppercase shadow-2xs">
+        <div class="hidden sm:flex items-center gap-2 bg-[#e8f7f0] border border-emerald-300/80 text-emerald-800 px-3.5 py-1.5 rounded-full text-xs font-extrabold tracking-wider uppercase shadow-2xs shrink-0">
             <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
             </svg>
@@ -24,10 +24,10 @@
     </div>
 
     <!-- Right Section: Enterprise Pill + Live Clock + Control Icons + User Avatar -->
-    <div class="flex items-center gap-2 sm:gap-2.5">
+    <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
         
         <!-- Enterprise Company Pill (like STARTUP WEB SUPPORT in reference) -->
-        <div class="hidden 2xl:flex items-center gap-2 bg-stone-50 border border-stone-200/90 text-slate-700 px-3.5 py-1.5 rounded-xl text-xs font-bold shadow-2xs">
+        <div class="hidden 2xl:flex items-center gap-2 bg-stone-50 border border-stone-200/90 text-slate-700 px-3.5 py-1.5 rounded-xl text-xs font-bold shadow-2xs shrink-0">
             <svg class="w-4 h-4 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
             </svg>
@@ -35,7 +35,7 @@
         </div>
 
         <!-- Real-Time Live Clock Pill (like Thu, Nov 19 • 12:40:50 PM in reference) -->
-        <div class="hidden lg:flex items-center gap-2 bg-stone-50 border border-stone-200/90 text-slate-800 px-3.5 py-1.5 rounded-xl text-xs font-bold shadow-2xs font-mono">
+        <div class="hidden xl:flex items-center gap-2 bg-stone-50 border border-stone-200/90 text-slate-800 px-3 py-1.5 rounded-xl text-xs font-bold shadow-2xs font-mono shrink-0">
             <svg class="w-3.5 h-3.5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- Group of Rounded Control Icon Buttons (Exact look from reference) -->
-        <div class="flex items-center gap-1 sm:gap-1.5 bg-stone-50/80 p-1 rounded-2xl border border-stone-200/90 shadow-2xs">
+        <div class="flex items-center gap-1 sm:gap-1.5 bg-stone-50/80 p-1 rounded-2xl border border-stone-200/90 shadow-2xs shrink-0">
             
             <!-- Fullscreen Toggle Button -->
             <button type="button" onclick="toggleAdminFullscreen()" 
