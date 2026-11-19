@@ -241,6 +241,16 @@ class SmecaWebsiteTest extends TestCase
         $response->assertSee('Plus Jakarta Sans');
         $response->assertSee('Playfair Display');
         $response->assertSee('smeca_admin_customizer_v2');
+
+        // Verify top executive header (matching reference design)
+        $response->assertSee('SMECA INDUSTRY PVT. LTD.');
+        $response->assertSee('headerLiveTime');
+        $response->assertSee('INQUIRIES DESK');
+
+        // Verify executive vibrant metric cards (matching reference design)
+        $response->assertSee('stat-card-gradient-1');
+        $response->assertSee('stat-card-gradient-2');
+        $response->assertSee('stat-card-glass');
     }
 
     /**

@@ -34,6 +34,15 @@
                     if (theme.headerBorder) root.style.setProperty('--admin-header-border', theme.headerBorder);
                     if (theme.headerText) root.style.setProperty('--admin-header-text', theme.headerText);
                 }
+
+                // Check sidebar minimized state
+                var isSidebarCollapsed = localStorage.getItem('smeca_admin_sidebar_collapsed');
+                if (isSidebarCollapsed === 'true' && window.innerWidth >= 1024) {
+                    document.documentElement.classList.add('sidebar-collapsed');
+                    document.addEventListener('DOMContentLoaded', function() {
+                        document.body.classList.add('sidebar-collapsed');
+                    });
+                }
             } catch(e) {}
         })();
     </script>
@@ -53,8 +62,8 @@
     <!-- Modular Pure White Admin Sidebar -->
     @include('admin.partials.sidebar')
 
-    <!-- Main Content Wrapper (offset by sidebar on desktop) -->
-    <div class="flex-1 flex flex-col lg:pl-72 min-h-screen">
+    <!-- Main Content Wrapper (Smoothly expands when sidebar is minimized) -->
+    <div id="adminMainWrapper" class="flex-1 flex flex-col min-h-screen">
         
         <!-- Modular Top Sticky Header -->
         @include('admin.partials.header')
@@ -75,14 +84,27 @@
     <!-- Layout Utility Scripts -->
     <script>
         function toggleAdminSidebar() {
+            const isDesktop = window.innerWidth >= 1024;
             const sidebar = document.getElementById('adminSidebar');
             const backdrop = document.getElementById('sidebarBackdrop');
-            if (sidebar.classList.contains('-translate-x-full')) {
-                sidebar.classList.remove('-translate-x-full');
-                backdrop.classList.remove('hidden');
+
+            if (isDesktop) {
+                // Minimize / Expand sidebar on desktop
+                const isCollapsed = document.body.classList.toggle('sidebar-collapsed');
+                try {
+                    localStorage.setItem('smeca_admin_sidebar_collapsed', isCollapsed ? 'true' : 'false');
+                } catch(e) {}
             } else {
-                sidebar.classList.add('-translate-x-full');
-                backdrop.classList.add('hidden');
+                // Open / Close drawer on mobile
+                if (!sidebar) return;
+                const isOpen = sidebar.classList.toggle('mobile-open');
+                if (backdrop) {
+                    if (isOpen) {
+                        backdrop.classList.remove('hidden');
+                    } else {
+                        backdrop.classList.add('hidden');
+                    }
+                }
             }
         }
 

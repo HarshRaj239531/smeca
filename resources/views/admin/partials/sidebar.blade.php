@@ -1,5 +1,5 @@
 <!-- Left Sidebar Navigation -->
-<aside id="adminSidebar" class="fixed inset-y-0 left-0 z-50 w-72 bg-white text-[#203a31] flex flex-col justify-between transition-transform duration-300 transform -translate-x-full lg:translate-x-0 border-r border-stone-200/90 shadow-xl">
+<aside id="adminSidebar" class="fixed inset-y-0 left-0 z-50 w-72 bg-white text-[#203a31] flex flex-col justify-between border-r border-stone-200/90 shadow-xl">
     
     <!-- Top Brand & User Profile -->
     <div>
@@ -12,8 +12,11 @@
                     <span class="text-[8.5px] font-bold tracking-[0.22em] uppercase text-emerald-800 mt-1">OPERATIONS PORTAL</span>
                 </div>
             </a>
-            <button onclick="toggleAdminSidebar()" class="lg:hidden text-stone-500 hover:text-stone-800 p-1.5 rounded-lg hover:bg-stone-100 transition">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <button onclick="toggleAdminSidebar()" title="Minimize / Collapse Sidebar" 
+                    class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-stone-100 transition cursor-pointer">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/>
+                </svg>
             </button>
         </div>
 

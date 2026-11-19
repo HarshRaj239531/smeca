@@ -2,11 +2,12 @@
 
 @section('title', 'Formulations & Products Catalog | SMECA Admin')
 @section('page_name', 'Formulations & Products')
+@section('module_name', 'FORMULATIONS CATALOG')
 
 @section('content')
 
 <!-- Header & Quick Action -->
-<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
     <div>
         <h1 class="text-2xl sm:text-3xl font-serif-display font-medium text-[#203a31]">
             Active Formulations & Catalog
@@ -25,37 +26,105 @@
     </div>
 </div>
 
-<!-- Category Metric Tabs -->
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-    <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-2xs">
-        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Formulations</div>
-        <div class="text-3xl font-serif-display font-medium text-slate-900 mt-1">{{ $totalProducts }}</div>
-        <div class="text-[11px] text-slate-400 mt-0.5">Database indexed</div>
+<!-- Category Metric Tabs (Matching Reference Design) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+    
+    <!-- Card 1: Emerald/Mint Gradient -->
+    <div class="stat-card-glass stat-card-gradient-1 p-5 text-white flex flex-col justify-between">
+        <div class="stat-card-watermark"></div>
+        <div>
+            <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/80"></span>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-white/95">Total Formulations</span>
+                </div>
+                <div class="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-xs border border-white/30 flex items-center justify-center text-white shrink-0 shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2.5 font-sans">
+                {{ $totalProducts }}
+            </div>
+        </div>
+        <div class="border-t border-white/25 mt-3 pt-2 text-[10px] font-semibold text-white/90 uppercase tracking-wider">
+            Database Indexed SKUs
+        </div>
     </div>
 
-    <div class="bg-white p-5 rounded-2xl border border-emerald-200 shadow-2xs">
-        <div class="text-xs font-bold text-emerald-800 uppercase tracking-wider">Ayurvedic Formulations</div>
-        <div class="text-3xl font-serif-display font-bold text-emerald-700 mt-1">
-            {{ \App\Models\Product::where('is_ayurvedic', true)->count() }}
+    <!-- Card 2: Purple/Violet Gradient -->
+    <div class="stat-card-glass stat-card-gradient-2 p-5 text-white flex flex-col justify-between">
+        <div class="stat-card-watermark"></div>
+        <div>
+            <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/80"></span>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-white/95">Ayurvedic Formulations</span>
+                </div>
+                <div class="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-xs border border-white/30 flex items-center justify-center text-white shrink-0 shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2.5 font-sans">
+                {{ \App\Models\Product::where('is_ayurvedic', true)->count() }}
+            </div>
         </div>
-        <div class="text-[11px] text-emerald-700/80 mt-0.5">Classical texts verified</div>
+        <div class="border-t border-white/25 mt-3 pt-2 text-[10px] font-semibold text-white/90 uppercase tracking-wider">
+            Classical Texts Verified
+        </div>
     </div>
 
-    <div class="bg-white p-5 rounded-2xl border border-amber-200 shadow-2xs">
-        <div class="text-xs font-bold text-amber-800 uppercase tracking-wider">B2B OEM Ready</div>
-        <div class="text-3xl font-serif-display font-bold text-amber-700 mt-1">
-            {{ \App\Models\Product::where('b2b_available', true)->count() }}
+    <!-- Card 3: Golden Amber Gradient -->
+    <div class="stat-card-glass stat-card-gradient-3 p-5 text-white flex flex-col justify-between">
+        <div class="stat-card-watermark"></div>
+        <div>
+            <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/80"></span>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-white/95">B2B OEM Ready</span>
+                </div>
+                <div class="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-xs border border-white/30 flex items-center justify-center text-white shrink-0 shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2.5 font-sans">
+                {{ \App\Models\Product::where('b2b_available', true)->count() }}
+            </div>
         </div>
-        <div class="text-[11px] text-amber-700/80 mt-0.5">Bulk batch eligible</div>
+        <div class="border-t border-white/25 mt-3 pt-2 text-[10px] font-semibold text-white/90 uppercase tracking-wider">
+            Bulk Batch Eligible
+        </div>
     </div>
 
-    <div class="bg-white p-5 rounded-2xl border border-blue-200 shadow-2xs">
-        <div class="text-xs font-bold text-blue-800 uppercase tracking-wider">Categories</div>
-        <div class="text-3xl font-serif-display font-bold text-blue-700 mt-1">
-            {{ count($categories) }}
+    <!-- Card 4: Royal Blue / Indigo Gradient -->
+    <div class="stat-card-glass stat-card-gradient-5 p-5 text-white flex flex-col justify-between">
+        <div class="stat-card-watermark"></div>
+        <div>
+            <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/80"></span>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-white/95">Product Categories</span>
+                </div>
+                <div class="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-xs border border-white/30 flex items-center justify-center text-white shrink-0 shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2.5 font-sans">
+                {{ count($categories) }}
+            </div>
         </div>
-        <div class="text-[11px] text-blue-700/80 mt-0.5">Product verticals</div>
+        <div class="border-t border-white/25 mt-3 pt-2 text-[10px] font-semibold text-white/90 uppercase tracking-wider">
+            Active Verticals
+        </div>
     </div>
+
 </div>
 
 <!-- Search & Filter Bar -->

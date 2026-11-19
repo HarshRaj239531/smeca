@@ -2,11 +2,12 @@
 
 @section('title', 'Customer & B2B Inquiry Desk | SMECA Admin')
 @section('page_name', 'Customer Inquiries & Leads')
+@section('module_name', 'INQUIRIES DESK')
 
 @section('content')
 
 <!-- Welcome & Action Summary -->
-<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
     <div>
         <h1 class="text-2xl sm:text-3xl font-serif-display font-medium text-[#203a31]">
             Customer Inquiries & B2B Leads
@@ -49,52 +50,127 @@
     </div>
 @endif
 
-<!-- Analytics KPI Cards -->
-<div class="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+<!-- Analytics KPI Cards (Exact Styling from Reference Image) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
     
-    <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-2xs hover:shadow-md transition">
-        <div class="flex items-center justify-between text-xs text-slate-500 font-semibold uppercase tracking-wider">
-            <span>Total Inquiries</span>
-            <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+    <!-- Card 1: Emerald/Mint Gradient (Total Inquiries) -->
+    <div class="stat-card-glass stat-card-gradient-1 p-5 text-white flex flex-col justify-between">
+        <div class="stat-card-watermark"></div>
+        <div>
+            <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/80"></span>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-white/95">Total Inquiries</span>
+                </div>
+                <div class="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-xs border border-white/30 flex items-center justify-center text-white shrink-0 shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2.5 font-sans">
+                {{ $stats['total'] }}
+            </div>
         </div>
-        <div class="text-3xl font-serif-display font-medium text-slate-900 mt-2">{{ $stats['total'] }}</div>
-        <div class="text-[11px] text-slate-400 mt-1">All time queries</div>
+        <div class="border-t border-white/25 mt-3 pt-2 text-[10px] font-semibold text-white/90 uppercase tracking-wider">
+            All-Time Received Leads
+        </div>
     </div>
 
-    <div class="bg-white p-5 rounded-2xl border border-emerald-200 shadow-2xs hover:shadow-md transition">
-        <div class="flex items-center justify-between text-xs text-emerald-800 font-bold uppercase tracking-wider">
-            <span>New / Unread</span>
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+    <!-- Card 2: Purple/Violet Gradient (New / Unread) -->
+    <div class="stat-card-glass stat-card-gradient-2 p-5 text-white flex flex-col justify-between">
+        <div class="stat-card-watermark"></div>
+        <div>
+            <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/80 animate-ping"></span>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-white/95">New / Unread</span>
+                </div>
+                <div class="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-xs border border-white/30 flex items-center justify-center text-white shrink-0 shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2.5 font-sans">
+                {{ $stats['new'] }}
+            </div>
         </div>
-        <div class="text-3xl font-serif-display font-bold text-emerald-700 mt-2">{{ $stats['new'] }}</div>
-        <div class="text-[11px] text-emerald-700/80 mt-1">Requires follow-up</div>
+        <div class="border-t border-white/25 mt-3 pt-2 text-[10px] font-semibold text-white/90 uppercase tracking-wider">
+            Requires Follow-Up Action
+        </div>
     </div>
 
-    <div class="bg-white p-5 rounded-2xl border border-amber-200 shadow-2xs hover:shadow-md transition">
-        <div class="flex items-center justify-between text-xs text-amber-800 font-bold uppercase tracking-wider">
-            <span>B2B & OEM</span>
-            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+    <!-- Card 3: Golden Amber Gradient (B2B & OEM) -->
+    <div class="stat-card-glass stat-card-gradient-3 p-5 text-white flex flex-col justify-between">
+        <div class="stat-card-watermark"></div>
+        <div>
+            <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/80"></span>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-white/95">B2B & OEM</span>
+                </div>
+                <div class="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-xs border border-white/30 flex items-center justify-center text-white shrink-0 shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2.5 font-sans">
+                {{ $stats['b2b'] }}
+            </div>
         </div>
-        <div class="text-3xl font-serif-display font-bold text-amber-700 mt-2">{{ $stats['b2b'] }}</div>
-        <div class="text-[11px] text-amber-700/80 mt-1">Contract packaging leads</div>
+        <div class="border-t border-white/25 mt-3 pt-2 text-[10px] font-semibold text-white/90 uppercase tracking-wider">
+            Contract Packaging Deals
+        </div>
     </div>
 
-    <div class="bg-white p-5 rounded-2xl border border-blue-200 shadow-2xs hover:shadow-md transition">
-        <div class="flex items-center justify-between text-xs text-blue-800 font-bold uppercase tracking-wider">
-            <span>Product Boxes</span>
-            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+    <!-- Card 4: Coral Orange Gradient (Product Boxes) -->
+    <div class="stat-card-glass stat-card-gradient-4 p-5 text-white flex flex-col justify-between">
+        <div class="stat-card-watermark"></div>
+        <div>
+            <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/80"></span>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-white/95">Product Boxes</span>
+                </div>
+                <div class="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-xs border border-white/30 flex items-center justify-center text-white shrink-0 shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2.5 font-sans">
+                {{ $stats['products'] }}
+            </div>
         </div>
-        <div class="text-3xl font-serif-display font-bold text-blue-700 mt-2">{{ $stats['products'] }}</div>
-        <div class="text-[11px] text-blue-700/80 mt-1">Retail skincare queries</div>
+        <div class="border-t border-white/25 mt-3 pt-2 text-[10px] font-semibold text-white/90 uppercase tracking-wider">
+            Retail Skincare Orders
+        </div>
     </div>
 
-    <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-2xs hover:shadow-md transition col-span-2 lg:col-span-1">
-        <div class="flex items-center justify-between text-xs text-slate-600 font-bold uppercase tracking-wider">
-            <span>Closed / Solved</span>
-            <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+    <!-- Card 5: Royal Blue / Indigo Gradient (Closed / Solved) -->
+    <div class="stat-card-glass stat-card-gradient-5 p-5 text-white flex flex-col justify-between col-span-1 sm:col-span-2 lg:col-span-1">
+        <div class="stat-card-watermark"></div>
+        <div>
+            <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white/80"></span>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-white/95">Closed / Solved</span>
+                </div>
+                <div class="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-xs border border-white/30 flex items-center justify-center text-white shrink-0 shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2.5 font-sans">
+                {{ $stats['closed'] ?? 0 }}
+            </div>
         </div>
-        <div class="text-3xl font-serif-display font-medium text-slate-700 mt-2">{{ $stats['closed'] ?? 0 }}</div>
-        <div class="text-[11px] text-slate-500 mt-1">Completed records</div>
+        <div class="border-t border-white/25 mt-3 pt-2 text-[10px] font-semibold text-white/90 uppercase tracking-wider">
+            Completed Records
+        </div>
     </div>
 
 </div>
