@@ -1,17 +1,9 @@
 <!-- Top Executive Header (Matching Reference Architecture) -->
 <header id="adminHeader" class="h-20 bg-white border-b border-stone-200/90 sticky top-0 z-30 shadow-2xs flex items-center justify-between px-4 sm:px-8 transition-colors">
     
-    <!-- Left Section: Brand Logo + Hamburger + Active Module Pill -->
+    <!-- Left Section: Hamburger + Active Module Pill -->
     <div class="flex items-center gap-3 sm:gap-4">
         
-        <!-- Brand Minimalist Logo (like SWS in reference) -->
-        <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-2.5 group">
-            <img src="{{ asset('images/smeca-logo.png') }}" alt="SMECA" class="h-8 w-auto object-contain">
-            <span class="text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-emerald-800 transition font-sans">
-                SMECA
-            </span>
-        </a>
-
         <!-- Sidebar Hamburger Toggle -->
         <button onclick="toggleAdminSidebar()" 
                 title="Toggle Sidebar Navigation"
