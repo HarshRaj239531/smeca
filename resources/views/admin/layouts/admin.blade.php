@@ -75,7 +75,7 @@
 
         <!-- Admin Desk Footer -->
         <footer class="py-4 px-6 border-t border-stone-200/80 bg-white/60 text-center text-xs text-slate-500">
-            <p>© {{ date('Y') }} SMECA Industry Private Limited • Design and Development by <span class="font-semibold text-slate-700">Startup Web Support</span></p>
+            <p>© {{ date('Y') }} SMECA Industry Private Limited • Design and Development by <a href="https://startupwebsupport.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-700 hover:text-emerald-700 transition underline underline-offset-4 decoration-stone-300 hover:decoration-emerald-600">Startup Web Support</a></p>
         </footer>
 
     </div>

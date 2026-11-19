@@ -352,7 +352,7 @@
 
             <!-- Developer Credit -->
             <div class="pt-4 mt-3 text-center text-xs text-[#c0caa7]/60 border-t border-white/5">
-                <p>Design and Development by <span class="text-white font-medium">Startup Web Support</span></p>
+                <p>Design and Development by <a href="https://startupwebsupport.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-emerald-300 font-medium transition underline underline-offset-4 decoration-white/30 hover:decoration-emerald-300">Startup Web Support</a></p>
             </div>
         </div>
     </footer>
