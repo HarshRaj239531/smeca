@@ -1,0 +1,152 @@
+/**
+ * SMECA Admin Appearance & Theme Studio Customizer Styles
+ * Provides CSS custom properties and dynamic selectors for real-time live theming.
+ */
+
+:root {
+    --admin-font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --admin-font-serif: 'Playfair Display', Georgia, serif;
+    
+    /* Default Mode: Light Executive with Pure White Sidebar */
+    --admin-bg: #f8fafc;
+    --admin-text-main: #1e293b;
+    --admin-text-muted: #64748b;
+    
+    --admin-card-bg: #ffffff;
+    --admin-card-border: #e2e8f0;
+    --admin-card-hover: #f1f5f9;
+    
+    /* Pure White Sidebar by default */
+    --admin-sidebar-bg: #ffffff;
+    --admin-sidebar-text: #203a31;
+    --admin-sidebar-muted: #94a3b8;
+    --admin-sidebar-border: #e2e8f0;
+    --admin-sidebar-hover: #f8fafc;
+    --admin-sidebar-active-bg: #203a31;
+    --admin-sidebar-active-text: #ffffff;
+    
+    --admin-header-bg: #ffffff;
+    --admin-header-border: #e2e8f0;
+    --admin-header-text: #0f172a;
+    
+    --admin-accent: #203a31;
+    --admin-accent-hover: #14221c;
+    --admin-accent-text: #ffffff;
+    --admin-radius: 1rem;
+}
+
+/* Scoped body class */
+body.admin-body {
+    font-family: var(--admin-font-sans) !important;
+    background-color: var(--admin-bg) !important;
+    color: var(--admin-text-main) !important;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Sidebar Dynamic Skin */
+#adminSidebar {
+    background-color: var(--admin-sidebar-bg) !important;
+    color: var(--admin-sidebar-text) !important;
+    border-color: var(--admin-sidebar-border) !important;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+#adminSidebar .sidebar-brand-box {
+    background-color: var(--admin-sidebar-bg) !important;
+    border-color: var(--admin-sidebar-border) !important;
+}
+
+#adminSidebar .sidebar-profile-box {
+    background-color: var(--admin-sidebar-hover) !important;
+    border-color: var(--admin-sidebar-border) !important;
+}
+
+#adminSidebar .sidebar-link-item {
+    color: var(--admin-sidebar-text) !important;
+    transition: all 0.2s ease;
+}
+
+#adminSidebar .sidebar-link-item:hover {
+    background-color: var(--admin-sidebar-hover) !important;
+}
+
+#adminSidebar .sidebar-link-active {
+    background-color: var(--admin-sidebar-active-bg) !important;
+    color: var(--admin-sidebar-active-text) !important;
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.08);
+}
+
+#adminSidebar .sidebar-group-header {
+    color: var(--admin-sidebar-muted) !important;
+}
+
+#adminSidebar .sidebar-footer-box {
+    background-color: var(--admin-sidebar-bg) !important;
+    border-color: var(--admin-sidebar-border) !important;
+}
+
+/* Header Dynamic Skin */
+#adminHeader {
+    background-color: var(--admin-header-bg) !important;
+    border-color: var(--admin-header-border) !important;
+    color: var(--admin-header-text) !important;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Canvas & Global Main Components when Theming is Active */
+[data-admin-themed="true"] {
+    font-family: var(--admin-font-sans) !important;
+}
+
+[data-admin-themed="true"] main .bg-white {
+    background-color: var(--admin-card-bg) !important;
+    transition: background-color 0.2s ease;
+}
+
+[data-admin-themed="true"] main .border-stone-200,
+[data-admin-themed="true"] main .border-stone-100 {
+    border-color: var(--admin-card-border) !important;
+}
+
+[data-admin-themed="true"] main .text-slate-900,
+[data-admin-themed="true"] main .text-stone-900,
+[data-admin-themed="true"] main .text-\[\#203a31\] {
+    color: var(--admin-text-main) !important;
+}
+
+[data-admin-themed="true"] main .text-slate-500,
+[data-admin-themed="true"] main .text-slate-400,
+[data-admin-themed="true"] main .text-stone-500,
+[data-admin-themed="true"] main .text-stone-400 {
+    color: var(--admin-text-muted) !important;
+}
+
+[data-admin-themed="true"] main .bg-\[\#f6f8f3\],
+[data-admin-themed="true"] main .bg-stone-50 {
+    background-color: var(--admin-card-hover) !important;
+}
+
+[data-admin-themed="true"] .font-serif-display {
+    font-family: var(--admin-font-serif, var(--admin-font-sans)) !important;
+}
+
+/* Theme Drawer Animation */
+#themeCustomizerDrawer {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+/* Custom Scrollbars */
+.custom-theme-scroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.custom-theme-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-theme-scroll::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.3);
+    border-radius: 9999px;
+}
+.custom-theme-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.5);
+}

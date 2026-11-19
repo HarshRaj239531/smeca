@@ -219,6 +219,31 @@ class SmecaWebsiteTest extends TestCase
     }
 
     /**
+     * Test admin appearance customizer, modular partials, and white sidebar layout.
+     */
+    public function test_admin_appearance_and_modular_layout(): void
+    {
+        $user = \App\Models\User::first() ?? \App\Models\User::factory()->create();
+
+        $response = $this->actingAs($user)->get('/admin/dashboard');
+
+        $response->assertStatus(200);
+        // Verify pure white sidebar elements
+        $response->assertSee('adminSidebar');
+        $response->assertSee('bg-white text-[#203a31]', false);
+        $response->assertSee('Secure Sign Out');
+        // Verify theme customizer drawer & options
+        $response->assertSee('themeCustomizerDrawer');
+        $response->assertSee('Appearance Studio');
+        $response->assertSee('Light Executive');
+        $response->assertSee('Midnight Dark');
+        $response->assertSee('Ayurvedic Forest');
+        $response->assertSee('Plus Jakarta Sans');
+        $response->assertSee('Playfair Display');
+        $response->assertSee('smeca_admin_customizer_v2');
+    }
+
+    /**
      * Test dynamic SEO sitemap generates valid XML.
      */
     public function test_sitemap_xml_generates_valid_response(): void
