@@ -42,6 +42,8 @@ class InquiryAdminController extends Controller
             'new' => Inquiry::where('status', 'new')->count(),
             'b2b' => Inquiry::where('inquiry_type', 'b2b_oem')->count(),
             'products' => Inquiry::where('inquiry_type', 'product')->count(),
+            'in_discussion' => Inquiry::where('status', 'in_discussion')->count(),
+            'closed' => Inquiry::where('status', 'closed')->count(),
         ];
 
         return view('admin.inquiries', compact('inquiries', 'stats'));

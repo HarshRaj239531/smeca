@@ -114,14 +114,16 @@ require __DIR__ . '/../vendor/autoload.php';
 /** @var Application $app */
 $app = require_once __DIR__ . '/../bootstrap/app.php';
 
-// Self-healing migration if database was empty or not bundled
-if ($needsMigration) {
-    try {
+// Self-healing migration & seeding if database was empty or admin missing
+try {
+    if ($needsMigration) {
         Artisan::call('migrate', ['--force' => true]);
         Artisan::call('db:seed', ['--force' => true]);
-    } catch (\Throwable $e) {
-        error_log('Migration fallback error: ' . $e->getMessage());
+    } elseif (\App\Models\User::count() === 0) {
+        Artisan::call('db:seed', ['--class' => 'Database\\Seeders\\AdminUserSeeder', '--force' => true]);
     }
+} catch (\Throwable $e) {
+    error_log('Migration/Seed fallback error: ' . $e->getMessage());
 }
 
 $app->handleRequest(Request::capture());

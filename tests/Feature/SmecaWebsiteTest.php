@@ -133,6 +133,8 @@ class SmecaWebsiteTest extends TestCase
      */
     public function test_admin_inquiries_dashboard_renders(): void
     {
+        $user = \App\Models\User::first() ?? \App\Models\User::factory()->create();
+
         Inquiry::create([
             'name' => 'Vikas Verma',
             'company_name' => 'Verma Naturals',
@@ -144,11 +146,39 @@ class SmecaWebsiteTest extends TestCase
             'status' => 'new',
         ]);
 
-        $response = $this->get('/admin/inquiries');
+        $response = $this->actingAs($user)->get('/admin/inquiries');
 
         $response->assertStatus(200);
         $response->assertSee('Vikas Verma');
         $response->assertSee('Verma Naturals');
+    }
+
+    /**
+     * Test admin login and authentication flow.
+     */
+    public function test_admin_login_redirects_and_authenticates(): void
+    {
+        // 1. Guest redirected to login
+        $guest = $this->get('/admin');
+        $guest->assertRedirect('/admin/login');
+
+        $loginPage = $this->get('/admin/login');
+        $loginPage->assertStatus(200);
+        $loginPage->assertSee('Administrative Access');
+
+        // 2. Successful login with seeded admin
+        $loginSubmit = $this->post('/admin/login', [
+            'email' => 'admin@smeca.com',
+            'password' => 'admin@123',
+        ]);
+
+        $loginSubmit->assertRedirect('/admin/dashboard');
+        $this->assertAuthenticated();
+
+        // 3. Logout
+        $logout = $this->post('/admin/logout');
+        $logout->assertRedirect('/admin/login');
+        $this->assertGuest();
     }
 
     /**

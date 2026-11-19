@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
@@ -34,9 +35,25 @@ Route::get('/sitemap.xml', function () {
         ->header('Content-Type', 'text/xml; charset=utf-8');
 })->name('sitemap');
 
-// Inquiry Management Dashboard for SMECA Team
+// Admin Authentication & Operations Portal
 Route::prefix('admin')->group(function (): void {
-    Route::get('/inquiries', [InquiryAdminController::class, 'index'])->name('admin.inquiries');
-    Route::patch('/inquiries/{inquiry}/status', [InquiryAdminController::class, 'updateStatus'])->name('admin.inquiries.status');
-    Route::delete('/inquiries/{inquiry}', [InquiryAdminController::class, 'destroy'])->name('admin.inquiries.destroy');
+    // Guest Authentication Routes
+    Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+    Route::post('/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
+
+    // Root /admin shortcut handler
+    Route::get('/', function () {
+        return auth()->check()
+            ? redirect()->route('admin.dashboard')
+            : redirect()->route('admin.login');
+    });
+
+    // Protected Admin Routes (Requires Auth)
+    Route::middleware('auth')->group(function (): void {
+        Route::get('/dashboard', [InquiryAdminController::class, 'index'])->name('admin.dashboard');
+        Route::get('/inquiries', [InquiryAdminController::class, 'index'])->name('admin.inquiries');
+        Route::patch('/inquiries/{inquiry}/status', [InquiryAdminController::class, 'updateStatus'])->name('admin.inquiries.status');
+        Route::delete('/inquiries/{inquiry}', [InquiryAdminController::class, 'destroy'])->name('admin.inquiries.destroy');
+        Route::post('/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
+    });
 });

@@ -327,15 +327,15 @@
                     </ul>
                 </div>
 
-                <!-- Col 4: Operations & Portal -->
+                <!-- Col 4: Operations -->
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Operations</h4>
                     <p class="text-xs text-[#c0caa7]/80 leading-relaxed mb-4">
                         Aurangabad Manufacturing Facility & Gaya Botanical Hub.
                     </p>
-                    <a href="{{ route('admin.inquiries') }}" class="inline-block bg-[#c0caa7]/15 hover:bg-[#c0caa7]/25 text-white text-xs font-semibold px-4 py-2 rounded-xs transition">
-                        Staff Inquiry Portal &rarr;
-                    </a>
+                    <p class="text-xs text-[#c0caa7]/60">
+                        Bihar, India • Certified cGMP Facilities
+                    </p>
                 </div>
 
             </div>
