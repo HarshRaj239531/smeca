@@ -52,8 +52,11 @@ Route::prefix('admin')->group(function (): void {
     Route::middleware('auth')->group(function (): void {
         Route::get('/dashboard', [InquiryAdminController::class, 'index'])->name('admin.dashboard');
         Route::get('/inquiries', [InquiryAdminController::class, 'index'])->name('admin.inquiries');
+        Route::post('/inquiries/manual', [InquiryAdminController::class, 'storeManual'])->name('admin.inquiries.manual');
+        Route::get('/inquiries/export', [InquiryAdminController::class, 'export'])->name('admin.inquiries.export');
         Route::patch('/inquiries/{inquiry}/status', [InquiryAdminController::class, 'updateStatus'])->name('admin.inquiries.status');
         Route::delete('/inquiries/{inquiry}', [InquiryAdminController::class, 'destroy'])->name('admin.inquiries.destroy');
+        Route::get('/products', [InquiryAdminController::class, 'products'])->name('admin.products');
         Route::post('/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
     });
 });

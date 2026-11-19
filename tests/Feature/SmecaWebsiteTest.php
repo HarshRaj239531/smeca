@@ -182,6 +182,43 @@ class SmecaWebsiteTest extends TestCase
     }
 
     /**
+     * Test admin advanced features: products view, CSV export, and manual lead entry.
+     */
+    public function test_admin_advanced_features(): void
+    {
+        $user = \App\Models\User::first() ?? \App\Models\User::factory()->create();
+
+        // 1. Admin Products Catalog View
+        $prodResponse = $this->actingAs($user)->get('/admin/products');
+        $prodResponse->assertStatus(200);
+        $prodResponse->assertSee('Active Formulations');
+
+        // 2. CSV Export
+        $exportResponse = $this->actingAs($user)->get('/admin/inquiries/export');
+        $exportResponse->assertStatus(200);
+        $exportResponse->assertHeader('Content-Type', 'text/csv; charset=UTF-8');
+
+        // 3. Manual Lead Logging
+        $manualLead = $this->actingAs($user)->post('/admin/inquiries/manual', [
+            'name' => 'Govind Jha',
+            'company_name' => 'Mithila Retailers',
+            'phone' => '+91 94311 22334',
+            'email' => 'govind@mithilaretail.com',
+            'inquiry_type' => 'distributorship',
+            'product_name' => 'Super Stockist Inquiry',
+            'status' => 'in_discussion',
+            'message' => 'Interested in super stockist distribution across North Bihar.',
+        ]);
+
+        $manualLead->assertRedirect();
+        $this->assertDatabaseHas('inquiries', [
+            'name' => 'Govind Jha',
+            'email' => 'govind@mithilaretail.com',
+            'status' => 'in_discussion',
+        ]);
+    }
+
+    /**
      * Test dynamic SEO sitemap generates valid XML.
      */
     public function test_sitemap_xml_generates_valid_response(): void
